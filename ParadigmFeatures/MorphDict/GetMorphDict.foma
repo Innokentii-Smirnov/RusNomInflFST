@@ -10,4 +10,4 @@ define r3 Gender -> 0;
 define r4 Acc (->) 0;
 define r5 "̀" -> 0;
 define Rules r1 .o. r2 .o. r3 .o. r4 .o. r5;
-define MorphDict [Lexicon .o. Rules].i;
+define GetMorphDict [Lexicon .o. Rules].i;

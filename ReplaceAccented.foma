@@ -1,4 +1,0 @@
-ReplaceAccented = и́ -> и Acc ,, ы́ -> ы Acc ,, е́ -> е Acc ,, э́ -> э Acc ,, а́ -> а Acc ,,
-я́ -> я Acc ,, о́ -> о Acc ,, ё́ -> ё Acc ,, у́ -> у Acc ,,
-о́₂ -> о₂ Acc ,, о̀́ -> о̀ Acc ,, ё̀́ -> ё̀ Acc ,,
-"*́"-> "*" Acc;

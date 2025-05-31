@@ -1,4 +1,4 @@
-load stack ../../ParadigmFeatures/MorphDict/MorphDict.bin
+load stack ../../ParadigmFeatures/MorphDict/GetMorphDict.bin
 invert net
 define MorphDict;
 read lexc ../../ParadigmFeatures/GrammRazr/GetGrammRazr.lexc
