@@ -1,0 +1,19 @@
+load stack ../../ParadigmFeatures/NonStandEndings/GetNonStandEndings.bin
+invert net
+define GetNonStandEndings;
+read lexc ../../ConvRepr/Stem/GetStem.lexc
+define Lexicon;
+define ExpandedLexicon Letter+ 0:Sep Letter* .o. Lexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+regex	Letter+ 0:Sep [Feature+ & $%+Adj & $%+ParDef14] .P.
+		Letter+ 0:Sep Letter^2 [Feature+ & $%+Adj] |
+		Letter+ 0:Sep [Feature+ & $%+Nul] .P. [
+			Lexicon .P.
+			Letter+ 0:Sep [Г Irr|ь|й] Feature+ .P.
+			Letter+ 0:Sep Feature+
+		];
+turn stack
+union net
+define SepInsertion;
+define GetStem GetNonStandEndings .o. SepInsertion;

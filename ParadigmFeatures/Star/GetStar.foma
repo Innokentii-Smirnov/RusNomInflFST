@@ -1,0 +1,27 @@
+load stack ../../ConvRepr/Stem/GetStem.bin
+invert net
+define GetStem;
+read lexc ../../ParadigmFeatures/Star/GetStar.lexc
+define StarLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define StarExceptions Wordform 0:Star Feature+ .o. StarLexicon / Sep Feature+;
+define ConsonantalDesinence С*;
+define VocalicDesinence Letter* Г Irr Letter*;
+define ExcFinVoc [д|з|й|л|н|р] н Sep а (DeclType) (Gender);
+define PosFinVoc ь Sep | [С|ь]к Sep | [С|ь]ц Sep ?* %+Neut | [С|ь]н Sep | С л Sep [я|и] ?* %+Subst1;
+define CompPosFinVoc PosFinVoc ?* .o. Letter+ Sep VocalicDesinence (DeclType) (Gender);
+define FinVoc CompPosFinVoc - ExcFinVoc;
+define WordVoc Letter* FinVoc;
+regex Letter+ и Sep й [Feature+ & $%+Pron1 & $Adj];
+regex	Letter+ [о Irr|ё|е] к Sep -
+		Letter* С [л|р|н] [о Irr|ё|е] к Sep -
+		Letter+ [Г|К] о Irr к Sep -
+		Letter+ С {шт} о Irr к Sep - 
+		Letter+ [{пёк}|{тёк}|в о Irr л о Irr к];
+turn stack
+union net
+define WordCons;
+define WordStar WordVoc | WordCons;
+define GetStar GetStem .o. StarExceptions .P.
+	[WordStar Feature+ .o. Wordform 0:%+Star Feature+] .P. ?*;
