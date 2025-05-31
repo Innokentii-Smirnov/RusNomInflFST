@@ -2,3 +2,4 @@
 *.txt
 *.stackdump
 !in.txt
+!compilation_order.txt

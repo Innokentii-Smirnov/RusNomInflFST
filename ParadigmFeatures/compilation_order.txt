@@ -1,0 +1,13 @@
+MorphDict
+GrammRazr
+ParadigmDefects
+DeclType
+NumberHom
+MorphNumber
+MorphGender
+PreciseDeclType
+Alternations
+NonStandEndings
+../../ConvRepr/Stem/GetStem.foma
+Star
+AP
