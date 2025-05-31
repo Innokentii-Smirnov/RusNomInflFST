@@ -1,0 +1,26 @@
+source ../../LetterClasses.foma
+Correct = [Г|С|"*"|"|"|'|Acc]+;
+r1 = "*" -> "" || _ С (')("|") Г;
+r2 = ' -> "" || \л _ [н|л|р|ц|с|т];
+r3 = [..] -> ' || С _ ("|")j;
+StarDeletion = r1 .o. r2 .o. r3;
+r4 = "*" -> и || _ j;
+r5 = "*" -> е || _ Irr j;
+r6 = "*" -> е || [j|'|Ш|ц] _ Irr [ц|л '|н '];
+r7 = "*" -> о;
+StarToVowel = r4 .o. r5 .o. r6 .o. r7;
+r8 = е -> и || и j "|" _ Unacc;
+r9 = в -> г || "|" о Irr _ о;
+Orth = r8 .o. r9;
+r10 = ы -> и || [К|Ш]"|" _;
+r11	= о -> е || [j|'|Ш|ц]("|") _ Unacc;
+r12 = "о₂" -> о;
+VowelChanges = r10 .o. r11 .o. r12;
+r13 = j "|" -> "|" j;
+r14 = ' "|" -> "|" ';
+r15 = [j|']а -> я , [j|']у -> ю , [j|'][о|о̀] -> ё , [j|']е -> е, [j|'][ы|и] -> и;
+r16 = j -> й;
+r17 = ' -> ь;
+Softness = r13 .o. r14 .o. r15 .o. r16 .o. r17;
+Accent = Acc -> "" || ё _ .o. Acc -> "́";
+ConvToOrth = ReplaceAccented .o. Correct .o. StarDeletion .o. StarToVowel .o. Orth .o. VowelChanges .o. Softness .o. Accent;

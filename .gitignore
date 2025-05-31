@@ -1,0 +1,16 @@
+*.bin
+*.txt
+*.stackdump
+*.py
+*1.foma
+*3.foma
+*_backup.foma
+*_old.foma
+*_opt.foma
+*_backup.lexc
+*_old.lexc
+AutoParadigmFeatures.foma
+ParadigmFeatures1
+ParadigmFeatures2
+????
+!in.txt

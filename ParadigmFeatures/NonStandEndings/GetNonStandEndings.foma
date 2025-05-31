@@ -1,0 +1,29 @@
+load stack ../../ParadigmFeatures/Alternations/GetAlternations.bin
+invert net
+define GetPreciseDeclType;
+read lexc ../../ParadigmFeatures/NonStandEndings/GetNonStandEndings.lexc
+define NonStandEndingsLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Features Alternation* DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define NonStandEndingsExceptions [Letter+ 0:NonStandEnding+ .o. NonStandEndingsLexicon] Features .P. ?*;
+regex [..] -> %+Nse1 || Letter NonStandEnding* [%+Alt12 | %+Alt14 | %+Alt15] _ Feature* %+Masc;
+regex [..] -> %+Nse1 || {ко} Irr Alternation* _ NonStandEnding* DeclType;
+regex [..] (->) %+Nse1 || и Irr {ще} _ NonStandEnding* DeclType Feature+ %+Masc .#.;
+regex [..] -> %+Nse2 || [а|я] Irr {нин} %+Alt6 _ NonStandEnding* DeclType;
+define Prev %+Nse1|%+Nse2;
+define Next [NonStandEnding - Prev]* DeclType Feature+;
+define Alt Alternation*;
+regex	Letter+ [Alt & $[%+Alt6|%+Alt14|%+Alt15]] (%+Nse1) 	0:%+Nse3 Next |
+		Letter+ Alt (%+Nse1) %+Nse2 						0:%+Nse3 Next |
+		Letter+ [Alt & $%+Alt12] (%+Nse1) 					0:%+Nse3 [Next & $[%+Neut|%+Fem]] |
+		Letter+ [С|ь]{ко} Acc Alt (%+Nse1)					0:%+Nse3 [Next & $%+Subst1 & $%+Neut] |
+		Letter+ {ико} Alt (%+Nse1) 							0:%+Nse3 [Next & $%+Neut] .P.
+		?*;
+define Prev %+Nse1|%+Nse2|%+Nse3;
+define Next [NonStandEnding - Prev]* DeclType Feature+;
+regex	Letter+ [К {ля} | С {ря}] Alt Prev* 0:%+Nse4 Next .P. ?*; 
+turn stack
+compose net
+define NonStandEndingsRules;
+define GetNonStandEndings GetPreciseDeclType .o. NonStandEndingsExceptions .o. NonStandEndingsRules;

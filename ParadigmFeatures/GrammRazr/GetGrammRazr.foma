@@ -1,0 +1,36 @@
+load stack ../../ParadigmFeatures/MorphDict/MorphDict.bin
+invert net
+define MorphDict;
+read lexc ../../ParadigmFeatures/GrammRazr/GetGrammRazr.lexc
+define GrammRazrLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define GrammRazrExceptions [Letter+ 0:GrammRazr .o. GrammRazrLexicon] (Pos:0);
+regex %+Noun -> %+Subst;
+regex [..] -> %+Adj || [е|о] Irr {нек} _ .#.;
+regex [..] -> %+Subst || Letter _ (Animacy) (Gender) .#.;
+regex %+PronAdj -> %+Adj;
+# Из прилагательных на ый
+regex %+Adj -> %+Simadj || {дцатый}|{деся́тый}|{со́тый} _ .#.;
+regex %+Adj -> %+Extadj || {ый} _ .#.;
+# Из прилагательных на ий
+regex %+Adj -> %+Extadj || [г|х|щ|Г Irr]{ий} _ .#.;
+# Из прилагательных на кий
+regex %+Adj -> %+Extadj || [К о Acc|ё][{хо}{ше}]{нький} _ .#.;
+regex %+Adj -> %+Simadj || [с|ц|{ньк}]{кий} _ .#.;
+regex %+Adj -> %+Extadj || {кий} _ .#.;
+# Из прилагательных на жий, чий, ший
+regex %+Adj -> %+Extadj || [у|ю] Acc {чий} _ .#.;
+regex %+Adj -> %+Extadj || [г|к|х|р] о Acc {жий}|{пле́чий} _ .#.;
+# Из прочих прилагательных на ий
+regex %+Adj -> %+Extadj || {сторо́нний} _ .#.;
+# Из прилагательных на ой
+regex %+Adj -> %+Simadj || .#. Syll [к|л|н|т] {о́й} _ .#.;
+regex %+Adj -> %+Extadj || .#. Syll {о́й} _ .#.;
+# Из прочих прилагательных
+regex %+Adj -> %+Extadj || [е|о] Irr {нек} _ .#.;
+regex %+Adj -> %+Simadj;
+turn stack
+compose net
+define GrammRazrRules;
+define GetGrammRazr MorphDict .o. GrammRazrExceptions .P. GrammRazrRules;

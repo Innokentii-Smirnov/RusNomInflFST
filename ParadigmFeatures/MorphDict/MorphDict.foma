@@ -1,0 +1,13 @@
+source ../../LetterClasses.foma
+read lexc ../../ParadigmFeatures/MorphDict/MorphDict.lexc
+define Lexicon;
+define Pos %+Noun | %+Adj | %+Pron | %+PronAdj;
+define Animacy %+Anim | %+Inanim;
+define Gender %+Masc | %+Fem | %+Neut;
+define r1 Pos -> 0;
+define r2 Animacy -> 0;
+define r3 Gender -> 0;
+define r4 Acc (->) 0;
+define r5 "̀" -> 0;
+define Rules r1 .o. r2 .o. r3 .o. r4 .o. r5;
+define MorphDict [Lexicon .o. Rules].i;

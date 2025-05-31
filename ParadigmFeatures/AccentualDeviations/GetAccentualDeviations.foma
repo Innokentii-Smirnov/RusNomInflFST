@@ -1,0 +1,6 @@
+source ../../ParadigmFeatures/UnstableO/GetUnstableO.foma
+read lexc ../../ParadigmFeatures/AccentualDeviations/GetAccentualDeviations.lexc
+define Lexicon;
+define Rules ?*;
+define GetAccentualDeviations GetUnstableO .o. [Lexicon Feature* .P. Rules];
+define Feature AccentualDeviations | Feature;

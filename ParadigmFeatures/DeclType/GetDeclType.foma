@@ -1,0 +1,88 @@
+load stack ../../ParadigmFeatures/ParadigmDefects/GetParadigmDefects.bin
+invert net
+define GetParadigmDefects;
+read lexc ../../ParadigmFeatures/DeclType/GetDeclType.lexc
+define DeclTypeLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Features (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define DeclTypeExceptions [Letter+ 0:DeclType .o. DeclTypeLexicon] Features;
+# Слова бесчисловых разрядов
+regex [..] -> %+Subst1 || {со́т} _ .#.;
+regex [..] -> %+Subst2 || {дцать} | {деся́т} _ .#.;
+regex [..] -> %+Pron1 || {еро} _ .#.;
+turn stack
+compose net
+define NumlDeclTypeRules;
+define NumlDeclType [NumlDeclTypeRules .o. Letter+ DeclType] (ParadigmDefects) Numl .P. ?*;
+# Прилагательные
+define Adj (ParadigmDefects) [%+Extadj | %+Simadj];
+# I. Прилагательные на ый и ой
+regex [..] -> %+Adj || {ый} | о Irr й _ Adj .#.;
+# II. Прилагательные на ий
+regex [..] -> %+Adj || [К|щ|Г Irr]{ий} _ Adj .#.;
+regex [..] -> %+Adj || [С|ь][ж|ч|ш|н|л]{ий} _ Adj .#.;
+regex [..] -> %+Adj || Г Irr [ж|ч|ш]{ий} _ (ParadigmDefects) %+Extadj .#.;
+regex [..] -> %+Pron1 || Г Irr [ж|ч|ш]{ий} _ (ParadigmDefects) %+Simadj .#.;
+regex [..] -> %+Pron1 || Г[н|л]{ий} _ Adj .#.;
+regex [..] -> %+Pron1 || {ий} _ Adj .#.;
+# III. Прилагательные на ийся
+regex [..] -> %+Refl || {ийся} _ Adj .#.;
+# IV. Прилагательные на ов, ёв, ев, ин, ын
+regex [..] -> %+Poss || о Irr в|{ёв}|{ев}|{и́н}|{ы́н} _ Adj .#.;
+regex [..] -> %+Poss | %+Pron1 || {ин}|{ын} _ Adj .#.;
+# V. Прочие прилагательные
+regex [..] -> %+Adj || Letter _ (ParadigmDefects) %+Extadj .#.;
+regex [..] -> %+Nul ||Letter _ (ParadigmDefects) %+Simadj .#.;
+turn stack
+compose net
+define AdjDeclType;
+# Существительные
+# I. Существительные на ый, ий, ой
+regex [..] -> %+Subst1 || [С - [К|Ш|н]] {ий} _ .#.;
+regex [..] -> %+Subst1 || Г Irr {ний} _ .#.;
+regex [..] -> %+Subst1 || [б|сл|гн|п|р|ст] о Irr й _ .#.;
+regex [..] -> %+Adj || [ы|и|о] Irr й _ .#.;
+# II. Прочие существительные на согласную
+regex [..] -> %+Subst1 || С _ .#.;
+# III. Существительные на ь
+regex [..] -> %+Subst || ь _ .#.;
+# IV. Существительные на ая, яя, ое, ее, ые, ие с безударной конечной гласной
+regex [..] -> %+Adj || [Г|К|щ|С[ш|н]] и Irr е _ .#.;
+regex [..] -> %+Subst1 || и Irr е _ .#.;
+regex [..] -> %+Adj || [а|я] Irr я | [о|е|ы|и] Irr е _ .#.;
+# V. Существительные на ийся, аяся, ееся, иеся
+regex [..] -> %+Refl || [{ий}|{ая}|{ее}|{ие}]{ся} _ .#.;
+# VI. Прочие существительные на гласную
+# А. Существительные на а, я, ё, ы
+regex [..] -> %+Subst2 || {мя} _ .#.;
+regex [..] -> %+Nul || Г а Irr _ .#.;
+regex [..] -> %+Subst1 || [а|я|ё|ы] Irr _ .#.;
+# Б. Существительные на у, ю, э
+regex [..] -> %+Nul || [у|ю|э] Irr _ .#.;
+# В. Существительные на е
+regex [..] -> %+Subst1 || [ь|ц|щ] е _ .#.;
+regex [..] -> %+Nul || е Irr _ .#.;
+# Г. Существительные на о
+regex [..] -> %+Subst1 || {цо} Acc _ .#.;
+regex [..] -> %+Subst1 || [т|Г Irr]{во} Irr _ .#.;
+regex [..] -> %+Nul || [л|о Irr]{ло} Irr _ .#.;
+regex [..] -> %+Subst1 || {ло} Irr _ .#.;
+regex [..] -> %+Nul || [{мм}|{нн}] о Irr _ .#.;
+regex [..] -> %+Subst1 || [С|ь][м|н] о Irr _ .#.;
+regex [..] -> %+Nul || {кко} Irr _ .#.;
+regex [..] -> %+Subst1 || [к|х] о _ .#.;
+regex [..] -> %+Subst1 || [С|ь] {ко} Acc _ .#.;
+regex [..] -> %+Nul || о Irr _ .#.;
+# Д. Существительные на и
+regex [..] -> %+Subst1 || [К|Ш] и Irr _ .#.;
+regex [..] -> %+Nul || {лли} | {нни} _ .#.;
+regex [..] -> %+Subst1 || [С|ь] [н|л] и _ .#.;
+regex [..] -> %+Subst1 || Г Irr и _ .#.;
+regex [..] -> %+Nul || и Irr _ .#.;
+turn stack
+compose net
+define SubstDeclTypeRules;
+define SubstDeclType [SubstDeclTypeRules .o. Letter+ DeclType] (ParadigmDefects) %+Subst (Animacy) (Gender) .P. ?*;
+define DeclTypeRules NumlDeclType .o. AdjDeclType .o. SubstDeclType;
+define GetDeclType GetParadigmDefects .o. DeclTypeExceptions .P. DeclTypeRules;

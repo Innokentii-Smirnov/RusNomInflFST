@@ -1,0 +1,48 @@
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures/Star/GetStar.foma
+Feature = [%+UnstableO|%+Star];
+
+!!!Блок I. Замена членов акцентно-позиционных чередований!!!
+b1r1 = ё -> ё̀ || _ Unacc;
+b1r2 = е -> ё || _ \е* "|" ?+ Acc ?* %+UnstableO;
+b1 = b1r1 .o. b1r2;
+
+!!!Блок II. Замена членов собственно-позиционных чередований!!!
+s1 = е|и -> "*" || _ Irr "|" ?* %+Star;
+s2 = [..] -> "*" || ь|С _ С "|" ?* %+Star;
+s3 = [..] -> ' || П|Т _ "*" [н|л|р|ц];
+s4 = о -> "*" || _ Irr С "|" ?* %+Star;
+s5 = Г -> "*" || Ш _ Irr С "|" ?* %+Star;
+s6 = Г -> ' "*" || _ Irr С "|" ?* %+Star;
+StarInsertion = s1 .o. s2 .o. s3 .o. s4 .o. s5 .o. s6;
+b2r2 = ь -> ' "*" || _ Sep;
+b2r3 = ' -> 0 || _ "*" Sep;
+b2 = StarInsertion .o. b2r2 .o. b2r3;
+
+!!!Блок III. Замена я, ю, ё, ё̀!!!
+b3 = я -> ' а, ю -> ' у, ё -> ' о, ё̀ -> ' о̀;
+
+!!!Блок IV. Замена и!!!
+b4r1 = и -> ы || к "|" _;
+b4r2 = и -> е || и "|" _ Unacc ?* "+Sg" ["+Prep"|"+Dat"];
+b4r3 = и -> ' ы || "|" _;
+b4r4 = [..] -> ' || Г|ь _ и;
+b4 = b4r1 .o. b4r2 .o. b4r3 .o. b4r4;
+
+!!!Блок V. Замена е!!!
+b4r2 = е -> ' о || "|" _ Unacc;
+
+!!!Блок VII. Замена й и ь!!!
+j1 = [..] -> j || й _ Sep;
+j2 = й -> j || _ \ [Г|j] | .#.;
+j3 = ' -> j || .#. _ , \С Sep _ , \[С|Sep] _ ;
+j4 = ь -> ' || _ \ о | .#.;
+j5 = Sep j -> j Sep;
+j6 = ' -> 0 || [Ш|ц|j] Sep _ ;
+j7 = Sep ' -> ' Sep;
+b7 = j1 .o. j2 .o. j3 .o. j4 .o. j5 .o. j6 .o. j7;
+
+!!!Последний блок!!!
+Accent = Acc -> "" || ё _ ;
+Cleanup = Feature -> "";
+OrthToConv = ReplaceAccented .o. GetStar .o. b1 .o. b2 .o. b3 .o. b4 .o. b7 .o. Accent .o. Cleanup;

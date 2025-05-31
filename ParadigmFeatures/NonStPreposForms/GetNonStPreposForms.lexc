@@ -1,0 +1,17 @@
+Multichar_Symbols +True
+
+LEXICON Root
+он		True;
+она́		True;
+оно́		True;
+oни		True;
+никто́		True;
+ничто́		True;
+некого		True;
+нечего		True;
+никако́й		True;
+никото́рый		True;
+ниче́й		True;
+
+LEXICON True
++True	#;

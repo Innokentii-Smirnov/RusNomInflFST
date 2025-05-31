@@ -1,0 +1,64 @@
+load stack ../../ParadigmFeatures/MorphNumber/GetMorphNumber.bin
+invert net
+define GetMorphNumber;
+read lexc ../../ParadigmFeatures/MorphGender/GetMorphGender.lexc
+define MorphGenderLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Preceding DeclType;
+define Following (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Insertion Letter+ Preceding 0:Gender;
+define MorphGenderExceptions [Insertion .o. [MorphGenderLexicon / Preceding]] Following;
+regex Letter+ %+Nul 0:%+Neut (NumberHom) %+Subst (Animacy) (Gender) .P. ?*;
+define IndeclMorphGender;
+regex L+ е 0:%+Masc;
+regex	L+ [{ья} Irr | {иеся}] 0:%+Masc .P.
+		L+ [а|я] Irr 0:%+Neut;
+regex [
+		L+ [ы|и] Acc 0:%+Masc |
+		L+ [{сы}|{озы}|{уары}|[С|ь][{ты}|{цы}]]
+	]
+	0:%+Masc .P.
+	L+ ы 0:%+Fem;
+regex	L+ {ики} 0:%+Masc .P.
+		L+ [{ки}|{ги}|{ищи}|{ии}] 0:%+Fem .P.
+		L+ и 0:%+Masc;
+turn stack
+union net
+define PluraliaTantumMorphGenderRules;
+define PluraliaTantumMorphGender [
+		[Insertion .o. PluraliaTantumMorphGenderRules.l / Preceding] [Following & 
+		[$%+NumberHom1 | $%+ParDef6]]
+	] .P. ?*;
+regex Letter+ {ийся} 0:%+Masc;
+regex	Letter+ [[о|е] Irr |ё|{мя}|{ееся}] 0:%+Neut .P.
+		Letter+ [а|я] Irr 0:%+Fem;
+regex Letter+ С 0:%+Masc;
+regex Letter+ Ш ь 0:%+Fem;
+regex Letter+ П ь 0:%+Fem;
+regex Letter+ [т|д|с|з] ь 0:%+Fem;
+regex [
+		Letter+ е Irr |
+		Letter+ л и Irr
+	]
+	{нь} 0:%+Masc .P.
+	Letter+ {нь} 0:%+Fem;
+regex [
+		С* [а|е] |
+		Syll е Acc |
+		Letter+ [с|[с|ф] о Irr]
+	]
+	{ль} 0:%+Fem .P.
+	Letter+ {ль} 0:%+Masc;
+regex [
+		Letter+ у Irr |
+		С* Г
+	]
+	{рь} 0:%+Fem .P.
+	Letter+ {рь} 0:%+Masc;
+turn stack
+union net
+define MainMorphGenderRules;
+define MainMorphGender [Insertion .o. MainMorphGenderRules.l / Preceding] [Following & $%+Subst] .P. ?*;
+define MorphGenderRules IndeclMorphGender .o. PluraliaTantumMorphGender .o. MainMorphGender;
+define GetMorphGender GetMorphNumber .o. MorphGenderExceptions .P. MorphGenderRules;

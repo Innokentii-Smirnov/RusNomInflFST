@@ -1,0 +1,6 @@
+source ../../ParadigmFeatures/NonStCountForm/GetNonStCountForm.foma
+read lexc ../../ParadigmFeatures/NonStPreposForms/GetNonStPreposForms.lexc
+define Lexicon;
+define Rules ?*;
+define GetNonStPreposForms GetNonStCountForm .o. [Lexicon Feature* .P. Rules];
+define Feature NonStPreposForms | Feature;

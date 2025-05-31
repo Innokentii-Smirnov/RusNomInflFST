@@ -1,0 +1,6 @@
+source ../../ParadigmFeatures/AP/GetAP.foma
+read lexc ../../ParadigmFeatures/NonStAcc/GetNonStAcc.lexc
+define Lexicon;
+define Rules ?*;
+define GetNonStAcc GetAP .o. [Lexicon Feature* .P. Rules];
+define Feature NonStAcc | Feature;

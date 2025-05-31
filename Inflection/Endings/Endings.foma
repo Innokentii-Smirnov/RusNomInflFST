@@ -1,0 +1,11 @@
+load stack ../../Inflection/ParadigmSchemata/ParadigmSchemata.bin
+invert net
+define ParadigmSchemata;
+read lexc Endings.lexc
+define Lexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+source ../../Properties.foma
+define Remove Letter+ DeclType (Gender) (Number) [Feature - [Gender|Number]]:0+ [Case|Number|Gender]+;
+define Startup [GetMorphGender .o. Remove] \Letter*;
+define Endings ParadigmSchemata .o. Remove .o. Letter+ Lexicon;

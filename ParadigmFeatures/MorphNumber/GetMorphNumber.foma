@@ -1,0 +1,19 @@
+load stack ../../ParadigmFeatures/NumberHom/GetNumberHom.bin
+invert net
+define GetNumberHom;
+read lexc ../../ParadigmFeatures/MorphNumber/GetMorphNumber.lexc
+define MorphNumberLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Preceding DeclType;
+define Following (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Insertion Letter+ Preceding 0:Number;
+define MorphNumberExceptions [Insertion .o. MorphNumberLexicon.l / Preceding] Following;
+regex L+ [{дцать} | {деся́т}] %+Sing;
+regex L+ [{со́т} | {еро}] %+Plur; 
+turn stack
+union net
+define NumlMorphNumberRules;
+define NumlMorphNumber [Insertion .o. NumlMorphNumberRules.l / Preceding] Following .P. ?*;
+define MorphNumberRules NumlMorphNumber;
+define GetMorphNumber GetNumberHom .o. MorphNumberExceptions .P. MorphNumberRules;

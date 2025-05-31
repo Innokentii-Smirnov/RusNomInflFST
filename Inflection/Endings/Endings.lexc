@@ -1,0 +1,113 @@
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Prep +Dat +Ins +Stem +Ending
+Definitions
+	Gender = %+Masc|%+Fem|%+Neut;
+	Subst = %+Subst1 | %+Subst2;
+	B = ж|ш|ч|';
+	A = \B;
+
+LEXICON Root
++Subst1:0 		Subst1;
++Subst2:0 		Subst2;
++Adj:0 			Adj;
++Pron1:0 		Pron1;
++Pron2:0 		Pron2;
++Poss:0 		Poss;
+Allomorphic;
+
+LEXICON Allomorphic
+<A [Subst %+Masc %+Plur %+Gen]:{ов}>						#;
+<B [Subst %+Masc %+Plur %+Gen]:{еj}>						#;
+<A [Subst [%+Fem | %+Neut] %+Plur %+Gen]:0>					#;
+<B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:0 %+Stem>		#;
+<B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:еj %+Ending>	#;
+<B [%+Subst2 [%+Fem | %+Neut] %+Plur %+Gen]:{еj}>			#;
+
+LEXICON Subst1
+Subst1DirectSing;
++Masc:0 				MascNeutSubst1;
++Neut:0 				MascNeutSubst1;
++Fem:0 					FemSubst1;
+SubstNomPlur;
+<Gender %+Plur .x. а>	OblPlur;
+
+LEXICON Subst2
++Masc+Sing+Nom:0		#;
++Neut+Sing+Nom:а		#;
++Fem+Sing+Nom:0			#;
+SubstNomPlur;
+<Gender %+Plur .x. а>	OblPlur;
+
+LEXICON SubstNomPlur
++Masc+Plur+Nom:ы		#;
++Neut+Plur+Nom:а		#;
++Fem+Plur+Nom:ы			#;
+
+LEXICON Adj
++Masc+Sing+Nom:ый					Stem;
++Masc+Sing+Nom:ой					Ending;
++Neut+Sing+Nom:оjе					#;
++Fem+Sing+Nom:аjа					#;
+<Gender %+Plur %+Nom .x. {ыjе}>		#;
+AdjObl;
+0:ы 					Them;
+
+LEXICON Pron1
+Subst1DirectSing;
+AdjObl;
+0:ы 					Them;
+
+LEXICON Pron2
+Subst1DirectSing;
+AdjObl;
+0:е 					Them;
+
+LEXICON Poss
+0:ы 					Them;
+
+LEXICON Subst1DirectSing
++Masc+Sing+Nom:0		#;
++Neut+Sing+Nom:о		#;
++Fem+Sing+Nom:а			#;
++Fem+Sing+Acc:у			#;
+
+LEXICON MascNeutSubst1
++Sing+Gen:а			#;
++Sing+Dat:е			#;
++Sing+Prep:у		#;
++Sing+Ins:ом		#;
+
+LEXICON FemSubst1
++Sing+Gen:ы						#;
+<%+Sing[%+Prep|%+Dat] .x. е>	#;
++Sing+Prep:е					#;
++Sing+Ins:оj					#;
++Sing+Ins:оj					#;
+
+LEXICON AdjObl
+MascNeutAdj;
+FemAdj;
+
+LEXICON MascNeutAdj
++Sing+Gen:ово		#;
++Sing+Dat:ом		#;
++Sing+Prep:ому		#;
+
+LEXICON FemAdj
+<%+Sing [%+Gen|%+Dat|%+Prep|%+Ins] .x. ы>	#;
++Sing+Ins:оjу								#;
+
+LEXICON Them
+<[%+Masc|%+Neut] %+Sing %+Ins .x. м>	#;
+<Gender %+Nom %+Plur .x. 0>				#;
+<Gender %+Plur .x. 0>					OblPlur;
+
+LEXICON OblPlur
++Prep:х				#;
++Dat:м				#;
++Ins:ми				#;
+
+LEXICON Stem
++Stem		#;
+
+LEXICON Ending
++Ending		#;

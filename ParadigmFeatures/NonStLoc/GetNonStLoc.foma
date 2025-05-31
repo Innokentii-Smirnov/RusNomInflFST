@@ -1,0 +1,6 @@
+source ../../ParadigmFeatures/NonStPart/GetNonStPart.foma
+read lexc ../../ParadigmFeatures/NonStLoc/GetNonStLoc.lexc
+define Lexicon;
+define Rules ?*;
+define GetNonStLoc GetNonStPart .o. [Lexicon Feature* .P. Rules];
+define Feature NonStLoc | Feature;

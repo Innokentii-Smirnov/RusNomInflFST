@@ -1,0 +1,1 @@
+define Case %+Nom|%+Acc|%+Gen|%+Prep|%+Dat|%+Ins;

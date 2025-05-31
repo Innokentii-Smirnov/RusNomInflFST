@@ -1,0 +1,11 @@
+Multichar_Symbols +True
+
+LEXICON Root
+ряд		True;
+след		True;
+час		True;
+шаг		True;
+шар		True;
+
+LEXICON True
++True	#;

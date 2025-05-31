@@ -1,0 +1,22 @@
+load stack ../../ParadigmFeatures/DeclType/GetDeclType.bin
+invert net
+define GetDeclType;
+read lexc ../../ParadigmFeatures/NumberHom/GetNumberHom.lexc
+define NumberHomLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Preceding DeclType;
+define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Insertion Letter+ Preceding 0:NumberHom;
+define NumberHomExceptions [Insertion .o. NumberHomLexicon / Preceding] Following;
+define NumberHomRules [
+		Letter+ DeclType 0:%+NumberHom0 %+ParDef6 .P. 
+		Letter+
+		[
+			[ы|и] Irr е %+Adj |
+			{иеся} %+Refl |
+			[ы|и] Irr [DeclType - %+Nul]
+		]
+		0:%+NumberHom1 (ParadigmDefects)
+	] GrammRazr (Animacy) (Gender) .P. ?*;
+define GetNumberHom GetDeclType .o. NumberHomExceptions .P. NumberHomRules;

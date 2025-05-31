@@ -1,0 +1,17 @@
+define П [п|б|ф|в|м];
+define Т [т|д|ц|с|з|н|л|р];
+define Ш [ч|ш|щ|ж];
+define К [к|г|х];
+define С [П|Т|Ш|й|j|К];
+define Г [и|ы|е|э|а|я|о|ё|у|ю|"о₂"|о̀|ё̀];
+define Sep "|";
+define Acc "́";
+define Unacc [\Acc|.#.];
+define Irr (Acc);
+define Letter [Г Irr|С|ь|ъ];
+define L Letter;
+define Letters Letter+;
+define Consonants С+ (ь);
+define Syll (Consonants) Г Irr (Consonants);
+define Wordform Letter+ Sep Letter*;
+define AccentedVowel [Г Acc | ё];

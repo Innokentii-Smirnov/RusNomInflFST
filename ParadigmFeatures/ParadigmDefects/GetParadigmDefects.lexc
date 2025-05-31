@@ -1,0 +1,149 @@
+Multichar_Symbols +ParDef1 +ParDef3 +ParDef4 +ParDef5 +ParDef6 +ParDef7 +ParDef9 +ParDef1%0 +ParDef11 +ParDef12 +ParDef13 +ParDef14 +ParDef15 +ParDef17
+
+LEXICON Root
+крепостца́		#;
+себя́		ParDef1;
+некого		ParDef1;
+друг_друга		ParDef1;
+нечего		ParDef1;
+не́кто		ParDef3;
+не́что		ParDef4;
+пол		ParDef4;
+ма́ло		ParDef4;
+нема́ло		ParDef4;
+дровец		ParDef5;
+щец		ParDef5;
+внуча́та		ParDef6;
+девча́та		ParDef6;
+ребя́та		ParDef6;
+молодожёны		ParDef6;
+роди́тели		ParDef6;
+детки		ParDef6;
+дети́шки		ParDef6;
+де́тушки		ParDef6;
+зверятки		ParDef6;
+люди́шки		ParDef6;
+ребя́тки		ParDef6;
+ребяти́шки		ParDef6;
+ребя́тушки		ParDef6;
+солдатушки		ParDef6;
+телятки		ParDef6;
+дре́вние		ParDef6;
+дома́шние		ParDef6;
+молоды́е		ParDef6;
+родны́е		ParDef6;
+новобра́чные		ParDef6;
+брачующиеся		ParDef6;
+сот		ParDef7;
+мга		ParDef9;
+мгла		ParDef9;
+мзда		ParDef9;
+тьма		ParDef9;
+полутьма́		ParDef9;
+хна		ParDef9;
+скло		ParDef9;
+казна́		ParDef9;
+камка́		ParDef9;
+пенька́		ParDef9;
+тоска́		ParDef9;
+треска́		ParDef10;
+огнь		ParDef11;
+пла́мень		ParDef11;
+порося́		ParDef11;
+ничто́		ParDef11;
+по́лымя		ParDef12;
+сре́дний		ParDef13;
+по́здний		ParDef13;
+пре́жний		ParDef13;
+поро́жний		ParDef13;
+пустопоро́жний		ParDef13;
+кра́йний		ParDef13;
+бескра́йний		ParDef13;
+ра́нний		ParDef13;
+вну́тренний		ParDef13;
+сторо́нний		ParDef13;
+посторо́нний		ParDef13;
+совершенноле́тний		ParDef13;
+дома́шний		ParDef13;
+вне́шний		ParDef13;
+ли́шний		ParDef13;
+да́льний		ParDef13;
+суя́гный		ParDef13;
+гроте́скный		ParDef13;
+родно́й		ParDef13;
+блажно́й		ParDef13;
+сквозно́й		ParDef13;
+срамно́й		ParDef13;
+земно́й		ParDef13;
+цветно́й		ParDef13;
+ручно́й		ParDef13;
+шально́й		ParDef13;
+голубо́й		ParDef13;
+ходово́й		ParDef13;
+делово́й		ParDef13;
+озорно́й		ParDef13;
+золото́й		ParDef13;
+гора́зд		ParDef14;
+до́лжен		ParDef14;
+люб		ParDef14;
+рад		ParDef14;
+великоват		ParDef14;
+малова́т		ParDef14;
+како́в		ParDef14;
+тако́в		ParDef14;
+одинёхонек		ParDef14;
+одинёшенек		ParDef14;
+радёхонек		ParDef14;
+радёшенек		ParDef14;
+дво́е		ParDef15;
+тро́е		ParDef15;
+че́тверо		ParDef15;
+пя́теро		ParDef15;
+ше́стеро		ParDef15;
+се́меро		ParDef15;
+во́сьмеро		ParDef15;
+де́вятеро		ParDef15;
+де́сятеро		ParDef15;
+кой		ParDef17;
+
+LEXICON ParDef1
++ParDef1	#;
+
+LEXICON ParDef3
++ParDef3	#;
+
+LEXICON ParDef4
++ParDef4	#;
+
+LEXICON ParDef5
++ParDef5	#;
+
+LEXICON ParDef6
++ParDef6	#;
+
+LEXICON ParDef7
++ParDef7	#;
+
+LEXICON ParDef9
++ParDef9	#;
+
+LEXICON ParDef10
++ParDef1%0	#;
+
+LEXICON ParDef11
++ParDef11	#;
+
+LEXICON ParDef12
++ParDef12	#;
+
+LEXICON ParDef13
++ParDef13	#;
+
+LEXICON ParDef14
++ParDef14	#;
+
+LEXICON ParDef15
++ParDef15	#;
+
+LEXICON ParDef17
++ParDef17	#;

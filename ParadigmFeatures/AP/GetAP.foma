@@ -1,0 +1,72 @@
+load stack ../../ParadigmFeatures/Star/GetStar.bin
+invert net
+define GetStar;
+read lexc ../../ParadigmFeatures/AP/GetAP.lexc
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Features (Star) NonStandEnding* Alternation* DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define APExceptions Wordform 0:AP Feature+ .o. StarLexicon / Sep Feature+;
+define StemStressed Letter* AccentedVowel Letter* Sep Letter*;
+define EndingStressed Letter* Sep Letter* AccentedVowel Letter*;
+define Monosyll Syll / Sep;
+define Disyll Syll^2 / Sep;
+define Polysyll Syll^>1 / Sep;
+#
+# Группа первая. Существительные мужского морфологического рода (кроме pluralia tantum)
+regex Letters [щ | Г Irr ч | [у|ю] Irr н]		Sep;
+regex Letters {ец} Sep & Monosyll;
+regex Syll+	[{е́ц}|{ёж}|{ы́ш}]	Sep;
+regex Syll	[{а́ш}|{я́ш}]			Sep;
+regex Letters [{р|ь}|{у́л|ь}|{ы́л|ь}] & Polysyll;
+regex Syll+	[{я́к}|{ю́к}|{и́к}|Ш {а́к}|Ш {у́к}]		Sep;
+regex Syll	[{а́к}|{у́к}|{ы́к}]	Sep;
+regex Syll+ {ю́г}				Sep;
+union net
+regex 0:%+b;
+turn stack
+concatenate net
+regex Wordform 0:%+b %+Star;
+union net
+define g1b;
+define g1a Wordform 0:%+a;
+define FirstGroup [g1b .P. g1a].l %+Subst1 %+Masc;
+#
+# Группа вторая. Существительные среднего морфологического рода (кроме pluralia tantum)
+regex StemStressed %+a;
+regex EndingStressed %+b;
+union net
+regex (Star) %+Subst1 %+Neut;
+turn stack
+concatenate net
+define SecondGroup;
+#
+# Группа третья. Существительные женского морфологического рода I субстантивного склонения (кроме pluralia tantum)
+regex StemStressed %+a;
+regex EndingStressed %+b;
+union net
+regex (Star) %+Subst1 %+Fem;
+turn stack
+concatenate net
+define ThirdGroup;
+#
+# Группа четвертая. Существительные женского морфологического рода II субстантивного склонения (кроме pluralia tantum)
+define FourthGroup Wordform %+a %+Subst2 %+Fem;
+#
+# Группа пятая. Pluralia tantum
+regex StemStressed %+a;
+regex EndingStressed %+b;
+union net
+regex (Star) [%+Subst1|%+Subst2] Gender %+NumberHom1;
+turn stack
+concatenate net
+define FifthGroup;
+#
+# Объединение
+define Substantival FirstGroup | SecondGroup | ThirdGroup | FourthGroup | FifthGroup;
+define APDistribution Substantival;
+#
+define Intervening NonStandEnding* Alternation*;
+define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define ExtendedAPDistribution [APDistribution / Intervening] Following .o. Wordform AP Features;
+define APRules Wordform 0:AP Features .o. ExtendedAPDistribution;
+define GetAP GetStar .o. APExceptions .P. APRules .P. Wordform 0:%+Error Feature+;

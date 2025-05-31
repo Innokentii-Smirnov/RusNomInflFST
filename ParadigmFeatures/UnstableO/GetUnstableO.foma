@@ -1,0 +1,6 @@
+source ../../ParadigmFeatures/NonStPreposForms/GetNonStPreposForms.foma
+read lexc ../../ParadigmFeatures/UnstableO/GetUnstableO.lexc
+define Lexicon;
+define Rules ?*;
+define GetUnstableO GetNonStPreposForms .o. [Lexicon Feature* .P. Rules];
+define Feature UnstableO | Feature;

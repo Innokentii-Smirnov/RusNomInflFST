@@ -1,0 +1,22 @@
+load stack ../../ParadigmFeatures/PreciseDeclType/GetPreciseDeclType.bin
+invert net
+define GetPreciseDeclType;
+read lexc ../../ParadigmFeatures/Alternations/GetAlternations.lexc
+define AlternationsLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Features DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define AlternationsExceptions [Letter+ 0:Alternation+ .o. AlternationsLexicon] Features .P. ?*;
+regex [..] -> %+Alt6 || [а|я] Irr н и Irr н _ $%+Masc & $%+Anim;
+regex [..] -> %+Alt14 || [ё|Ш о Irr] {нок} _ $%+Masc & $%+Anim;
+regex [..] -> %+Alt27 || [%+Alt20|%+Alt21] _ ;
+define Context [Letter+ [ё|а|я|е] {нный}]
+ - [Letter* [П| [Letter - ж] д|т|з|с] {ённый}]
+ - [Letter* [б|п|ф|т|з|с] {енный}]
+ - [Letter* Г Irr [в|м|д] {енный}];
+regex [..] -> %+Alt33 || .#. Context _ Features;
+regex [..] -> %+Alt34 || [С|ь]{ний} _ Alternation* Feature* %+Extadj;
+turn stack
+compose net
+define AlternationsRules;
+define GetAlternations GetPreciseDeclType .o. AlternationsExceptions .o. AlternationsRules;

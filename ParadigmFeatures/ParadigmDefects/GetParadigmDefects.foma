@@ -1,0 +1,16 @@
+load stack ../../ParadigmFeatures/GrammRazr/GetGrammRazr.bin
+invert net
+define GetGrammRazr;
+read lexc ../../ParadigmFeatures/ParadigmDefects/GetParadigmDefects.lexc
+define ParadigmDefectsLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define ParadigmDefectsExceptions Letter+ (0:ParadigmDefects) .o. ParadigmDefectsLexicon;
+regex [..] -> %+ParDef9 || [С|ь] {ца́} _ .#.;
+regex [..] -> %+ParDef14 || [е|о] Irr н е Irr к _ .#.;
+# regex [..] -> %+ParDef0 || Letter _ .#.;
+turn stack
+compose net
+define ParadigmDefectsRules;
+define Features GrammRazr (Animacy) (Gender);
+define GetParadigmDefects GetGrammRazr .o. [ParadigmDefectsExceptions .P. ParadigmDefectsRules] Features;

@@ -1,0 +1,369 @@
+Multichar_Symbols +Alt1 +Alt12 +Alt2 +Alt3 +Alt4 +Alt13 +Alt5 +Alt28 +Alt6 +Alt1%0 +Alt7 +Alt8 +Alt9 +Alt11 +Alt14 +Alt15 +Alt16 +Alt17 +Alt18 +Alt19 +Alt2%0 +Alt21 +Alt22 +Alt23 +Alt25 +Alt26 +Alt29 +Alt3%0 +Alt31 +Alt32 +Alt33 +Alt35 +Alt36 +Alt37 +Alt38 +Alt4%0 +Alt41 +Alt42 +Alt43 +Alt58 +Alt44 +Alt54 +Alt45 +Alt55 +Alt57 +Alt46 +Alt56 +Alt47 +Alt48 +Alt59 +Alt49 +Alt5%0 +Alt51 +Alt52 +Alt53 +Alt6%0 +Alt61
+
+LEXICON Root
+о́ко		Alt1;
+клок		Alt1_Alt12;
+крюк		Alt1_Alt12;
+сук		Alt1_Alt12;
+друг		Alt2_Alt12;
+у́хо		Alt3;
+чёрт		Alt4_Alt13;
+дитя́		Alt5_Alt28;
+ба́рин		Alt6;
+болга́рин		Alt6;
+боя́рин		Alt6;
+господи́н		Alt6;
+тата́рин		Alt6;
+хаза́рин		Alt6;
+хозя́ин		Alt6_Alt10;
+шу́рин		Alt6_Alt12;
+су́дно		Alt7;
+цвето́к		Alt8;
+ку́рица		Alt9;
+кум		Alt10_Alt12;
+сын		Alt10_Alt12;
+дре́во		Alt11;
+не́бо		Alt11;
+чу́до		Alt11;
+брат		Alt12;
+брус		Alt12;
+грозд		Alt12;
+де́верь		Alt12;
+зуб		Alt12;
+зять		Alt12;
+ка́мень		Alt12;
+клин		Alt12;
+князь		Alt12;
+кол		Alt12;
+ко́лос		Alt12;
+ком		Alt12;
+копы́л		Alt12;
+лист		Alt12;
+ло́скут		Alt12;
+лоску́т		Alt12;
+луб		Alt12;
+муж		Alt12;
+о́бод		Alt12;
+по́вод		Alt12;
+по́лоз		Alt12;
+прут		Alt12;
+собра́т		Alt12;
+струп		Alt12;
+стул		Alt12;
+у́голь		Alt12;
+де́рево		Alt12;
+дно		Alt12;
+звено́		Alt12;
+колёно		Alt12;
+крыло́		Alt12;
+перо́		Alt12;
+поле́но		Alt12;
+помело́		Alt12;
+сило́		Alt12;
+ши́ло		Alt12;
+гроздь		Alt12;
+дя́дя		Alt12;
+коле́но		Alt13;
+сосе́д		Alt13;
+слюна́		Alt13;
+маслёнок		Alt14;
+опёнок		Alt14;
+бесёнок		Alt15;
+чертёнок		Alt15;
+щено́к		Alt15;
+ребёнок		Alt16;
+челове́к		Alt17;
+госпо́дь		Alt18;
+христо́с		Alt19;
+бере́мя		Alt20;
+бре́мя		Alt20;
+вре́мя		Alt20;
+вы́мя		Alt20;
+зна́мя		Alt20;
+и́мя		Alt20;
+пла́мя		Alt20;
+пле́мя		Alt20;
+полуи́мя		Alt20;
+тёмя		Alt20;
+се́мя		Alt21;
+стре́мя		Alt21;
+дочь		Alt22;
+мать		Alt22;
+по́лдень		Alt23;
+по́лночь		Alt23;
+год		Alt25;
+це́рковь		Alt26;
+расхля́банный		Alt29;
+опосре́дствованный		Alt29;
+пре́данный		Alt29;
+противопока́занный		Alt29;
+обя́занный		Alt29;
+свя́занный		Alt29;
+общепризнанный		Alt29;
+поме́шанный		Alt29;
+предубеждённый		Alt29;
+врождённый		Alt29;
+измождённый		Alt29;
+обнажённый		Alt29;
+поло́женный		Alt29;
+располо́женный		Alt29;
+предрасполо́женный		Alt29;
+благорасположенный		Alt29;
+изнеможённый		Alt29;
+подвёрженный		Alt29;
+привёрженный		Alt29;
+сопряжённый		Alt29;
+раздро́бленный		Alt29;
+влюблённый		Alt29;
+предустано́вленный		Alt29;
+осведомлённый		Alt29;
+зачумлённый		Alt29;
+вы́мышленный		Alt29;
+увёренный		Alt29;
+намёренный		Alt29;
+угнетённый		Alt29;
+обречённый		Alt29;
+расфранчённый		Alt29;
+разви́нченный		Alt29;
+малоизученный		Alt29;
+лишённый		Alt29;
+искушённый		Alt29;
+разобщённый		Alt29;
+польщённый		Alt29;
+смяте́нный		Alt29;
+солёный		Alt30;
+ма́ленький		Alt31;
+большо́й		Alt32;
+согбе́нный		Alt33;
+забвенный		Alt33;
+незабве́нный		Alt33;
+самозабве́нный		Alt33;
+благослове́нный		Alt33;
+дерзнове́нный		Alt33;
+прикоснове́нный		Alt33;
+вдохнове́нный		Alt33;
+сокрове́нный		Alt33;
+блаже́нный		Alt33;
+растле́нный		Alt33;
+неоцене́нный		Alt33;
+презре́нный		Alt33;
+смире́нный		Alt33;
+неизрече́нный		Alt33;
+свяще́нный		Alt33;
+вы́спренний		Alt33;
+и́скренний		Alt35;
+тот		Alt36;
+э́тот		Alt36_Alt37;
+оди́н		Alt37;
+сам		Alt37;
+сей		Alt38;
+не́кий		Alt40;
+э́кий		Alt40;
+кто		Alt41;
+что		Alt41;
+никто́		Alt41;
+ничто́		Alt41;
+во́семь		Alt42;
+во́семьдесят		Alt42_Alt43_Alt58;
+восемьсо́т		Alt42_Alt58;
+пятьдеся́т		Alt43_Alt58;
+шестьдеся́т		Alt43_Alt58;
+се́мьдесят		Alt43_Alt58;
+о́ба		Alt44_Alt54;
+я		Alt45_Alt55_Alt57;
+ты		Alt46_Alt56_Alt57;
+мы		Alt47;
+две́сти		Alt48_Alt59;
+они́		Alt48_Alt49;
+он		Alt49;
+она́		Alt49;
+оно́		Alt49;
+полтора́		Alt50;
+полтора́ста		Alt50;
+три		Alt51_Alt52;
+четы́ре		Alt51_Alt53;
+два		Alt52;
+себя́		Alt56_Alt57;
+пятьсо́т		Alt58;
+шестьсо́т		Alt58;
+семьсо́т		Alt58;
+девятьсо́т		Alt58;
+три́ста		Alt60;
+четы́реста		Alt61;
+
+LEXICON Alt1
++Alt1	#;
+
+LEXICON Alt1_Alt12
++Alt1+Alt12	#;
+
+LEXICON Alt2_Alt12
++Alt2+Alt12	#;
+
+LEXICON Alt3
++Alt3	#;
+
+LEXICON Alt4_Alt13
++Alt4+Alt13	#;
+
+LEXICON Alt5_Alt28
++Alt5+Alt28	#;
+
+LEXICON Alt6
++Alt6	#;
+
+LEXICON Alt6_Alt10
++Alt6+Alt1%0	#;
+
+LEXICON Alt6_Alt12
++Alt6+Alt12	#;
+
+LEXICON Alt7
++Alt7	#;
+
+LEXICON Alt8
++Alt8	#;
+
+LEXICON Alt9
++Alt9	#;
+
+LEXICON Alt10_Alt12
++Alt1%0+Alt12	#;
+
+LEXICON Alt11
++Alt11	#;
+
+LEXICON Alt12
++Alt12	#;
+
+LEXICON Alt13
++Alt13	#;
+
+LEXICON Alt14
++Alt14	#;
+
+LEXICON Alt15
++Alt15	#;
+
+LEXICON Alt16
++Alt16	#;
+
+LEXICON Alt17
++Alt17	#;
+
+LEXICON Alt18
++Alt18	#;
+
+LEXICON Alt19
++Alt19	#;
+
+LEXICON Alt20
++Alt2%0	#;
+
+LEXICON Alt21
++Alt21	#;
+
+LEXICON Alt22
++Alt22	#;
+
+LEXICON Alt23
++Alt23	#;
+
+LEXICON Alt25
++Alt25	#;
+
+LEXICON Alt26
++Alt26	#;
+
+LEXICON Alt29
++Alt29	#;
+
+LEXICON Alt30
++Alt3%0	#;
+
+LEXICON Alt31
++Alt31	#;
+
+LEXICON Alt32
++Alt32	#;
+
+LEXICON Alt33
++Alt33	#;
+
+LEXICON Alt35
++Alt35	#;
+
+LEXICON Alt36
++Alt36	#;
+
+LEXICON Alt36_Alt37
++Alt36+Alt37	#;
+
+LEXICON Alt37
++Alt37	#;
+
+LEXICON Alt38
++Alt38	#;
+
+LEXICON Alt40
++Alt4%0	#;
+
+LEXICON Alt41
++Alt41	#;
+
+LEXICON Alt42
++Alt42	#;
+
+LEXICON Alt42_Alt43_Alt58
++Alt42+Alt43+Alt58	#;
+
+LEXICON Alt42_Alt58
++Alt42+Alt58	#;
+
+LEXICON Alt43_Alt58
++Alt43+Alt58	#;
+
+LEXICON Alt44_Alt54
++Alt44+Alt54	#;
+
+LEXICON Alt45_Alt55_Alt57
++Alt45+Alt55+Alt57	#;
+
+LEXICON Alt46_Alt56_Alt57
++Alt46+Alt56+Alt57	#;
+
+LEXICON Alt47
++Alt47	#;
+
+LEXICON Alt48_Alt59
++Alt48+Alt59	#;
+
+LEXICON Alt48_Alt49
++Alt48+Alt49	#;
+
+LEXICON Alt49
++Alt49	#;
+
+LEXICON Alt50
++Alt5%0	#;
+
+LEXICON Alt51_Alt52
++Alt51+Alt52	#;
+
+LEXICON Alt51_Alt53
++Alt51+Alt53	#;
+
+LEXICON Alt52
++Alt52	#;
+
+LEXICON Alt56_Alt57
++Alt56+Alt57	#;
+
+LEXICON Alt58
++Alt58	#;
+
+LEXICON Alt60
++Alt6%0	#;
+
+LEXICON Alt61
++Alt61	#;
