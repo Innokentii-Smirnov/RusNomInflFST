@@ -1,6 +1,6 @@
-кто
-кот
-стол
-нож
-большой
-каждый
+кто+Gen
+кот+Sing+Nom
+стол+Plur+Dat
+нож+Sing+Ins
+большой+Masc+Sing+Acc
+каждый+Fem+Sing+Dat

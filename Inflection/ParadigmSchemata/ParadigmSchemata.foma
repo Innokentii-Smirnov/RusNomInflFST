@@ -1,6 +1,6 @@
-load stack ../../ParadigmFeatures/MorphGender/GetMorphGender.bin
+load stack ../../Morphonology/OrthToConv/OrthToConv.bin
 invert net
-define GetMorphGender;
+define OrthToConv;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
@@ -10,13 +10,11 @@ define SubstSchema Number Case;
 define SimadjSchema Gender Number Case;
 define ExtadjSchema Gender Number Case;
 define Schema NesoglbchSchema | SoglbchSchema | SubstSchema | SimadjSchema | ExtadjSchema;
-define Constraint Letter+ Feature+ [
+define Constraint Letter+ Sep Letter* Feature+ [
 	%+Nesoglbch NesoglbchSchema | 
 	%+Soglbch SoglbchSchema | 
-	%+Subst SubstSchema | 
+	%+Subst Animacy SubstSchema |
 	%+Simadj SimadjSchema | 
 	%+Extadj ExtadjSchema
-] ./. [NumberHom (Animacy)];
-define Cleanup Letter+ Feature+ NumberHom (Animacy) (Gender:0);
-define Wordforms [GetMorphGender .o. Cleanup] Schema .o. Constraint;
-define ParadigmSchemata Letter+ 0:Schema .o. Wordforms;
+];
+define ParadigmSchemata [OrthToConv Schema] .o. Constraint;

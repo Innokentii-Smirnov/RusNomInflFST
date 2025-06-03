@@ -8,7 +8,7 @@ define Sep "|";
 define Acc "́";
 define Unacc [\Acc|.#.];
 define Irr (Acc);
-define Letter [Г Irr|С|ь|ъ];
+define Letter [Г Irr|С|С "'"|ь|ъ];
 define L Letter;
 define Letters Letter+;
 define Consonants С+ (ь);
