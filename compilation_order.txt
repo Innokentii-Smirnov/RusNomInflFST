@@ -15,3 +15,4 @@ Morphonology/OrthToConv/OrthToConv
 Inflection/ParadigmSchemata/ParadigmSchemata
 Morphonology/Alternations/Alternations
 Inflection/Endings/Endings
+Morphonology/ConvToOrth/ConvToOrth
