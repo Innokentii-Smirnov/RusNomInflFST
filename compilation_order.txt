@@ -8,6 +8,7 @@ MorphGender
 PreciseDeclType
 Alternations
 NonStandEndings
-../ConvRepr/Stem/GetStem.foma
+ConvRepr/Stem/GetStem
 Star
 AP
+Morphonology/OrthToConv/OrthToConv
