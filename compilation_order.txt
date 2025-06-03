@@ -13,3 +13,4 @@ Star
 AP
 Morphonology/OrthToConv/OrthToConv
 Inflection/ParadigmSchemata/ParadigmSchemata
+Morphonology/Alternations/Alternations

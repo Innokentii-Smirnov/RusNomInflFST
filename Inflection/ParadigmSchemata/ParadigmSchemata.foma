@@ -13,7 +13,7 @@ define Schema NesoglbchSchema | SoglbchSchema | SubstSchema | SimadjSchema | Ext
 define Constraint Letter+ Sep Letter* Feature+ [
 	%+Nesoglbch NesoglbchSchema | 
 	%+Soglbch SoglbchSchema | 
-	%+Subst Animacy SubstSchema |
+	%+Subst Animacy (Gender:0) SubstSchema |
 	%+Simadj SimadjSchema | 
 	%+Extadj ExtadjSchema
 ];
