@@ -1,1 +1,1 @@
-define Case %+Nom|%+Acc|%+Gen|%+Prep|%+Dat|%+Ins;
+define Case %+Nom|%+Acc|%+Gen|%+Loc|%+Dat|%+Ins;

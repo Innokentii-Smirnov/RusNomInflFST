@@ -1,4 +1,4 @@
-Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Prep +Dat +Ins +Stem +Ending
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Stem +Ending
 Definitions
 	Gender = %+Masc|%+Fem|%+Neut;
 	Subst = %+Subst1 | %+Subst2;
@@ -73,14 +73,14 @@ LEXICON Subst1DirectSing
 
 LEXICON MascNeutSubst1
 +Sing+Gen:а			#;
-+Sing+Dat:е			#;
-+Sing+Prep:у		#;
++Sing+Dat:у			#;
++Sing+Loc:е		#;
 +Sing+Ins:ом		#;
 
 LEXICON FemSubst1
 +Sing+Gen:ы						#;
-<%+Sing[%+Prep|%+Dat] .x. е>	#;
-+Sing+Prep:е					#;
+<%+Sing[%+Loc|%+Dat] .x. е>	#;
++Sing+Loc:е					#;
 +Sing+Ins:оj					#;
 +Sing+Ins:оj					#;
 
@@ -91,10 +91,10 @@ FemAdj;
 LEXICON MascNeutAdj
 +Sing+Gen:ово		#;
 +Sing+Dat:ом		#;
-+Sing+Prep:ому		#;
++Sing+Loc:ому		#;
 
 LEXICON FemAdj
-<%+Sing [%+Gen|%+Dat|%+Prep|%+Ins] .x. ы>	#;
+<%+Sing [%+Gen|%+Dat|%+Loc|%+Ins] .x. ы>	#;
 +Sing+Ins:оjу								#;
 
 LEXICON Them
@@ -103,7 +103,7 @@ LEXICON Them
 <Gender %+Plur .x. 0>					OblPlur;
 
 LEXICON OblPlur
-+Prep:х				#;
++Loc:х				#;
 +Dat:м				#;
 +Ins:ми				#;
 
