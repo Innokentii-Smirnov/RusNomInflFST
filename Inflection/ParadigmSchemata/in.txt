@@ -54,4 +54,3 @@
 год+Plur+Gen
 церковь+Sing+Nom
 церковь+Plur+Dat
-

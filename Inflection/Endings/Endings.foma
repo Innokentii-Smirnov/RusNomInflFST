@@ -1,11 +1,11 @@
-load stack ../../Inflection/ParadigmSchemata/ParadigmSchemata.bin
+load stack ../../Morphonology/Alternations/Alternations.bin
 invert net
-define ParadigmSchemata;
+define Alternations;
 read lexc Endings.lexc
 define Lexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define Remove Letter+ DeclType (Gender) (Number) [Feature - [Gender|Number]]:0+ [Case|Number|Gender]+;
-define Startup [GetMorphGender .o. Remove] \Letter*;
-define Endings ParadigmSchemata .o. Remove .o. Letter+ Lexicon;
+define Cleanup Animacy -> 0 || _ ,, GrammRazr -> 0 || _ ;
+define W Letter+ (Sep Letter*);
+define Endings Alternations .o. Cleanup .O. W Lexicon;

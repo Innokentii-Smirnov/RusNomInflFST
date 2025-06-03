@@ -2,8 +2,9 @@ Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sin
 Definitions
 	Gender = %+Masc|%+Fem|%+Neut;
 	Subst = %+Subst1 | %+Subst2;
-	B = ж|ш|ч|';
-	A = \B;
+	Sep = "|";
+	B = ж|ш|ч|' Sep;
+	A = \B Sep;
 
 LEXICON Root
 +Subst1:0 		Subst1;
