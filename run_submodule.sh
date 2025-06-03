@@ -6,5 +6,10 @@ olddir=$(pwd)
 cd $directory
 xfst -utf8 -e "source $name.foma" -e "push $name" -e "invert net" -e "save stack $binary" -e "sigma" -stop
 echo "Created Foma binary $binary."
-lookup $binary -utf8 < in.txt > out.txt
+if [ -f in.txt ]; then
+	input=in.txt
+else
+	input=../../in.txt
+fi
+lookup $binary -utf8 < $input > out.txt
 cd "$olddir"
