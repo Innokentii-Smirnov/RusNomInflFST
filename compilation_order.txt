@@ -13,6 +13,8 @@ Star
 AP
 Morphonology/OrthToConv/OrthToConv
 Inflection/ParadigmSchemata/ParadigmSchemata
+Accentuation/ConvStress/GetConvStress
 Morphonology/Alternations/Alternations
 Inflection/Endings/Endings
+Accentuation/Accentuate/Accentuate
 Morphonology/ConvToOrth/ConvToOrth

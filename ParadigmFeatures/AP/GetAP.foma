@@ -63,7 +63,18 @@ define FifthGroup;
 #
 # Объединение
 define Substantival FirstGroup | SecondGroup | ThirdGroup | FourthGroup | FifthGroup;
-define APDistribution Substantival;
+#
+# Прилагательные
+regex StemStressed %+a;
+regex EndingStressed %+b;
+union net
+regex (Star) %+Adj;
+turn stack
+concatenate net
+define Adjectival;
+#
+# Объединение
+define APDistribution Substantival | Adjectival;
 #
 define Intervening NonStandEnding* Alternation*;
 define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);

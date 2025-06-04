@@ -1,0 +1,11 @@
+load stack ../../Inflection/ParadigmSchemata/ParadigmSchemata.bin
+invert net
+define ParadigmSchemata;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+source ../../Properties.foma
+define rA [..] -> %+Stem || %+a Feature+ Property+ _ .#.;
+define rB [..] -> %+Ending || %+b Feature+ Property+ _ .#.;
+define Rules rA .o. rB;
+define Cleanup AP -> 0 || _ ;
+define GetConvStress ParadigmSchemata .o. Rules .o. Cleanup;

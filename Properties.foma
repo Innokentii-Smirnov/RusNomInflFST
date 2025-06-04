@@ -1,1 +1,3 @@
 define Case %+Nom|%+Acc|%+Gen|%+Loc|%+Dat|%+Ins;
+define ConvStress %+Stem|%+Ending;
+define Property Case;

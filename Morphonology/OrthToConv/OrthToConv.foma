@@ -1,5 +1,5 @@
 source ../../LetterClasses.foma
-source ../../ParadigmFeatures/Star/GetStar.foma
+source ../../ParadigmFeatures/AP/GetAP.foma
 define Feature [%+UnstableO|%+Star];
 
 !!!Блок I. Замена членов акцентно-позиционных чередований!!!
@@ -46,4 +46,4 @@ define b7 j1 .o. j2 .o. j3 .o. j4 .o. j5 .o. j6 .o. j7;
 !!!Последний блок!!!
 define Accent Acc -> "" || ё _ ;
 define Cleanup Feature -> "";
-define OrthToConv GetStar .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b7 .o. Accent .o. Cleanup;
+define OrthToConv GetAP .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b7 .o. Accent .o. Cleanup;

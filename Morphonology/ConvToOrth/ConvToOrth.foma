@@ -1,6 +1,6 @@
-load stack ../../Inflection/Endings/Endings.bin
+load stack ../../Accentuation/Accentuate/Accentuate.bin
 invert net
-define Endings;
+define Accentuate;
 source ../../LetterClasses.foma
 define r1 "*" Irr -> "" || _ С (')("|") Г;
 define r2 ' -> "" || \л _ [н|л|р|ц|с|т];
@@ -25,4 +25,4 @@ define r16 j -> й;
 define r17 ' -> ь;
 define Softness r13 .o. r14 .o. r15 .o. r16 .o. r17;
 define Accent Acc -> "" || ё _ .o. Acc -> "́";
-define ConvToOrth Endings .o. StarDeletion .o. StarToVowel .o. Orth .o. VowelChanges .o. Softness .o. Accent;
+define ConvToOrth Accentuate .o. StarDeletion .o. StarToVowel .o. Orth .o. VowelChanges .o. Softness .o. Accent;
