@@ -56,7 +56,7 @@ new_errors = sorted(errors - old_errors)
 if len(new_errors) == 0:
 	print('No new errors.')
 else:
-	print('New erors: {0}.'.format(len(new_errors)))
+	print('New errors: {0}.'.format(len(new_errors)))
 with open('new_correct.txt', 'w') as fout:
 	for string in new_correct:
 		fout.write(string + '\n')

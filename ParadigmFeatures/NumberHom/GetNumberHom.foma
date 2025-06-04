@@ -18,5 +18,5 @@ define NumberHomRules [
 			[ы|и] Irr [DeclType - %+Nul]
 		]
 		0:%+NumberHom1 (ParadigmDefects)
-	] GrammRazr (Animacy) (Gender) .P. ?*;
+	] %+Subst (Animacy) (Gender) .P. ?*;
 define GetNumberHom GetDeclType .o. NumberHomExceptions .P. NumberHomRules;

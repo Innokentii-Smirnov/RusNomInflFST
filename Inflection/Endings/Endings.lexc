@@ -50,6 +50,7 @@ LEXICON Adj
 +Masc+Sing+Nom:ой					Ending;
 +Neut+Sing+Nom:оjе					#;
 +Fem+Sing+Nom:аjа					#;
++Fem+Sing+Acc:уjу					#;
 <Gender %+Plur %+Nom .x. {ыjе}>		#;
 AdjObl;
 0:ы 					Them;

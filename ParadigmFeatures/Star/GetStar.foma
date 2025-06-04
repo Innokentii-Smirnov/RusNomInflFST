@@ -19,6 +19,7 @@ regex	Letter+ [о Irr|ё|е] к Sep -
 		Letter+ [Г|К] о Irr к Sep -
 		Letter+ С {шт} о Irr к Sep - 
 		Letter+ [{пёк}|{тёк}|в о Irr л о Irr к];
+regex Letter+ Acc Letter* {ец} Sep;
 turn stack
 union net
 define WordCons;

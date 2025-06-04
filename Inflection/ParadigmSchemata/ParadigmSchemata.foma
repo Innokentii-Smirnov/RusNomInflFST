@@ -5,7 +5,7 @@ source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
 define NesoglbchSchema Case;
-define SoglbchSchema Gender Case;
+define SoglbchSchema (Gender) Case;
 define SubstSchema Number Case;
 define SimadjSchema Gender Number Case;
 define ExtadjSchema Gender Number Case;

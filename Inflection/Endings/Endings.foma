@@ -2,10 +2,13 @@ load stack ../../Morphonology/Alternations/Alternations.bin
 invert net
 define Alternations;
 read lexc Endings.lexc
-define Lexicon;
+define StandardEnding;
+read lexc NonStandardEndings.lexc
+define NonStandardEnding;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
+define RemoveParDef ParadigmDefects -> 0 || _ ;
 define RemoveGrammRazr GrammRazr -> 0 || _ ;
 define r1 %+Acc -> %+Nom || %+Neut Animacy %+Sing _ ;
 define r2 %+Acc -> %+Nom || %+Subst2 Gender Animacy %+Sing _ ;
@@ -13,6 +16,7 @@ define r3 %+Acc -> %+Nom || %+Masc %+Inanim %+Sing _ , %+Inanim %+Plur _ ;
 define r4 %+Acc -> %+Gen || %+Masc %+Anim %+Sing _ , %+Anim %+Plur _ ;
 define Syncretism r1 .o. r2 .o. r3 .o. r4;
 define RemoveAnimacy Animacy -> 0 || _ ;
-define Rules RemoveGrammRazr .o. Syncretism .o. RemoveAnimacy;
+define Rules RemoveParDef .o. RemoveGrammRazr .o. Syncretism .o. RemoveAnimacy;
 define W Letter+ (Sep Letter*);
-define Endings Alternations .o. Rules .O. W Lexicon;
+define RemoveNse NonStandEnding -> 0 || _ ;
+define Endings Alternations .o. Rules .O. [W NonStandardEnding .P. [RemoveNse .o. W StandardEnding]];

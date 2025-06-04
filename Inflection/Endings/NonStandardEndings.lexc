@@ -1,0 +1,39 @@
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Nse1 +Nse2 +Nse3 +Nse4 +Nse5 +Nse6 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse24 +Nse25
+
+Definitions
+	Gender = %+Masc|%+Fem|%+Neut;
+
+LEXICON Root
++Nse1+Subst1+Masc+Plur+Nom:а		#;
++Nse1+Subst1+Fem+Plur+Nom:а			#;
++Nse1+Subst1+Neut+Plur+Nom:ы		#;
++Nse2+Nse3+Subst1+Masc+Plur+Nom:е	#;
++Nse1+Nse3+Subst1+Masc+Plur+Gen:0	#;
++Nse1+Nse3+Subst1+Fem+Plur+Gen:ов	#;
++Nse1+Nse3+Subst1+Neut+Plur+Gen:ов	#;
++Nse2+Nse3+Subst1+Masc+Plur+Gen:0	#;
++Nse3+Subst1+Masc+Plur+Gen:0		#;
++Nse3+Subst1+Fem+Plur+Gen:ов		#;
++Nse3+Subst1+Neut+Plur+Gen:ов		#;
++Nse4+Subst1+Neut+Plur+Gen:еj		#;
++Nse4+Subst1+Fem+Plur+Gen:еj		#;
++Nse5+Subst1+Neut+Plur+Gen:0		#;
++Nse5+Subst1+Fem+Plur+Gen:0			#;
++Nse6+Subst1+Masc+Plur+Ins:ми		#;
++Nse6+Subst2+Fem+Plur+Ins:ми		#;
++Nse6+Subst2+Neut+Plur+Ins:ми		#;
++Nse14+Nse15+Subst1+Fem+Sing+Nom:0		#;
++Nse14+Nse15+Subst1+Fem+Sing+Gen:а		#;
++Nse15+Subst1+Fem+Sing+Gen:а			#;
+<%+Nse16 %+Nse17 %+Subst1 %+Masc %+Plur [%+Gen|%+Loc] .x. {ас}>		#;
+<%+Nse18 %+Pron1 (Gender) %+Plur %+Nom .x. о>				#;
+<%+Nse19 %+Pron1 [%+Masc|%+Neut] %+Plur %+Nom .x. а>	#;
++Nse19+Pron1+Fem+Plur+Nom:е								#;
+<%+Nse24 %+Anom %+Plur Gender .x. у>		NumeralOblique;
+<%+Nse25 %+Anom %+Plur .x. о>		NumeralOblique;
+
+Lexicon NumeralOblique
++Gen:х			#;
++Loc:х			#;
++Dat:м			#;
++Ins:м'а		#;
