@@ -21,6 +21,7 @@ regex	Letter+ [о Irr|ё|е] к Sep -
 		Letter+ [{пёк}|{тёк}|в о Irr л о Irr к];
 regex Letter+ Acc Letter* {ец} Sep;
 regex Letter+ Acc Letter* {ен|ь} Feature* %+Subst1;
+regex Letter+ [Г | Г С] е Acc ц Sep;
 turn stack
 union net
 define WordCons;
