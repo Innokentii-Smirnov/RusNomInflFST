@@ -5,7 +5,7 @@ read lexc ../../ParadigmFeatures/Star/GetStar.lexc
 define StarLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
-define StarExceptions Wordform 0:Star Feature+ .o. StarLexicon / Sep Feature+;
+define StarExceptions Wordform (0:Star) Feature+ .o. StarLexicon / Sep Feature+;
 define ConsonantalDesinence С*;
 define VocalicDesinence Letter* Г Irr Letter*;
 define ExcFinVoc [д|з|й|л|н|р] н Sep а (DeclType) (Gender);

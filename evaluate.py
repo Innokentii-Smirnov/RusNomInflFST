@@ -50,9 +50,9 @@ with open(predfile) as fin, open(corrfile) as ref, open('correct.txt', 'w') as c
 				mf.write(string + '\n')
 		else:
 			new_morpholex = True
-new_correct = correct - old_correct
+new_correct = sorted(correct - old_correct)
 print('New correct: {0}.'.format(len(new_correct)))
-new_errors = errors - old_errors
+new_errors = sorted(errors - old_errors)
 if len(new_errors) == 0:
 	print('No new errors.')
 else:

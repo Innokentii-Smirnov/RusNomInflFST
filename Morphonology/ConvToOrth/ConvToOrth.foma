@@ -2,7 +2,7 @@ load stack ../../Inflection/Endings/Endings.bin
 invert net
 define Endings;
 source ../../LetterClasses.foma
-define r1 "*" -> "" || _ С (')("|") Г;
+define r1 "*" Irr -> "" || _ С (')("|") Г;
 define r2 ' -> "" || \л _ [н|л|р|ц|с|т];
 define r3 [..] -> ' || С _ ("|")j;
 define StarDeletion r1 .o. r2 .o. r3;

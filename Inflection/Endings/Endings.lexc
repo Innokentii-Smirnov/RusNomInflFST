@@ -87,16 +87,16 @@ LEXICON FemSubst1
 +Sing+Ins:оj					#;
 
 LEXICON AdjObl
-MascNeutAdj;
-FemAdj;
+<%+Masc|%+Neut .x. 0>	MascNeutAdj;
+<%+Fem:0>				FemAdj;
 
 LEXICON MascNeutAdj
 +Sing+Gen:ово		#;
-+Sing+Dat:ом		#;
-+Sing+Loc:ому		#;
++Sing+Dat:ому		#;
++Sing+Loc:ом		#;
 
 LEXICON FemAdj
-<%+Sing [%+Gen|%+Dat|%+Loc|%+Ins] .x. ы>	#;
+<%+Sing [%+Gen|%+Dat|%+Loc|%+Ins] .x. {оj}>	#;
 +Sing+Ins:оjу								#;
 
 LEXICON Them

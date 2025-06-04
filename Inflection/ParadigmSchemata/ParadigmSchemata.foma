@@ -13,8 +13,9 @@ define Schema NesoglbchSchema | SoglbchSchema | SubstSchema | SimadjSchema | Ext
 define Constraint Letter+ Sep Letter* Feature+ [
 	%+Nesoglbch NesoglbchSchema | 
 	%+Soglbch SoglbchSchema | 
-	%+Subst Animacy (Gender:0) SubstSchema |
+	%+Subst Animacy SubstSchema |
 	%+Simadj SimadjSchema | 
 	%+Extadj ExtadjSchema
 ];
-define ParadigmSchemata [OrthToConv Schema] .o. Constraint;
+define Cleanup Gender -> 0 || к Sep о Irr Feature+ _ .#.;
+define ParadigmSchemata [[OrthToConv .o. Cleanup] Schema] .o. Constraint;
