@@ -12,7 +12,7 @@ define RemoveParDef ParadigmDefects -> 0 || _ ;
 define RemoveGrammRazr GrammRazr -> 0 || _ ;
 define r1 %+Acc -> %+Nom || %+Neut Animacy %+Sing _ ;
 define r2 %+Acc -> %+Nom || %+Subst2 Gender Animacy %+Sing _ ;
-define r3 %+Acc -> %+Nom || %+Masc %+Inanim %+Sing _ , %+Inanim %+Plur _ ;
+define r3 %+Acc -> %+Nom || %+Masc %+Inan %+Sing _ , %+Inan %+Plur _ ;
 define r4 %+Acc -> %+Gen || %+Masc %+Anim %+Sing _ , %+Anim %+Plur _ ;
 define Syncretism r1 .o. r2 .o. r3 .o. r4;
 define RemoveAnimacy Animacy -> 0 || _ ;

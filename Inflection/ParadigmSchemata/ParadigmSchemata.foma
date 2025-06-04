@@ -7,8 +7,8 @@ source ../../Properties.foma
 define NesoglbchSchema Case;
 define SoglbchSchema (Gender) Case;
 define SubstSchema Number Case;
-define SimadjSchema Gender Number Case;
-define ExtadjSchema Gender Number Case;
+define SimadjSchema Gender (Animacy) Number Case;
+define ExtadjSchema Gender (Animacy) Number Case;
 define Schema NesoglbchSchema | SoglbchSchema | SubstSchema | SimadjSchema | ExtadjSchema;
 define Constraint Letter+ Sep Letter* Feature+ [
 	%+Nesoglbch NesoglbchSchema | 

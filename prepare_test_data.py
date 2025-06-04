@@ -10,6 +10,7 @@ categories = {
 	'PRON': ['Case'],
 	'NUM': ['Case'],
 }
+l = ['Gender', 'Animacy', 'Number', 'Case']
 olddir = os.getcwd()
 data = set[tuple[str, str]]()
 sources = ['../UD_Russian-SynTagRus', '../UD_Russian-Taiga']
@@ -31,6 +32,8 @@ for source in sources:
 					cats = categories[upos]
 					if upos == 'NUM' and 'Gender' in feats:
 						cats = ['Gender'] + cats
+					if upos == 'ADJ' and feats['Case'] == 'Acc':
+						cats = l
 					features = ['+' + node.feats[category]
 					for category in cats]
 					if (all(feature != '+' for feature in features) and form.isalpha()

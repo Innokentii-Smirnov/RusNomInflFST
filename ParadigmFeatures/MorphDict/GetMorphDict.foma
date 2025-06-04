@@ -1,9 +1,8 @@
-source ../../LetterClasses.foma
 read lexc ../../ParadigmFeatures/MorphDict/MorphDict.lexc
 define Lexicon;
 define Pos %+Noun | %+Adj | %+Pron | %+PronAdj;
-define Animacy %+Anim | %+Inanim;
-define Gender %+Masc | %+Fem | %+Neut;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
 define Preprocess е <- ё || _ ;
 define r1 Pos -> 0;
 define r2 Animacy -> 0;

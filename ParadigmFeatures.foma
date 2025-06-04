@@ -1,4 +1,4 @@
-define Animacy %+Anim | %+Inanim;
+define Animacy %+Anim | %+Inan;
 define GrammRazr %+Extadj | %+Nesoglbch | %+Simadj | %+Soglbch | %+Subst;
 define Numl %+Nesoglbch | %+Soglbch;
 define Adj %+Extadj | %+Simadj;
