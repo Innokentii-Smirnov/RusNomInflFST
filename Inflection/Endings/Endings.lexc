@@ -20,7 +20,7 @@ LEXICON Allomorphic
 <B [Subst %+Masc %+Plur %+Gen]:{еj}>						#;
 <A [Subst [%+Fem | %+Neut] %+Plur %+Gen]:0>					#;
 <B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:0 %+Stem>		#;
-<B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:еj %+Ending>	#;
+<B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:{еj} %+Ending>	#;
 <B [%+Subst2 [%+Fem | %+Neut] %+Plur %+Gen]:{еj}>			#;
 
 LEXICON Subst1
