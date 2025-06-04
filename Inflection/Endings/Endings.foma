@@ -6,6 +6,13 @@ define Lexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define Cleanup Animacy -> 0 || _ ,, GrammRazr -> 0 || _ ;
+define RemoveGrammRazr GrammRazr -> 0 || _ ;
+define r1 %+Acc -> %+Nom || %+Neut Animacy %+Sing _ ;
+define r2 %+Acc -> %+Nom || %+Subst2 Gender Animacy %+Sing _ ;
+define r3 %+Acc -> %+Nom || %+Masc %+Inanim %+Sing _ , %+Inanim %+Plur _ ;
+define r4 %+Acc -> %+Gen || %+Masc %+Anim %+Sing _ , %+Anim %+Plur _ ;
+define Syncretism r1 .o. r2 .o. r3 .o. r4;
+define RemoveAnimacy Animacy -> 0 || _ ;
+define Rules RemoveGrammRazr .o. Syncretism .o. RemoveAnimacy;
 define W Letter+ (Sep Letter*);
-define Endings Alternations .o. Cleanup .O. W Lexicon;
+define Endings Alternations .o. Rules .O. W Lexicon;

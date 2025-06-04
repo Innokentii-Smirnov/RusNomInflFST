@@ -102,7 +102,11 @@ LEXICON FemAdj
 LEXICON Them
 <[%+Masc|%+Neut] %+Sing %+Ins .x. м>	#;
 <Gender %+Nom %+Plur .x. 0>				#;
-<Gender %+Plur .x. 0>					OblPlur;
+<Gender %+Plur .x. 0>					AdjOblPlur;
+
+LEXICON AdjOblPlur
++Gen:х				#;
+OblPlur;
 
 LEXICON OblPlur
 +Loc:х				#;

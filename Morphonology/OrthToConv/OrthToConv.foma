@@ -30,7 +30,8 @@ define b4r4 [..] -> ' || Г|ь _ и;
 define b4 b4r1 .o. b4r2 .o. b4r3 .o. b4r4;
 
 !!!Блок V. Замена е!!!
-define b4r2 е -> ' о || "|" _ Unacc;
+define b5r2 е -> ' о || "|" _ Unacc;
+define b5 b5r2;
 
 !!!Блок VII. Замена й и ь!!!
 define j1 [..] -> j || й _ Sep;
@@ -45,4 +46,4 @@ define b7 j1 .o. j2 .o. j3 .o. j4 .o. j5 .o. j6 .o. j7;
 !!!Последний блок!!!
 define Accent Acc -> "" || ё _ ;
 define Cleanup Feature -> "";
-define OrthToConv GetStar .o. b1 .o. b2 .o. b3 .o. b4 .o. b7 .o. Accent .o. Cleanup;
+define OrthToConv GetStar .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b7 .o. Accent .o. Cleanup;
