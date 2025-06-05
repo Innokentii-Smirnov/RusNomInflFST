@@ -5,7 +5,7 @@ Definitions
 	Case = %+Nom|%+Acc|%+Gen|%+Loc|%+Dat|%+Ins;
 	Subst = %+Subst1 | %+Subst2;
 	Sep = "|";
-	Soft = ж|ш|ч|';
+	Soft = ж|ш|ч|щ|';
 	B = Soft Sep;
 	A = \Soft Sep;
 
