@@ -1,6 +1,13 @@
 Multichar_Symbols +Extadj +Nesoglbch +Simadj +Soglbch
 
 LEXICON Root
+Prefix;
+Lexeme;
+
+LEXICON Prefix
+не			Lexeme;
+
+LEXICON Lexeme
 ве́ский		Extadj;
 пло́ский		Extadj;
 но́ский		Extadj;
