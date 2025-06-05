@@ -5,8 +5,10 @@ read lexc ../../ParadigmFeatures/NonStandEndings/GetNonStandEndings.lexc
 define NonStandEndingsLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
-define Features Alternation* DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
-define NonStandEndingsExceptions [Letter+ 0:NonStandEnding+ .o. NonStandEndingsLexicon] Features .P. ?*;
+define Intervening Alternation*;
+define Following DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Insertion Letter+ Intervening 0:NonStandEnding+ Following .o. [NonStandEndingsLexicon / Intervening] Following;
+define NonStandEndingsExceptions Insertion .P. ?*;
 regex [..] -> %+Nse1 || Letter NonStandEnding* [%+Alt12 | %+Alt14 | %+Alt15] _ Feature* %+Masc;
 regex [..] -> %+Nse1 || {ко} Irr Alternation* _ NonStandEnding* DeclType;
 regex [..] (->) %+Nse1 || и Irr {ще} _ NonStandEnding* DeclType Feature+ %+Masc .#.;

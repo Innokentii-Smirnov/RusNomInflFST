@@ -10,6 +10,7 @@ define class2 %+Alt18|%+Alt19|%+Alt20|%+Alt21|%+Alt22|%+Alt23;
 define class3 %+Alt24|%+Alt25;
 define class4 %+Alt26;
 define class5 %+Alt27|%+Alt28;
+define class6 %+Alt29|%+Alt30|%+Alt31|%+Alt32;
 define AlternationIndices class1|class2|class3|class4|class5;
 !!!_____________________Класс I_____________________!!!
 define r1 к -> ч || _ "|" %+Alt1 .o. %+Alt1 -> 0;
@@ -64,7 +65,9 @@ define r29 {'*н} -> 0 || _ "|" %+Alt29 .o. %+Alt29 -> 0;
 define r30 ' -> 0 || _ "|" %+Alt30 .o. %+Alt30 -> 0;
 define r31 {ен'*к} -> 0 || _ "|" %+Alt31 .o. %+Alt31 -> 0;
 define r32 {бол'ш} -> {велик} || _ "|" %+Alt32 .o. %+Alt32 -> 0;
-define c6 r29 .o. r30 .o. r31 .o. r32;
+define b6 r29 .o. r30 .o. r31 .o. r32;
+define morphome6 b6 .o. W %+Short Gender Number Tail;
+define c6 morphome6 .P. [?* .o. class6 -> 0];
 !!!_____________________Класс VII_____________________!!!
 define r33 {'%*н} -> 0 || _ "|" %+Alt33 .o. %+Alt33 -> 0;
 define r34 ' -> 0 || _ "|" %+Alt34 .o. %+Alt34 -> 0;
