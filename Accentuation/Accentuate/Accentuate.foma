@@ -4,11 +4,12 @@ define Endings;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define r1 [..] -> Acc || .#. С* Г _ Unaccented* Sep Letter* %+Stem %+Marg;
-define r2 [..] -> Acc || .#. Unaccented* Г _ С* Sep Letter* %+Stem .#.;
-define r3 Acc -> 0 || Letter* _ Letter* Sep Letter* %+Ending;
-define r4 [..] -> Acc || Sep Г _ Letter* %+Ending;
-define r5 [..] -> Acc || [Г|"*"] _ С* Sep %+Ending;
+define Gram (Gender Number Case);
+define r1 [..] -> Acc || .#. С* Г _ Unaccented* Sep Letter* Gram %+Stem %+Marg;
+define r2 [..] -> Acc || .#. Unaccented* Г _ С* Sep Letter* Gram %+Stem .#.;
+define r3 Acc -> 0 || Letter* _ Letter* Sep Letter* Gram %+Ending;
+define r4 [..] -> Acc || Sep Г _ Letter* Gram %+Ending;
+define r5 [..] -> Acc || [Г|"*"] _ С* Sep Gram %+Ending;
 define Rules r1 .o. r2 .o. r3 .o. r4 .o. r5;
 define Cleanup1 ConvStress -> 0 || _ ;
 define Cleanup2 AccType -> 0 || _ ;

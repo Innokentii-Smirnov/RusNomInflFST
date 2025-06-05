@@ -23,7 +23,7 @@ Allomorphic;
 LEXICON Allomorphic
 <A [Subst %+Masc %+Plur %+Gen]:{ов}>						#;
 <B [Subst %+Masc %+Plur %+Gen]:{еj}>						#;
-<A [Subst [%+Fem | %+Neut] %+Plur %+Gen]:0>					#;
+<A [Subst:0 [%+Fem | %+Neut] %+Plur %+Gen]>					#;
 <B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:0 %+Stem>		#;
 <B [%+Subst1 [%+Fem | %+Neut] %+Plur %+Gen]:{еj} %+Ending>	#;
 <B [%+Subst2 [%+Fem | %+Neut] %+Plur %+Gen]:{еj}>			#;
@@ -39,7 +39,7 @@ SubstNomPlur;
 LEXICON Subst2
 +Masc+Sing+Nom:0		#;
 +Neut+Sing+Nom:а		#;
-+Fem+Sing+Nom:0			#;
++Fem+Sing+Nom			#;
 <Gender %+Sing [%+Gen|%+Dat|%+Loc] .x. ы>	#;
 +Fem+Sing+Ins:jу							#;
 SubstNomPlur;

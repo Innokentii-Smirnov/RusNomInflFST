@@ -2,6 +2,8 @@ load stack ../../Accentuation/Accentuate/Accentuate.bin
 invert net
 define Accentuate;
 source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+source ../../Properties.foma
 define r1 "*" Irr -> "" || _ С (')("|") Г;
 define r2 ' -> "" || \л _ [н|л|р|ц|с|т];
 define r3 [..] -> ' || [С - й] _ ("|")j;
@@ -11,7 +13,7 @@ define r5 "*" -> е || _ Irr j;
 define r6 "*" -> е || [j|'|Ш|ц] _ Irr [ц|л '|н '];
 define r7 "*" -> о;
 define StarToVowel r4 .o. r5 .o. r6 .o. r7;
-define r8 е -> и || и j "|" _ Unacc;
+define r8 е -> и || и Irr j "|" _ Unacc;
 define r9 в -> г || "|" о Irr _ о;
 define Orth r8 .o. r9;
 define r10 ы -> и || [К|Ш]"|" _;
@@ -24,7 +26,15 @@ define r15 [j|']а -> я , [j|']у -> ю , [j|'][о|о̀] -> ё , [j|']е -> е,
 define r16 j -> й;
 define r17 ' -> ь;
 define Softness r13 .o. r14 .o. r15 .o. r16 .o. r17;
+define Main StarDeletion .o. StarToVowel .o. Orth .o. VowelChanges .o. Softness;
+read lexc Additional.lexc
+define AdditionalLex;
+define r19 [..] -> ь || Ш Sep _ %+Fem %+Sing %+Nom;
+define r20 й -> 0 || _ Sep й %+Fem %+Plur %+Gen;
+define AdditionalRules r19 .o. r20;
+define Additional AdditionalLex ?* .P. ?* .o. AdditionalRules;
+define Cleanup Feature|Property -> 0;
 define Accent Acc -> "" || ё _ .o. Acc -> "́";
 define Postprocessing ё (->) е || _ ;
 set flag-is-epsilon ON
-define ConvToOrth Accentuate .o. StarDeletion .o. StarToVowel .o. Orth .o. VowelChanges .o. Softness .o. Accent .o. Postprocessing;
+define ConvToOrth Accentuate .o. Main .o. Additional .o. Cleanup .o. Accent .o. Postprocessing;
