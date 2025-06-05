@@ -20,7 +20,7 @@ define b2r3 ' -> 0 || _ "*" Sep;
 define b2 StarInsertion .o. b2r2 .o. b2r3;
 
 !!!Блок III. Замена я, ю, ё, ё̀!!!
-define b3 я -> ' а, ю -> ' у, ё -> ' о, ё̀ -> ' о̀;
+define b3 я -> ' а, ю -> ' у, ё -> ' о Acc, ё̀ -> ' о̀;
 
 !!!Блок IV. Замена и!!!
 define b4r1 и -> ы || к "|" _;

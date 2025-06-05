@@ -12,6 +12,7 @@ define EndingStressed Letter* Sep Letter* AccentedVowel Letter*;
 define Monosyll Syll / Sep;
 define Disyll Syll^2 / Sep;
 define Polysyll Syll^>1 / Sep;
+define FinalStressed UnaccOrth+ AccentedVowel С* Sep;
 #
 # Группа первая. Существительные мужского морфологического рода (кроме pluralia tantum)
 regex Letters [щ | Г Irr ч | [у|ю] Irr н]		Sep;
@@ -26,10 +27,10 @@ union net
 regex 0:%+b;
 turn stack
 concatenate net
-regex Wordform 0:%+b %+Star;
+regex FinalStressed 0:%+b %+Star;
 union net
 define g1b;
-define g1a Wordform 0:%+a;
+define g1a Wordform 0:%+a (Star);
 define FirstGroup [g1b .P. g1a].l %+Subst1 %+Masc;
 #
 # Группа вторая. Существительные среднего морфологического рода (кроме pluralia tantum)

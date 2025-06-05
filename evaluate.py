@@ -6,7 +6,7 @@ sys.path.insert(1, start_dir)
 from package.util import split, join
 from package.eval import is_correct
 def postprocess(morpholex: str) -> str:
-	return morpholex.replace('\u0301', '').replace('|', '').replace('ё', 'е')
+	return morpholex.replace('\u0301', '').replace('|', '')
 predfile = '../Morphonology/ConvToOrth/out.txt'
 corrfile = '../corr.txt'
 target = 'test_result'
@@ -60,18 +60,18 @@ with (open(predfile) as fin,
 				n_equal += 1
 				string = '{0:30} {1}'.format(morpholex, joined_pred)
 			else:
-				extra = pred - corr
+				extra = postprocessed - corr
 				if len(extra) > 0:
 					string = '{0:30} {1:30} {2}'.format(
 						morpholex, join(extra), joined_corr)
 					extraf.write(string + '\n')
-				incomp = corr - pred
+				incomp = corr - postprocessed
 				if len(incomp) > 0:
 					string = '{0:30} {1:30} {2}'.format(
 						morpholex, joined_pred, join(incomp))
 					incompf.write(string + '\n')
 				else:
-					if pred.issubset(corr):
+					if postprocessed.issubset(corr):
 						string = '{0:30} {1}'.format(morpholex, joined_pred)
 					else:
 						string = '{0:30} {1:30} {2}'.format(
