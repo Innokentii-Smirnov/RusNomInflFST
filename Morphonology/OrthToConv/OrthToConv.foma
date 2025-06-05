@@ -23,7 +23,7 @@ define b2 StarInsertion .o. b2r2 .o. b2r3;
 define b3 я -> ' а, ю -> ' у, ё -> ' о Acc, ё̀ -> ' о̀;
 
 !!!Блок IV. Замена и!!!
-define b4r1 и -> ы || к "|" _;
+define b4r1 и -> ы || К "|" _;
 define b4r2 и -> е || и "|" _ Unacc ?* "+Sg" ["+Prep"|"+Dat"];
 define b4r3 и -> ' ы || "|" _;
 define b4r4 [..] -> ' || Г|ь _ и;
@@ -33,6 +33,9 @@ define b4 b4r1 .o. b4r2 .o. b4r3 .o. b4r4;
 define b5r2 е -> ' о || "|" _ Unacc;
 define b5r3 [..] -> ' || .#. | Г | ь _ е;
 define b5 b5r2 .o. b5r3;
+
+!!!Блок VI. Замена безударного о после шипящих и ц!!!
+define b6 о -> "о₂" || Ш | ц _ Unacc;
 
 !!!Блок VII. Замена й и ь!!!
 define j1 [..] -> j || й _ Sep;
@@ -47,4 +50,4 @@ define b7 j1 .o. j2 .o. j3 .o. j4 .o. j5 .o. j6 .o. j7;
 !!!Последний блок!!!
 define Accent Acc -> "" || ё _ ;
 define Cleanup Feature -> "";
-define OrthToConv GetAP .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b7 .o. Accent .o. Cleanup;
+define OrthToConv GetAP .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b6 .o. b7 .o. Accent .o. Cleanup;
