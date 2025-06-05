@@ -11,7 +11,7 @@ if [ -f in.txt ]; then
 	lookup $binary -utf8 < $input > loc.txt
 fi
 echo $directory
-if [[ $directory == 'ParadigmFeatures'* ]]; then
+if [[ $directory == 'ParadigmFeatures'* || $name == 'OrthToConv' ]]; then
 	input=../../lemmata.txt
 else
 	input=../../in.txt
