@@ -14,6 +14,8 @@ define Disyll Syll^2 / Sep;
 define Polysyll Syll^>1 / Sep;
 define FinalStressed UnaccOrth+ AccentedVowel С* Sep;
 #
+# Существительные
+#
 # Группа первая. Существительные мужского морфологического рода (кроме pluralia tantum)
 regex Letters [щ | Г Irr ч | [у|ю] Irr н]		Sep;
 regex Letters {ец} Sep & Monosyll;
@@ -64,22 +66,32 @@ concatenate net
 define FifthGroup;
 #
 # Объединение
-define Substantival FirstGroup | SecondGroup | ThirdGroup | FourthGroup | FifthGroup;
+define Substantival [FirstGroup | SecondGroup | ThirdGroup | FourthGroup | FifthGroup] (ParadigmDefects) %+Subst;
 #
 # Прилагательные
+#
+# Прилагательные простого адъективного разряда
+regex [[Letter* Sep о Acc й | Letter* [и|ы] Acc н Sep] 0:%+b .P.
+	Wordform 0:%+a].l;
+regex (Star) DeclType %+Simadj;
+turn stack
+concatenate net
+define SimAdjectival;
+#
+# Прилагательные расширенного адъективного разряда
 regex StemStressed %+a;
 regex EndingStressed %+b;
 union net
-regex (Star) %+Adj;
+regex (Star) DeclType %+Extadj;
 turn stack
 concatenate net
-define Adjectival;
+define ExtAdjectival;
 #
 # Объединение
-define APDistribution Substantival | Adjectival;
+define APDistribution Substantival | SimAdjectival | ExtAdjectival;
 #
 define Intervening Alternation* NonStandEnding*;
-define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Following (Animacy) (Gender);
 define ExtendedAPDistribution [APDistribution / Intervening] Following .o. Wordform AP Features;
 define APRules Wordform 0:AP Features .o. ExtendedAPDistribution;
-define GetAP GetStar .o. APExceptions .P. APRules .P. ?*; #Wordform 0:%+Error Feature+;
+define GetAP GetStar .o. APExceptions .P. APRules .P. Wordform 0:%+Error Feature+;
