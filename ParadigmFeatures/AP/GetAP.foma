@@ -76,7 +76,7 @@ define Adjectival;
 # Объединение
 define APDistribution Substantival | Adjectival;
 #
-define Intervening NonStandEnding* Alternation*;
+define Intervening Alternation* NonStandEnding*;
 define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define ExtendedAPDistribution [APDistribution / Intervening] Following .o. Wordform AP Features;
 define APRules Wordform 0:AP Features .o. ExtendedAPDistribution;
