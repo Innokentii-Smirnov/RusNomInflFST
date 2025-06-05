@@ -80,4 +80,4 @@ define Intervening Alternation* NonStandEnding*;
 define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define ExtendedAPDistribution [APDistribution / Intervening] Following .o. Wordform AP Features;
 define APRules Wordform 0:AP Features .o. ExtendedAPDistribution;
-define GetAP GetStar .o. APExceptions .P. APRules .P. Wordform 0:%+Error Feature+;
+define GetAP GetStar .o. APExceptions .P. APRules .P. ?*; #Wordform 0:%+Error Feature+;
