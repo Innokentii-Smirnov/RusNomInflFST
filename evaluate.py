@@ -59,17 +59,22 @@ with (open(predfile) as fin,
 				n_equal += 1
 				string = '{0:30} {1}'.format(morpholex, joined_pred)
 			else:
+				extra = pred - corr
+				if len(extra) > 0:
+					string = '{0:30} {1:30} {2}'.format(
+						morpholex, join(extra), joined_corr)
+					extraf.write(string + '\n')
 				incomp = corr - pred
 				if len(incomp) > 0:
 					string = '{0:30} {1:30} {2}'.format(
 						morpholex, joined_pred, join(incomp))
 					incompf.write(string + '\n')
-				extra =pred - corr
-				if len(extra) > 0:
-					string = '{0:30} {1:30} {2}'.format(
-						morpholex, join(extra), joined_corr)
-					extraf.write(string + '\n')
-			string = '{0:30} {1:30} {2}'.format(morpholex, joined_pred, joined_corr)
+				else:
+					if pred.issubset(corr):
+						string = '{0:30} {1}'.format(morpholex, joined_pred)
+					else:
+						string = '{0:30} {1:30} {2}'.format(
+						morpholex, joined_pred, joined_corr)
 			corrf.write(string + '\n')
 			correct.add(string)
 		elif len(pred) > 0:

@@ -30,7 +30,7 @@ define r15 {*к} -> {'ат} || _ "|" %+Alt15 .o. %+Alt15 -> 0;
 define r16 {реб'он*к} -> {дет'} || _ "|" %+Alt16 .o. %+Alt16 -> 0;
 define r17 {человек} -> {л'уд'} || _ "|" %+Alt17 .o. %+Alt17 -> 0;
 define b1 r1 .o. r2 .o. r3 .o. r4 .o. r5 .o. r6 .o. r7 .o. r8 .o. r9 .o. r10 .o. r11 .o. r12 .o. r13 .o. r14 .o. r15 .o. r16 .o. r17;
-define morphome1 b1 .o. W %+Plur Case;
+define morphome1 b1 .o. W %+Plur Case (ConvStress);
 define c1 morphome1 .P. [?* .o. class1 -> 0];
 !!!_____________________Класс II_____________________!!!
 define r18 ' -> 0 || _ "|" %+Alt18 .o. %+Alt18 -> 0;
@@ -40,24 +40,24 @@ define r21 [..] -> {ан} || _ "|" %+Alt21 .o. %+Alt21 -> 0;
 define r22 [..] -> {ер'} || _ "|" %+Alt22 .o. %+Alt22 -> 0;
 define r23 [..] -> у || _ "|" %+Alt23 .o. %+Alt23 -> 0;
 define b2 r18 .o. r19 .o. r20 .o. r21 .o. r22 .o. r23;
-define morphome2 b2 .o. W [Number Case - %+Sing %+Nom];
+define morphome2 b2 .o. W [Number Case - %+Sing %+Nom] (ConvStress);
 define c2 morphome2 .P. [?* .o. class2 -> 0];
 !!!_____________________Класс III_____________________!!!
 define r24 ' -> 0 || _ "|" %+Alt24 .o. %+Alt24 -> 0;
 define r25 {год} -> {лет} || _ "|" %+Alt25 .o. %+Alt25 -> 0;
 define b3  r24 .o. r25;
-define morphome3 b3 .o. W %+Plur %+Gen;
+define morphome3 b3 .o. W %+Plur %+Gen (ConvStress);
 define c3 morphome3 .P. [?* .o. class3 -> 0];
 !!!_____________________Класс IV_____________________!!!
 define r26 ' -> 0 || _ "|" %+Alt26 .o. %+Alt26 -> 0;
 define b3 r26;
-define morphome4 b3 .o. W %+Plur [%+Prep|%+Dat|%+Ins];
+define morphome4 b3 .o. W %+Plur [%+Prep|%+Dat|%+Ins] (ConvStress);
 define c4 morphome4 .P. [?* .o. %+Alt26 -> 0];
 !!!_____________________Класс V_____________________!!!
 define r27 [..] -> ' || _ "|" %+Alt27 .o. %+Alt27 -> 0;
 define r28 [..] -> {ат'} || _ "|" %+Alt28 .o. %+Alt28 -> 0;
 define b5 r27 .o. r28;
-define morphome5 b5 .o. W %+Sing [Case - %+Nom];
+define morphome5 b5 .o. W %+Sing [Case - %+Nom] (ConvStress);
 define c5 morphome5 .P. [?* .o. class5 -> 0];
 !!!_____________________Класс VI_____________________!!!
 define r29 {'*н} -> 0 || _ "|" %+Alt29 .o. %+Alt29 -> 0;
