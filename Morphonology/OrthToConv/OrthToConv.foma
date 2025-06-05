@@ -3,7 +3,7 @@ source ../../ParadigmFeatures/AP/GetAP.foma
 define Feature [%+UnstableO|%+Star];
 
 !!!Блок I. Замена членов акцентно-позиционных чередований!!!
-define b1r1 ё -> ё̀ || _ Unacc;
+define b1r1 ё -> ё̀ || _ Letter+ Acc, Acc Letter* _ ;
 define b1r2 е -> ё || _ \е* "|" ?+ Acc ?* %+UnstableO;
 define b1 b1r1 .o. b1r2;
 
