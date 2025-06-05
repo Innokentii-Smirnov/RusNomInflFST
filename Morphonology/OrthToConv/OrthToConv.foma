@@ -1,6 +1,6 @@
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures/AP/GetAP.foma
-define Feature [%+UnstableO|%+Star];
+source ../../ParadigmFeatures.foma
 
 !!!Блок I. Замена членов акцентно-позиционных чередований!!!
 define b1r1 ё -> ё̀ || _ Letter+ Acc, Acc Letter* _ ;
@@ -8,12 +8,12 @@ define b1r2 е -> ё || _ \е* "|" ?+ Acc ?* %+UnstableO;
 define b1 b1r1 .o. b1r2;
 
 !!!Блок II. Замена членов собственно-позиционных чередований!!!
-define s1 е|и -> "*" || _ Irr "|" ?* %+Star;
-define s2 [..] -> "*" || ь|С _ С "|" ?* %+Star;
+define s1 е|и -> "*" || _ Irr "|" ?* Star;
+define s2 [..] -> "*" || ь|С _ С "|" ?* Star;
 define s3 [..] -> ' || П|Т _ "*" [н|л|р|ц];
-define s4 о -> "*" || _ Irr С "|" ?* %+Star;
-define s5 Г -> "*" || Ш _ Irr С "|" ?* %+Star;
-define s6 Г -> ' "*" || _ Irr С "|" ?* %+Star;
+define s4 о -> "*" || _ Irr С "|" ?* Star;
+define s5 Г -> "*" || Ш _ Irr С "|" ?* Star;
+define s6 Г -> ' "*" || _ Irr С "|" ?* Star;
 define StarInsertion s1 .o. s2 .o. s3 .o. s4 .o. s5 .o. s6;
 define b2r2 ь -> ' "*" || _ Sep;
 define b2r3 ' -> 0 || _ "*" Sep;
@@ -49,5 +49,7 @@ define b7 j1 .o. j2 .o. j3 .o. j4 .o. j5 .o. j6 .o. j7;
 
 !!!Последний блок!!!
 define Accent Acc -> "" || ё _ ;
-define Cleanup Feature -> "";
+define Cleanup1 UnstableO -> "";
+define Cleanup2 Star -> "";
+define Cleanup Cleanup1 .o. Cleanup2;
 define OrthToConv GetAP .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b6 .o. b7 .o. Accent .o. Cleanup;
