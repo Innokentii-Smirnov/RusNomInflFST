@@ -6,7 +6,8 @@ def is_valid(node: Node):
 		form.isalpha() and
 		len(form) > 1 and
 		form.islower() and
-		'Typo' not in node.misc and
-		'Lang' not in node.misc and
-		'Foreign' not in node.misc
+		'Typo' not in node.feats and
+		'Abbr' not in node.feats and
+		'Foreign' not in node.feats and
+		'Lang' not in node.misc
 	)

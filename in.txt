@@ -4586,7 +4586,6 @@ hk+Sing+Gen
 баллончик+Sing+Acc
 баллончик+Sing+Gen
 баллончик+Sing+Ins
-баллончик+Sing+Loc
 балльный+Fem+Sing+Dat
 балльный+Fem+Sing+Gen
 балованный+Fem+Sing+Gen
@@ -6802,7 +6801,6 @@ hk+Sing+Gen
 бестелесный+Masc+Sing+Gen
 бестоварный+Neut+Sing+Nom
 бестолковость+Sing+Gen
-бестолковость+Sing+Nom
 бестолковщина+Sing+Nom
 бестолковый+Fem+Sing+Gen
 бестолковый+Fem+Sing+Nom
@@ -9123,7 +9121,6 @@ hk+Sing+Gen
 брезент+Sing+Ins
 брезент+Sing+Loc
 брезентовый+Masc+Sing+Nom
-брекет+Plur+Acc
 брекетинг+Sing+Gen
 брекзит+Sing+Gen
 брелок+Sing+Ins
@@ -9266,7 +9263,6 @@ hk+Sing+Gen
 брожение+Sing+Nom
 брокер+Plur+Acc
 брокколи+Sing+Acc
-брокколи+Sing+Nom
 бром+Sing+Acc
 бром+Sing+Gen
 бром+Sing+Ins
@@ -11430,7 +11426,6 @@ hk+Sing+Gen
 венецианец+Sing+Nom
 венецианка+Sing+Ins
 венецианский+Fem+Sing+Gen
-венецианский+Fem+Sing+Ins
 венецианский+Masc+Sing+Dat
 венецианский+Masc+Sing+Gen
 венецианский+Masc+Sing+Loc
@@ -13177,7 +13172,6 @@ hk+Sing+Gen
 вкусность+Plur+Gen
 вкуснота+Sing+Acc
 вкуснотища+Sing+Nom
-вкуснотище+Sing+Nom
 вкусный+Fem+Sing+Gen
 вкусный+Fem+Sing+Ins
 вкусный+Fem+Sing+Nom
@@ -15289,7 +15283,6 @@ hk+Sing+Gen
 вражеский+Neut+Sing+Loc
 вражий+Fem+Sing+Gen
 вражий+Fem+Sing+Nom
-вразумительный+Masc+Sing+Gen
 вразумительный+Neut+Sing+Dat
 вразумительный+Neut+Sing+Gen
 вразумительный+Neut+Sing+Nom
@@ -16537,7 +16530,6 @@ hk+Sing+Gen
 выселки+Plur+Nom
 высказанность+Sing+Gen
 высказывание+Plur+Acc
-высказывание+Plur+Dat
 высказывание+Plur+Gen
 высказывание+Plur+Ins
 высказывание+Plur+Loc
@@ -17480,7 +17472,6 @@ hk+Sing+Gen
 гастрономка+Sing+Nom
 гастронономист+Sing+Nom
 гастроскопия+Sing+Acc
-гастростома+Sing+Acc
 гастростома+Sing+Nom
 гастроэктомия+Sing+Nom
 гастроэнтеролог+Sing+Acc
@@ -17571,9 +17562,6 @@ hk+Sing+Gen
 геенский+Masc+Sing+Dat
 гей+Plur+Acc
 гей+Plur+Gen
-гей+Plur+Nom
-гей+Sing+Acc
-гей+Sing+Nom
 гейдельбергский+Masc+Sing+Ins
 гейзер+Sing+Nom
 гейзерный+Masc+Sing+Gen
@@ -19332,7 +19320,6 @@ hk+Sing+Gen
 голос+Sing+Ins
 голос+Sing+Loc
 голос+Sing+Nom
-голосеевский+Masc+Sing+Loc
 голосистый+Fem+Sing+Nom
 голословный+Masc+Sing+Ins
 голосование+Plur+Acc
@@ -22794,7 +22781,6 @@ hk+Sing+Gen
 дедуленька+Sing+Dat
 дедуля+Sing+Voc
 дедушка+Plur+Gen
-дедушка+Plur+Ins
 дедушка+Plur+Loc
 дедушка+Plur+Nom
 дедушка+Sing+Acc
@@ -25531,7 +25517,6 @@ hk+Sing+Gen
 дол+Sing+Acc
 дол+Sing+Nom
 долбежка+Sing+Acc
-долбоеб+Plur+Nom
 долбяк+Plur+Dat
 долбяшка+Sing+Nom
 долг+Plur+Acc
@@ -26577,7 +26562,6 @@ hk+Sing+Gen
 древесина+Sing+Dat
 древесина+Sing+Gen
 древесина+Sing+Ins
-древесина+Sing+Loc
 древесина+Sing+Nom
 древесница+Sing+Gen
 древесницевый+Plur+Gen
@@ -27164,7 +27148,6 @@ hk+Sing+Gen
 дурачок+Sing+Nom
 дурачье+Sing+Nom
 дурдом+Sing+Acc
-дурдом+Sing+Nom
 дурень+Plur+Acc
 дурень+Sing+Dat
 дурень+Sing+Ins
@@ -27508,7 +27491,6 @@ hk+Sing+Gen
 дюспаталин+Sing+Nom
 дюфалак+Sing+Acc
 дюфалак+Sing+Gen
-дюфалак+Sing+Nom
 дюфастон+Sing+Nom
 дюшбара+Sing+Nom
 дягилевский+Fem+Sing+Loc
@@ -33368,7 +33350,6 @@ hk+Sing+Gen
 игра+Sing+Nom
 игральный+Fem+Sing+Nom
 игрек+Sing+Nom
-игривый+Fem+Sing+Nom
 игрище+Plur+Loc
 игровой+Fem+Sing+Gen
 игровой+Fem+Sing+Ins
@@ -36253,7 +36234,6 @@ hk+Sing+Gen
 искупление+Sing+Nom
 искус+Sing+Gen
 искус+Sing+Nom
-искусcтво+Plur+Gen
 искуситель+Sing+Dat
 искуситель+Sing+Gen
 искуситель+Sing+Ins
@@ -37107,7 +37087,6 @@ hk+Sing+Gen
 кадка+Sing+Acc
 кадка+Sing+Gen
 кадка+Sing+Loc
-кадка+Sing+Nom
 кадмий+Plur+Nom
 кадмий+Sing+Gen
 кадмий+Sing+Nom
@@ -37339,21 +37318,8 @@ hk+Sing+Gen
 какой+Nom+Fem
 какой+Nom+Masc
 какой+Nom+Neut
-какой-либо+Acc+Masc
-какой-либо+Nom+Fem
-какой-нибудь+Acc+Masc
-какой-нибудь+Gen+Masc
-какой-нибудь+Nom+Fem
-какой-то+Acc+Fem
-какой-то+Acc+Masc
-какой-то+Acc+Neut
-какой-то+Gen+Masc
-какой-то+Gen+Neut
 какой-то+Ins+Fem
-какой-то+Ins+Neut
 какой-то+Nom+Fem
-какой-то+Nom+Masc
-какой-то+Nom+Neut
 кактус+Plur+Acc
 кактус+Plur+Gen
 кактус+Plur+Nom
@@ -38157,7 +38123,6 @@ hk+Sing+Gen
 карасий+Masc+Inan+Sing+Acc
 карась+Plur+Acc
 карась+Sing+Acc
-карате+Sing+Dat
 карате+Sing+Gen
 карате+Sing+Ins
 карате+Sing+Nom
@@ -38182,7 +38147,6 @@ hk+Sing+Gen
 карбон+Sing+Gen
 карбон+Sing+Nom
 карбонад+Sing+Nom
-карбонара+Sing+Acc
 карбонат+Sing+Acc
 карбонатит+Plur+Dat
 карбонитрид+Plur+Gen
@@ -38211,7 +38175,6 @@ hk+Sing+Gen
 кардиологический+Neut+Sing+Gen
 кардиология+Sing+Gen
 кардиология+Sing+Loc
-кардиосклероз+Sing+Nom
 кардиостимулятор+Plur+Acc
 кардиостимулятор+Plur+Loc
 кардиотоксический+Neut+Sing+Ins
@@ -38369,7 +38332,6 @@ hk+Sing+Gen
 картель+Sing+Gen
 картель+Sing+Ins
 картель+Sing+Nom
-картечь+Sing+Nom
 картина+Plur+Acc
 картина+Plur+Dat
 картина+Plur+Gen
@@ -39087,7 +39049,6 @@ hk+Sing+Gen
 кварц+Sing+Gen
 кварц+Sing+Ins
 кварц+Sing+Nom
-кварцевание+Sing+Loc
 кварцевый+Fem+Sing+Nom
 кварцевый+Masc+Sing+Gen
 кварцевый+Neut+Sing+Gen
@@ -39999,7 +39960,6 @@ hk+Sing+Gen
 клеевой+Masc+Sing+Gen
 клеенка+Plur+Loc
 клеенка+Plur+Nom
-клеенка+Sing+Acc
 клеенка+Sing+Ins
 клееночка+Sing+Nom
 клеенчатый+Fem+Sing+Loc
@@ -40793,7 +40753,6 @@ hk+Sing+Gen
 кодификация+Sing+Nom
 кодла+Sing+Gen
 кодовый+Neut+Sing+Ins
-кое-что+Acc
 кое-что+Loc
 коечка+Sing+Loc
 кожа+Plur+Gen
@@ -40931,7 +40890,6 @@ hk+Sing+Gen
 койка+Sing+Nom
 койкоместо+Sing+Acc
 койкоместо+Sing+Gen
-койне+Sing+Nom
 кок+Sing+Acc
 кок+Sing+Ins
 кок+Sing+Nom
@@ -42237,7 +42195,6 @@ hk+Sing+Gen
 компьютерный+Fem+Sing+Gen
 компьютерный+Fem+Sing+Loc
 компьютерный+Fem+Sing+Nom
-компьютерный+Masc+Inan+Sing+Acc
 компьютерный+Masc+Sing+Gen
 компьютерный+Masc+Sing+Nom
 компьютерный+Neut+Sing+Gen
@@ -42581,7 +42538,6 @@ hk+Sing+Gen
 конница+Sing+Loc
 конница+Sing+Nom
 коннопередовой+Masc+Sing+Gen
-коннотация+Sing+Gen
 конный+Fem+Sing+Gen
 конный+Fem+Sing+Ins
 конный+Fem+Sing+Nom
@@ -42814,7 +42770,6 @@ hk+Sing+Gen
 консультирование+Sing+Gen
 консьерж+Plur+Gen
 консьерж+Plur+Nom
-консьерж+Sing+Nom
 консьюмеризм+Sing+Gen
 консьюмеризм+Sing+Nom
 консьюмеристский+Fem+Sing+Gen
@@ -42907,7 +42862,6 @@ hk+Sing+Gen
 конторский+Masc+Sing+Ins
 конторский+Masc+Sing+Nom
 конторщик+Sing+Ins
-контр-адмирал+Sing+Nom
 контра+Sing+Acc
 контра+Sing+Nom
 контрабанда+Sing+Dat
@@ -44153,7 +44107,6 @@ hk+Sing+Gen
 косметический+Neut+Sing+Dat
 косметолог+Plur+Ins
 косметолог+Sing+Dat
-косметолог+Sing+Gen
 космик+Sing+Nom
 космический+Fem+Sing+Dat
 космический+Fem+Sing+Gen
@@ -46142,14 +46095,6 @@ hk+Sing+Gen
 кто+Ins
 кто+Loc
 кто+Nom
-кто-либо+Nom
-кто-нибудь+Gen
-кто-нибудь+Ins
-кто-нибудь+Nom
-кто-то+Dat
-кто-то+Gen
-кто-то+Ins
-кто-то+Nom
 куб+Plur+Acc
 куб+Plur+Gen
 куб+Plur+Loc
@@ -47474,7 +47419,6 @@ hk+Sing+Gen
 латание+Plur+Gen
 латание+Sing+Acc
 латание+Sing+Nom
-лататуй+Sing+Nom
 латвийский+Fem+Sing+Gen
 латвийский+Neut+Sing+Nom
 латентность+Sing+Ins
@@ -48336,7 +48280,6 @@ hk+Sing+Gen
 летун+Sing+Nom
 летунья+Sing+Acc
 летунья+Sing+Nom
-летучесть+Sing+Ins
 летучий+Fem+Sing+Ins
 летучий+Fem+Sing+Nom
 летучий+Masc+Sing+Nom
@@ -48402,7 +48345,6 @@ hk+Sing+Gen
 лженаучность+Sing+Loc
 лжеобщественный+Neut+Sing+Ins
 лжепифагорейский+Fem+Sing+Gen
-лжеруководитель+Plur+Nom
 лжесвидетельница+Sing+Nom
 лжесвидетельство+Plur+Nom
 лжесвидетельство+Sing+Gen
@@ -49667,7 +49609,6 @@ hk+Sing+Gen
 лот+Sing+Gen
 лот+Sing+Ins
 лотарингский+Masc+Sing+Nom
-лотерейный+Masc+Inan+Sing+Acc
 лотерейный+Masc+Sing+Dat
 лотерейный+Masc+Sing+Gen
 лотерейный+Masc+Sing+Loc
@@ -50340,7 +50281,6 @@ hk+Sing+Gen
 лютый+Sing+Nom
 люфтваффе+Sing+Gen
 люфтваффе+Sing+Nom
-люшенька+Plur+Nom
 ля+Sing+Acc
 ля+Sing+Nom
 ляган+Plur+Ins
@@ -50587,7 +50527,6 @@ hk+Sing+Gen
 мазохист+Plur+Gen
 мазохист+Sing+Nom
 мазохистка+Plur+Acc
-мазохистка+Sing+Nom
 мазур+Plur+Gen
 мазурка+Plur+Gen
 мазурка+Sing+Acc
@@ -50708,7 +50647,6 @@ hk+Sing+Gen
 маковый+Masc+Sing+Ins
 маковый+Neut+Sing+Loc
 маковый+Neut+Sing+Nom
-макраме+Sing+Nom
 макрель+Plur+Nom
 макрокосм+Plur+Acc
 макроморфологический+Masc+Sing+Ins
@@ -52563,7 +52501,6 @@ hk+Sing+Gen
 мелочный+Masc+Sing+Nom
 мелочный+Neut+Sing+Gen
 мелочный+Neut+Sing+Ins
-мелочовка+Sing+Nom
 мелочуга+Sing+Gen
 мелочь+Plur+Acc
 мелочь+Plur+Dat
@@ -53015,8 +52952,6 @@ hk+Sing+Gen
 месячный+Masc+Sing+Loc
 месячный+Masc+Sing+Nom
 месячный+Neut+Sing+Gen
-метaллист+Plur+Gen
-метaллист+Sing+Gen
 мета+Sing+Gen
 метаболизм+Sing+Acc
 метаболизм+Sing+Gen
@@ -53457,7 +53392,6 @@ hk+Sing+Gen
 меценат+Sing+Nom
 меценатство+Sing+Acc
 меценатство+Sing+Gen
-меццо-сопрано+Sing+Nom
 меч+Plur+Acc
 меч+Plur+Dat
 меч+Plur+Gen
@@ -54013,7 +53947,6 @@ hk+Sing+Gen
 минздрав+Sing+Ins
 минздрав+Sing+Nom
 мини+Sing+Acc
-мини-отель+Sing+Nom
 миниавтобус+Sing+Loc
 миниатор+Sing+Ins
 миниатюра+Plur+Acc
@@ -56221,7 +56154,6 @@ hk+Sing+Gen
 мотор+Sing+Ins
 мотор+Sing+Loc
 мотор+Sing+Nom
-моторика+Sing+Acc
 моторика+Sing+Gen
 моторика+Sing+Nom
 моторикша+Sing+Loc
@@ -56279,7 +56211,6 @@ hk+Sing+Gen
 мох+Sing+Nom
 мохеган+Plur+Nom
 мохеровый+Neut+Sing+Nom
-мохито+Sing+Acc
 мохнатый+Fem+Sing+Gen
 мохнатый+Fem+Sing+Nom
 мохнатый+Masc+Anim+Sing+Acc
@@ -57122,7 +57053,6 @@ hk+Sing+Gen
 мюнхенский+Masc+Sing+Nom
 мюнхенский+Neut+Sing+Gen
 мюсли+Plur+Nom
-мяcо+Sing+Gen
 мягкий+Fem+Sing+Dat
 мягкий+Fem+Sing+Gen
 мягкий+Fem+Sing+Ins
@@ -57951,7 +57881,6 @@ hk+Sing+Gen
 накопитель+Plur+Loc
 накопитель+Plur+Nom
 накопитель+Sing+Gen
-накопитель+Sing+Loc
 накопительный+Fem+Sing+Gen
 накопительный+Fem+Sing+Ins
 накопительный+Fem+Sing+Nom
@@ -59907,7 +59836,6 @@ hk+Sing+Gen
 негатив+Plur+Acc
 негатив+Plur+Ins
 негатив+Sing+Acc
-негатив+Sing+Gen
 негатив+Sing+Loc
 негатив+Sing+Nom
 негативизм+Sing+Gen
@@ -64380,7 +64308,6 @@ hk+Sing+Gen
 норов+Sing+Nom
 норовистый+Masc+Anim+Sing+Acc
 норушка+Sing+Ins
-норушка+Sing+Nom
 нос+Plur+Acc
 нос+Plur+Gen
 нос+Plur+Ins
@@ -64785,7 +64712,6 @@ hk+Sing+Gen
 обаятельный+Masc+Sing+Nom
 обаятельный+Neut+Sing+Gen
 обаятельный+Neut+Sing+Ins
-обаяшка+Sing+Ins
 обвал+Plur+Gen
 обвал+Plur+Ins
 обвал+Plur+Nom
@@ -67751,7 +67677,6 @@ hk+Sing+Gen
 оладья+Plur+Acc
 оладья+Plur+Nom
 оладья+Sing+Acc
-олбанский+Masc+Sing+Nom
 олдтаймер+Sing+Loc
 олдтаймер+Sing+Nom
 олеандр+Plur+Gen
@@ -69489,7 +69414,6 @@ hk+Sing+Gen
 остаточный+Masc+Sing+Dat
 остаточный+Masc+Sing+Nom
 остаточный+Neut+Sing+Gen
-осташковский+Neut+Sing+Nom
 остекление+Sing+Acc
 остекление+Sing+Nom
 остеологический+Masc+Sing+Nom
@@ -71898,7 +71822,6 @@ hk+Sing+Gen
 папановский+Fem+Sing+Nom
 папановский+Masc+Inan+Sing+Acc
 папановский+Masc+Sing+Gen
-папарацци+Plur+Nom
 папатут+Sing+Nom
 папаха+Sing+Acc
 папаха+Sing+Dat
@@ -75040,7 +74963,6 @@ hk+Sing+Gen
 печенежский+Masc+Sing+Nom
 печение+Plur+Gen
 печенка+Sing+Acc
-печенка+Sing+Nom
 печеность+Plur+Acc
 печеночный+Masc+Sing+Nom
 печеный+Fem+Sing+Gen
@@ -75371,7 +75293,6 @@ hk+Sing+Gen
 пиния+Plur+Ins
 пинок+Plur+Gen
 пинок+Sing+Gen
-пиноккио+Sing+Nom
 пинцет+Sing+Gen
 пинцет+Sing+Ins
 пион+Plur+Acc
@@ -82272,7 +82193,6 @@ hk+Sing+Gen
 починка+Plur+Nom
 починка+Sing+Gen
 починка+Sing+Loc
-починка+Sing+Nom
 почирк+Plur+Acc
 почирк+Plur+Nom
 почитание+Sing+Gen
@@ -86477,7 +86397,6 @@ hk+Sing+Gen
 прожиточный+Masc+Inan+Sing+Acc
 прожиточный+Masc+Sing+Gen
 прожиточный+Masc+Sing+Nom
-прожог+Sing+Acc
 прожора+Sing+Nom
 прожорливость+Sing+Ins
 прожорливость+Sing+Loc
@@ -87407,7 +87326,6 @@ hk+Sing+Gen
 простой+Sing+Acc
 простой+Sing+Gen
 простой+Sing+Loc
-простойный+Masc+Inan+Sing+Acc
 простокваша+Sing+Acc
 простокваша+Sing+Loc
 простолюдин+Plur+Gen
@@ -87505,7 +87423,6 @@ hk+Sing+Gen
 простыня+Plur+Loc
 простыня+Plur+Nom
 простыня+Sing+Acc
-простыня+Sing+Gen
 простыня+Sing+Ins
 простыня+Sing+Loc
 просульпин+Sing+Acc
@@ -87864,7 +87781,6 @@ hk+Sing+Gen
 профессионализм+Sing+Acc
 профессионализм+Sing+Dat
 профессионализм+Sing+Gen
-профессионализм+Sing+Ins
 профессионализм+Sing+Nom
 профессиональный+Fem+Sing+Dat
 профессиональный+Fem+Sing+Gen
@@ -88236,7 +88152,6 @@ hk+Sing+Gen
 прощанье+Sing+Nom
 прощелыга+Plur+Gen
 прощелыга+Plur+Nom
-прощелыга+Sing+Acc
 прощение+Plur+Acc
 прощение+Sing+Acc
 прощение+Sing+Gen
@@ -90173,7 +90088,6 @@ hk+Sing+Gen
 развал+Sing+Loc
 развал+Sing+Nom
 развалина+Plur+Acc
-развалина+Plur+Dat
 развалина+Plur+Gen
 развалина+Plur+Ins
 развалина+Plur+Loc
@@ -90299,7 +90213,6 @@ hk+Sing+Gen
 развлекательный+Masc+Sing+Gen
 развлекательный+Masc+Sing+Ins
 развлекательный+Masc+Sing+Nom
-развлекательный+Neut+Sing+Nom
 развлекашка+Sing+Nom
 развлечение+Plur+Acc
 развлечение+Plur+Dat
@@ -93715,7 +93628,6 @@ hk+Sing+Gen
 рецидив+Sing+Acc
 рецидив+Sing+Dat
 рецидив+Sing+Gen
-рецидивист+Sing+Gen
 реципиент+Plur+Gen
 реципиент+Sing+Dat
 речевка+Plur+Dat
@@ -94496,7 +94408,6 @@ hk+Sing+Gen
 розетка+Sing+Gen
 розетка+Sing+Ins
 розетка+Sing+Loc
-розетка+Sing+Nom
 розлив+Sing+Acc
 розлив+Sing+Dat
 розмарин+Sing+Acc
@@ -95168,7 +95079,6 @@ hk+Sing+Gen
 рукопожатие+Sing+Nom
 рукоположение+Sing+Gen
 рукоприкладство+Sing+Dat
-рукоприкладство+Sing+Gen
 рукоприкладство+Sing+Ins
 рукотворность+Sing+Acc
 рукотворный+Fem+Sing+Gen
@@ -98171,7 +98081,6 @@ hk+Sing+Gen
 секира+Plur+Ins
 секира+Sing+Nom
 секонд+Sing+Acc
-секонд+Sing+Ins
 секрет+Plur+Acc
 секрет+Plur+Gen
 секрет+Plur+Ins
@@ -100259,7 +100168,6 @@ hk+Sing+Gen
 скворец+Sing+Nom
 скворечник+Plur+Acc
 скворечник+Plur+Loc
-скворечник+Plur+Nom
 скворечник+Sing+Acc
 скворечник+Sing+Ins
 скворечник+Sing+Nom
@@ -103164,7 +103072,6 @@ hk+Sing+Gen
 соловьиный+Fem+Sing+Ins
 соловьиный+Fem+Sing+Nom
 соловьиный+Masc+Sing+Ins
-соловьиный+Masc+Sing+Loc
 соловьиный+Masc+Sing+Nom
 соловьиный+Neut+Sing+Gen
 солод+Sing+Ins
@@ -103483,7 +103390,6 @@ hk+Sing+Gen
 сопло+Sing+Ins
 сопло+Sing+Nom
 сопля+Plur+Acc
-сопля+Plur+Gen
 сопля+Plur+Ins
 сопля+Plur+Nom
 сопляк+Sing+Ins
@@ -106352,7 +106258,6 @@ hk+Sing+Gen
 стипендия+Sing+Gen
 стипендия+Sing+Nom
 стиралка+Sing+Acc
-стиралка+Sing+Gen
 стиралка+Sing+Nom
 стиральный+Fem+Sing+Gen
 стиральный+Fem+Sing+Loc
@@ -106709,7 +106614,6 @@ hk+Sing+Gen
 стоматолог+Sing+Ins
 стоматолог+Sing+Nom
 стоматологический+Fem+Sing+Nom
-стоматологический+Masc+Sing+Gen
 стоматологический+Masc+Sing+Loc
 стоматология+Sing+Acc
 стоматология+Sing+Gen
@@ -109713,7 +109617,6 @@ hk+Sing+Gen
 тверской+Masc+Sing+Dat
 тверской+Masc+Sing+Loc
 тверской+Masc+Sing+Nom
-тверской+Neut+Sing+Nom
 твидовый+Masc+Sing+Loc
 твист+Sing+Acc
 твист+Sing+Dat
@@ -109813,7 +109716,6 @@ hk+Sing+Gen
 театрализация+Sing+Ins
 театрализованный+Fem+Sing+Loc
 театрализованный+Masc+Sing+Gen
-театрально-декорационный+Neut+Sing+Gen
 театральность+Sing+Gen
 театральный+Fem+Sing+Gen
 театральный+Fem+Sing+Ins
@@ -110830,7 +110732,6 @@ hk+Sing+Gen
 теснина+Plur+Dat
 теснина+Plur+Gen
 тесноватый+Masc+Sing+Nom
-тесноватый+Neut+Sing+Nom
 теснота+Sing+Acc
 теснота+Sing+Gen
 теснота+Sing+Ins
@@ -114246,7 +114147,6 @@ hk+Sing+Gen
 тэдж+Sing+Nom
 тэмбо+Sing+Nom
 тэтэ+Sing+Nom
-тюбетейка+Sing+Ins
 тюбетейка+Sing+Loc
 тюбетейка+Sing+Nom
 тюбик+Plur+Loc
@@ -114709,7 +114609,6 @@ hk+Sing+Gen
 увольнение+Plur+Acc
 увольнение+Plur+Dat
 увольнение+Plur+Gen
-увольнение+Plur+Ins
 увольнение+Plur+Nom
 увольнение+Sing+Acc
 увольнение+Sing+Dat
@@ -114984,7 +114883,6 @@ hk+Sing+Gen
 удаленный+Masc+Sing+Gen
 удаленный+Masc+Sing+Loc
 удаленный+Neut+Sing+Nom
-удаленщик+Plur+Nom
 удалец+Plur+Gen
 удалец+Sing+Nom
 удалой+Fem+Sing+Gen
@@ -120762,7 +120660,6 @@ hk+Sing+Gen
 хозяйствование+Sing+Nom
 хозяюшка+Plur+Ins
 хозяюшка+Plur+Nom
-хозяюшка+Sing+Dat
 хозяюшка+Sing+Gen
 хозяюшка+Sing+Nom
 хоккеист+Plur+Acc
@@ -121020,7 +120917,6 @@ hk+Sing+Gen
 хороший+Neut+Sing+Nom
 хорошист+Sing+Ins
 хоррор+Plur+Gen
-хоррор+Sing+Nom
 хоругвеносец+Plur+Nom
 хоругвь+Plur+Nom
 хоругвь+Sing+Acc
@@ -121387,7 +121283,6 @@ hk+Sing+Gen
 худший+Neut+Sing+Loc
 худший+Neut+Sing+Nom
 хуитнес+Plur+Acc
-хуй+Plur+Nom
 хуйня+Sing+Gen
 хула+Sing+Gen
 хула+Sing+Nom
@@ -122102,7 +121997,6 @@ hk+Sing+Gen
 цивилизованный+Neut+Sing+Loc
 цивилизованный+Neut+Sing+Nom
 цивильный+Masc+Sing+Ins
-цивильный+Masc+Sing+Nom
 цигарка+Plur+Acc
 цигарка+Sing+Acc
 цигарка+Sing+Nom
@@ -122257,7 +122151,6 @@ hk+Sing+Gen
 цитата+Sing+Ins
 цитата+Sing+Loc
 цитата+Sing+Nom
-цитатка+Plur+Ins
 цитатник+Sing+Nom
 цитатный+Masc+Inan+Sing+Acc
 цитирование+Sing+Acc
@@ -122760,7 +122653,6 @@ hk+Sing+Gen
 челобитная+Plur+Loc
 челобитная+Sing+Acc
 челобитная+Sing+Nom
-челобитье+Sing+Nom
 человек+Plur+Acc
 человек+Plur+Dat
 человек+Plur+Gen
@@ -123834,14 +123726,6 @@ hk+Sing+Gen
 что+Par
 что+бы+Acc
 что+бы+Nom
-что-либо+Acc
-что-нибудь+Acc
-что-нибудь+Gen
-что-нибудь+Nom
-что-то+Acc
-что-то+Gen
-что-то+Ins
-что-то+Loc
 что-то+Nom
 чтокудацена+Sing+Nom
 чуб+Sing+Ins
@@ -126192,11 +126076,9 @@ hk+Sing+Gen
 эзопов+Masc+Sing+Ins
 эзопов+Masc+Sing+Loc
 эзопов+Masc+Sing+Nom
-эзоповский+Fem+Sing+Ins
 эзоповский+Masc+Sing+Dat
 эзоповский+Masc+Sing+Gen
 эзоповский+Masc+Sing+Nom
-эзопство+Sing+Nom
 эзотерика+Sing+Dat
 эзотерика+Sing+Gen
 эзотерический+Fem+Sing+Gen
@@ -126848,7 +126730,6 @@ hk+Sing+Gen
 электричество+Sing+Loc
 электричество+Sing+Nom
 электричка+Plur+Gen
-электричка+Plur+Ins
 электричка+Plur+Loc
 электричка+Plur+Nom
 электричка+Sing+Acc
@@ -128138,7 +128019,6 @@ hk+Sing+Gen
 юг+Sing+Ins
 юг+Sing+Loc
 юг+Sing+Nom
-юго-запад+Sing+Loc
 югославский+Fem+Sing+Gen
 югославский+Fem+Sing+Nom
 югославский+Masc+Sing+Nom

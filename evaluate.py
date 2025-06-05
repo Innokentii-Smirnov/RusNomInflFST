@@ -1,5 +1,10 @@
 import os, shutil
 from os import path
+import sys
+start_dir = os.getcwd()
+sys.path.insert(1, start_dir)
+from package.util import split, join
+from package.eval import is_correct
 def postprocess(morpholex: str) -> str:
 	return morpholex.replace('\u0301', '').replace('|', '').replace('ё', 'е')
 predfile = '../Morphonology/ConvToOrth/out.txt'
@@ -20,36 +25,52 @@ else:
 correct = set()
 errors = set()
 n_correct = 0
+n_equal = 0
 total = 0
-with open(predfile) as fin, open(corrfile) as ref, open('correct.txt', 'w') as corrf, open('errors.txt', 'w') as errf, open('missing.txt', 'w') as mf:
-	it = iter(ref)
-	new_morpholex = True
-	for line in fin:
-		if new_morpholex:
-			corr = next(it).rstrip()
-			new_morpholex = False
-		line = line.rstrip()
-		if line != '':
-			total += 1
+with (open(predfile) as fin,
+	  open(corrfile) as ref,
+	  open('correct.txt', 'w') as corrf,
+	  open('errors.txt', 'w') as errf,
+	  open('missing.txt', 'w') as mf,
+	  open('incomplete.txt', 'w') as incompf):
+	for corr_line in ref:
+		total += 1
+		joined_corr = corr_line.rstrip()
+		corr: set[str] = split(joined_corr)
+		pred = set[str]()
+		while ((line := fin.readline().rstrip()) != ''):
 			spl = line.split('\t')
 			if len(spl) == 2:
 				morpholex, generated = spl
-				if postprocess(generated) == corr:
-					string = '{0:30} {1}'.format(morpholex, generated)
-					corrf.write(string + '\n')
-					correct.add(string)
-					n_correct += 1
-				elif generated != '+?':
-					string = '{0:30} {1:50} {2}'.format(morpholex, generated, corr)
-					errf.write(string + '\n')
-					errors.add(string)
+				pred.add(postprocess(generated))
 			else:
 				morpholex, _, mark = spl
 				assert mark == '+?', morpholex
-				string = '{0:30} {1}'.format(morpholex, corr)
-				mf.write(string + '\n')
+				line = fin.readline().rstrip()
+				assert line == ''
+				break
+		joined_pred = join(pred)
+		correctness = is_correct(pred, corr)
+		equality = (pred == corr)
+		if correctness:
+			n_correct += 1
+			if equality:
+				n_equal += 1
+				string = '{0:30} {1}'.format(morpholex, joined_pred)
+			else:
+				string = '{0:30} {1:30} {2}'.format(
+					morpholex, joined_pred,
+					join(corr - pred))
+				incompf.write(string + '\n')
+			corrf.write(string + '\n')
+			correct.add(string)
+		elif len(pred) > 0:
+			string = '{0:30} {1:50} {2}'.format(morpholex, joined_pred, joined_corr)
+			errf.write(string + '\n')
+			errors.add(string)
 		else:
-			new_morpholex = True
+			string = '{0:30} {1}'.format(morpholex, joined_corr)
+			mf.write(string + '\n')
 new_correct = sorted(correct - old_correct)
 print('New correct: {0}.'.format(len(new_correct)))
 new_errors = sorted(errors - old_errors)
@@ -65,3 +86,5 @@ with open('new_errors.txt', 'w') as fout:
 		fout.write(string + '\n')
 accuracy = 100 * n_correct / total
 print('Accuracy: {0} % ({1} / {2}).'.format(round(accuracy, 2), n_correct, total))
+strict_accuracy = 100 * n_equal / total
+print('Equality: {0} % ({1} / {2}).'.format(round(strict_accuracy, 2), n_equal, total))
