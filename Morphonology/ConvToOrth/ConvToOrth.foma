@@ -4,9 +4,9 @@ define Accentuate;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define r1 "*" Irr -> "" || _ С (')("|") Г;
-define r2 ' -> "" || \л _ [н|л|р|ц|с|т];
-define r3 [..] -> ' || [С - й] _ ("|")j;
+define r1 "*" Irr -> "" || _ С (') ("|") Г;
+define r2 ' -> "" || \л _ [н|л|р|ц|с|т] (') ("|") Г;
+define r3 [..] -> ' || [С - й] _ ("|") j;
 define StarDeletion r1 .o. r2 .o. r3;
 define r4 "*" -> и || _ j;
 define r5 "*" -> е || _ Irr j;
