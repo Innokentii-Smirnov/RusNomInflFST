@@ -1,10 +1,13 @@
-Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Stem +Ending
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Nul +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Stem +Ending
 Definitions
 	Gender = %+Masc|%+Fem|%+Neut;
+	Number = %+Sing|%+Plur;
+	Case = %+Nom|%+Acc|%+Gen|%+Loc|%+Dat|%+Ins;
 	Subst = %+Subst1 | %+Subst2;
 	Sep = "|";
-	B = ж|ш|ч|' Sep;
-	A = \B Sep;
+	Soft = ж|ш|ч|';
+	B = Soft Sep;
+	A = \Soft Sep;
 
 LEXICON Root
 +Subst1:0 		Subst1;
@@ -13,6 +16,7 @@ LEXICON Root
 +Pron1:0 		Pron1;
 +Pron2:0 		Pron2;
 +Poss:0 		Poss;
++Nul:0			Nul;
 Allomorphic;
 
 LEXICON Allomorphic
@@ -119,3 +123,6 @@ LEXICON Stem
 
 LEXICON Ending
 +Ending		#;
+
+LEXICON Nul
+<Gender Number Case .x. 0>	#;
