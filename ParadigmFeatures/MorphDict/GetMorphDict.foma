@@ -1,6 +1,5 @@
 read lexc ../../ParadigmFeatures/MorphDict/MorphDict.lexc
 define Lexicon;
-define Pos %+Noun | %+Adj | %+Pron | %+PronAdj;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Preprocess е <- ё || _ ;

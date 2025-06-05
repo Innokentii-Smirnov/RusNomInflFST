@@ -11,6 +11,7 @@ define class3 %+Alt24|%+Alt25;
 define class4 %+Alt26;
 define class5 %+Alt27|%+Alt28;
 define class6 %+Alt29|%+Alt30|%+Alt31|%+Alt32;
+define class7 %+Alt33|%+Alt34;
 define AlternationIndices class1|class2|class3|class4|class5;
 !!!_____________________Класс I_____________________!!!
 define r1 к -> ч || _ "|" %+Alt1 .o. %+Alt1 -> 0;
@@ -71,7 +72,9 @@ define c6 morphome6 .P. [?* .o. class6 -> 0];
 !!!_____________________Класс VII_____________________!!!
 define r33 {'%*н} -> 0 || _ "|" %+Alt33 .o. %+Alt33 -> 0;
 define r34 ' -> 0 || _ "|" %+Alt34 .o. %+Alt34 -> 0;
-define c7 r33 .o. r34;
+define b7 r33 .o. r34;
+define morphome7 b7 .o. W %+Short %+Masc %+Sing Tail;
+define c7 morphome7 .P. [?* .o. class7 -> 0];
 !!!_____________________Класс VIII_____________________!!!
 define r35 ' -> 0 || _ "|" %+Alt35 .o. %+Alt35 -> 0;
 define c8 r35;

@@ -1,3 +1,4 @@
+define Pos %+Noun | %+Adj | %+Pron | %+PronAdj;
 define Animacy %+Anim | %+Inan;
 define GrammRazr %+Extadj | %+Nesoglbch | %+Simadj | %+Soglbch | %+Subst;
 define Numl %+Nesoglbch | %+Soglbch;
