@@ -8,6 +8,7 @@ source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 regex	Letter+ 0:Sep [Feature+ & $%+Adj & $%+ParDef14] .P.
 		Letter+ 0:Sep Letter^2 [Feature+ & $%+Adj] |
+		Letter+ 0:Sep Letter^4 [Feature+ & $%+Refl] |
 		Letter+ 0:Sep [Feature+ & $%+Nul] .P. [
 			Lexicon .P.
 			Letter+ 0:Sep [Г Irr|ь|й] Feature+ .P.

@@ -5,4 +5,5 @@ source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
 define Cleanup ConvStress -> 0 || _ ;
+set flag-is-epsilon ON
 define Accentuate Endings .o. Cleanup;

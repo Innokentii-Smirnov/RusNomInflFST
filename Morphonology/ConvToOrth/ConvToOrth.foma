@@ -25,4 +25,5 @@ define r16 j -> й;
 define r17 ' -> ь;
 define Softness r13 .o. r14 .o. r15 .o. r16 .o. r17;
 define Accent Acc -> "" || ё _ .o. Acc -> "́";
+set flag-is-epsilon ON
 define ConvToOrth Accentuate .o. StarDeletion .o. StarToVowel .o. Orth .o. VowelChanges .o. Softness .o. Accent;

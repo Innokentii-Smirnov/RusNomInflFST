@@ -1,4 +1,4 @@
-Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Nul +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Stem +Ending
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Nul +Refl +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Stem +Ending @P.REFL.ON@ @R.REFL.ON@ @D.REFL.ON@
 Definitions
 	Gender = %+Masc|%+Fem|%+Neut;
 	Number = %+Sing|%+Plur;
@@ -17,6 +17,7 @@ LEXICON Root
 +Pron2:0 		Pron2;
 +Poss:0 		Poss;
 +Nul:0			Nul;
++Refl:0			Refl;
 Allomorphic;
 
 LEXICON Allomorphic
@@ -52,10 +53,10 @@ LEXICON SubstNomPlur
 LEXICON Adj
 +Masc+Sing+Nom:ый					Stem;
 +Masc+Sing+Nom:ой					Ending;
-+Neut+Sing+Nom:оjе					#;
-+Fem+Sing+Nom:аjа					#;
-+Fem+Sing+Acc:уjу					#;
-<Gender %+Plur %+Nom .x. {ыjе}>		#;
++Neut+Sing+Nom:оjе					OptRefl;
++Fem+Sing+Nom:аjа					OptRefl;
++Fem+Sing+Acc:уjу					OptRefl;
+<Gender %+Plur %+Nom .x. {ыjе}>		OptRefl;
 AdjObl;
 0:ы 					Them;
 
@@ -96,27 +97,34 @@ LEXICON AdjObl
 <%+Fem:0>				FemAdj;
 
 LEXICON MascNeutAdj
-+Sing+Gen:ово		#;
-+Sing+Dat:ому		#;
-+Sing+Loc:ом		#;
++Sing+Gen:ово		OptRefl;
++Sing+Dat:ому		OptRefl;
++Sing+Loc:ом		OptRefl;
 
 LEXICON FemAdj
-<%+Sing [%+Gen|%+Dat|%+Loc|%+Ins] .x. {оj}>	#;
-+Sing+Ins:оjу								#;
+<%+Sing [%+Gen|%+Dat|%+Loc|%+Ins] .x. {оj}>	OptRefl;
++Sing+Ins:оjу								OptRefl;
 
 LEXICON Them
-<[%+Masc|%+Neut] %+Sing %+Ins .x. м>	#;
-<Gender %+Nom %+Plur .x. 0>				#;
+<[%+Masc|%+Neut] %+Sing %+Ins .x. м>	OptRefl;
+<Gender %+Nom %+Plur .x. 0>				OptRefl;
 <Gender %+Plur .x. 0>					AdjOblPlur;
 
 LEXICON AdjOblPlur
-+Gen:х				#;
++Gen:х				OptRefl;
 OblPlur;
 
 LEXICON OblPlur
-+Loc:х				#;
-+Dat:м				#;
-+Ins:ми				#;
++Loc:х				OptRefl;
++Dat:м				OptRefl;
++Ins:ми				OptRefl;
+
+LEXICON OptRefl
+@D.REFL.ON@			#;
+@R.REFL.ON@			Postfix;
+
+LEXICON Postfix
+0:с'а		#;
 
 LEXICON Stem
 +Stem		#;
@@ -126,3 +134,6 @@ LEXICON Ending
 
 LEXICON Nul
 <Gender Number Case .x. 0>	#;
+
+LEXICON Refl
+@P.REFL.ON@			Adj;
