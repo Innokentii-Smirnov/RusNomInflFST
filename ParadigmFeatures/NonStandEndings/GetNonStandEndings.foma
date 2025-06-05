@@ -10,7 +10,7 @@ define NonStandEndingsExceptions [Letter+ 0:NonStandEnding+ .o. NonStandEndingsL
 regex [..] -> %+Nse1 || Letter NonStandEnding* [%+Alt12 | %+Alt14 | %+Alt15] _ Feature* %+Masc;
 regex [..] -> %+Nse1 || {ко} Irr Alternation* _ NonStandEnding* DeclType;
 regex [..] (->) %+Nse1 || и Irr {ще} _ NonStandEnding* DeclType Feature+ %+Masc .#.;
-regex [..] -> %+Nse2 || [а|я] Irr {нин} %+Alt6 _ NonStandEnding* DeclType;
+regex [..] -> %+Nse2 || [а|я] Irr н и Irr н %+Alt6 _ NonStandEnding* DeclType;
 define Prev %+Nse1|%+Nse2;
 define Next [NonStandEnding - Prev]* DeclType Feature+;
 define Alt Alternation*;
