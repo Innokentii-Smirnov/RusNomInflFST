@@ -1,20 +1,18 @@
 import os
-from os.path import join, isfile, splitext
+from os import path
+from os.path import isfile, splitext
 from tqdm.auto import tqdm
 from udapi.block.read.conllu import Conllu
-categories = {
-	'ADJ': ['Gender', 'Number', 'Case'],
-	'NOUN': ['Number', 'Case'],
-	'NOUN': ['Number', 'Case'],
-	'DET': ['Case', 'Gender'],
-	'PRON': ['Case'],
-	'NUM': ['Case'],
-}
-l = ['Gender', 'Animacy', 'Number', 'Case']
-olddir = os.getcwd()
-data = set[tuple[str, str]]()
-sources = ['../UD_Russian-SynTagRus', '../UD_Russian-Taiga']
-for source in sources:
+start_dir = os.getcwd()
+import sys
+sys.path.insert(1, start_dir)
+from package.const import LANG, CORPORA, CATEGORIES
+from package.categories import get_categories
+from package.util import join
+from package.validate import is_valid
+data = dict[str, set[str]]()
+for corpus in CORPORA:
+	source = f'../UD_{LANG}-{corpus}'
 	print(source)
 	os.chdir(source)
 	files = [name for name in os.listdir('.')
@@ -25,26 +23,24 @@ for source in sources:
 		for tree in tqdm(document.trees):
 			for node in tree.descendants:
 				form = node.form
-				lemma = node.lemma
-				upos = node.upos
-				feats = node.feats
-				if upos in categories:
-					cats = categories[upos]
-					if upos == 'NUM' and 'Gender' in feats:
-						cats = ['Gender'] + cats
-					if upos == 'ADJ' and feats['Case'] == 'Acc':
-						cats = l
-					features = ['+' + node.feats[category]
-					for category in cats]
-					if (all(feature != '+' for feature in features) and form.isalpha()
-					and len(form) > 1 and form.islower()):
-						tag = ''.join(features)
-						data.add((form, lemma + tag))
-result = sorted(data, key=lambda x: x[1])
-os.chdir(olddir)
+				if is_valid(node):
+					upos = node.upos
+					if upos in CATEGORIES:
+						feats = node.feats
+						categories = get_categories(upos, feats)
+						features = [feats[category] for category in categories]
+						if (all(feature != '' for feature in features)):
+							tag = ''.join('+'+ feature for feature in features)
+							morpholex = node.lemma + tag
+							if not morpholex in data:
+								data[morpholex] = set[str]()
+							data[morpholex].add(form)
+result = [(morpholex, join(forms)) for morpholex, forms in data.items()]
+result.sort()
+os.chdir(start_dir)
 with open('in.txt', 'w', encoding='utf-8') as fout:
-	for form, analysis in result:
-		fout.write(analysis + '\n')
+	for morhpolex, form in result:
+		fout.write(morhpolex + '\n')
 with open('corr.txt', 'w', encoding='utf-8') as fout:
-	for form, analysis in result:
+	for morpholex, form in result:
 		fout.write(form + '\n')

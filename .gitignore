@@ -1,6 +1,7 @@
 *.bin
 *.txt
 *.stackdump
+*.pyc
 !in.txt
 !corr.txt
 !compilation_order.txt

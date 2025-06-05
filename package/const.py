@@ -1,0 +1,11 @@
+LANG = 'Russian'
+CORPORA = ['Taiga', 'SynTagRus', 'Poetry', 'GSD', 'PUD']
+CATEGORIES = {
+	'ADJ': ['Gender', 'Number', 'Case'],
+	'ADJ-Animacy': ['Gender', 'Animacy', 'Number', 'Case'],
+	'NOUN': ['Number', 'Case'],
+	'DET': ['Case', 'Gender'],
+	'PRON': ['Case'],
+	'NUM': ['Case'],
+	'NUM-Gender': ['Gender', 'Case']
+}
