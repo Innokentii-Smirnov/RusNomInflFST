@@ -45,7 +45,7 @@ regex [
 	Letter+ {нь} 0:%+Fem;
 regex [
 		С* [а|е] |
-		Syll е Acc |
+		Syll+ е Acc |
 		Letter+ [с|[с|ф] о Irr]
 	]
 	{ль} 0:%+Fem .P.
