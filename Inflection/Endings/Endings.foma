@@ -21,4 +21,4 @@ define Rules RemoveParDef .o. RemoveNumHom .o. RemoveGrammRazr .o. Syncretism .o
 define W Letter+ (Sep Letter*);
 define RemoveNse NonStandEnding -> 0 || _ ;
 set flag-is-epsilon ON
-define Endings Alternations .o. Rules .o. [W NonStandardEnding ConvStress .P. [RemoveNse .o. W StandardEnding (ConvStress)]];
+define Endings Alternations .o. Rules .o. [W NonStandardEnding Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];

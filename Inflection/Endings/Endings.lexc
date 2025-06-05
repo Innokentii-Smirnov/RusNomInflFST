@@ -90,7 +90,7 @@ LEXICON FemSubst1
 <%+Sing[%+Loc|%+Dat] .x. е>	#;
 +Sing+Loc:е					#;
 +Sing+Ins:оj					#;
-+Sing+Ins:оj					#;
++Sing+Ins:оjу					#;
 
 LEXICON AdjObl
 <%+Masc|%+Neut .x. 0>	MascNeutAdj;

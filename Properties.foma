@@ -1,3 +1,5 @@
 define Case %+Nom|%+Acc|%+Gen|%+Loc|%+Dat|%+Ins;
-define ConvStress %+Stem|%+Ending;
+define ConvStress %+Stem | %+Ending;
+define AccType %+Marg;
 define Property Case;
+define Tail ConvStress (AccType);
