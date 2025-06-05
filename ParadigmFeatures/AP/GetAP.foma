@@ -2,10 +2,11 @@ load stack ../../ParadigmFeatures/Star/GetStar.bin
 invert net
 define GetStar;
 read lexc ../../ParadigmFeatures/AP/GetAP.lexc
+define APLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Features (Star) Alternation* NonStandEnding* DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
-define APExceptions Wordform 0:AP Feature+ .o. StarLexicon / Sep Feature+;
+define APExceptions Wordform 0:AP Feature+ .o. APLexicon / Sep Feature+;
 define StemStressed Letter* AccentedVowel Letter* Sep Letter*;
 define EndingStressed Letter* Sep Letter* AccentedVowel Letter*;
 define Monosyll Syll / Sep;

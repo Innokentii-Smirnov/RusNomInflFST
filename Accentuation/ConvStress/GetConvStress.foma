@@ -4,8 +4,16 @@ define ParadigmSchemata;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define rA [..] -> %+Stem || %+a Feature+ Property+ _ .#.;
-define rB [..] -> %+Ending || %+b Feature+ Property+ _ .#.;
-define Rules rA .o. rB;
+define r0 [..] -> %+ConvStress || _ .#.;
+define A %+a | %+ab | %+ac;
+define rA %+ConvStress -> %+Stem || A Feature+ Case _ ;
+define rC %+ConvStress -> %+Stem || %+c Feature+ %+Sing Case _ ;
+define rD %+ConvStress -> %+Stem || %+d Feature+ %+Plur Case _ ;
+define rD1 %+ConvStress -> %+Stem || %+d1 Feature+ [%+Sing %+Acc | %+Plur Case] _ ;
+define rE %+ConvStress -> %+Stem || %+e Feature+ [%+Sing Case | %+Plur %+Nom] _ ;
+define rF %+ConvStress -> %+Stem || %+e Feature+ %+Plur %+Nom _ ;
+define rF1 %+ConvStress -> %+Stem || %+f1 Feature+ [%+Sing %+Acc | %+Plur %+Nom] _ ;
+define Default %+ConvStress -> %+Ending || _ ;
+define Rules r0 .o. rA .o. rC .o. rD .o. rD1 .o. rE .o. rF .o. rF1 .o. Default;
 define Cleanup AP -> 0 || _ ;
 define GetConvStress ParadigmSchemata .o. Rules .o. Cleanup;

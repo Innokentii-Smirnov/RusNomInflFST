@@ -43,7 +43,7 @@ with (open(predfile) as fin,
 			spl = line.split('\t')
 			if len(spl) == 2:
 				morpholex, generated = spl
-				pred.add(postprocess(generated))
+				pred.add(generated)
 			else:
 				morpholex, _, mark = spl
 				assert mark == '+?', morpholex
@@ -51,8 +51,9 @@ with (open(predfile) as fin,
 				assert line == ''
 				break
 		joined_pred = join(pred)
-		correctness = is_correct(pred, corr)
-		equality = (pred == corr)
+		postprocessed = set(map(postprocess, pred))
+		correctness = is_correct(postprocessed, corr)
+		equality = (postprocessed == corr)
 		if correctness:
 			n_correct += 1
 			if equality:
