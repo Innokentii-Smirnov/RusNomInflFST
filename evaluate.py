@@ -32,7 +32,8 @@ with (open(predfile) as fin,
 	  open('correct.txt', 'w') as corrf,
 	  open('errors.txt', 'w') as errf,
 	  open('missing.txt', 'w') as mf,
-	  open('incomplete.txt', 'w') as incompf):
+	  open('incomplete.txt', 'w') as incompf,
+	  open('extra.txt', 'w') as extraf):
 	for corr_line in ref:
 		total += 1
 		joined_corr = corr_line.rstrip()
@@ -58,10 +59,17 @@ with (open(predfile) as fin,
 				n_equal += 1
 				string = '{0:30} {1}'.format(morpholex, joined_pred)
 			else:
-				string = '{0:30} {1:30} {2}'.format(
-					morpholex, joined_pred,
-					join(corr - pred))
-				incompf.write(string + '\n')
+				incomp = corr - pred
+				if len(incomp) > 0:
+					string = '{0:30} {1:30} {2}'.format(
+						morpholex, joined_pred, join(incomp))
+					incompf.write(string + '\n')
+				extra =pred - corr
+				if len(extra) > 0:
+					string = '{0:30} {1:30} {2}'.format(
+						morpholex, join(extra), joined_corr)
+					extraf.write(string + '\n')
+			string = '{0:30} {1:30} {2}'.format(morpholex, joined_pred, joined_corr)
 			corrf.write(string + '\n')
 			correct.add(string)
 		elif len(pred) > 0:
