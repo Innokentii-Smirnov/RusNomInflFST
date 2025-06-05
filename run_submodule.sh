@@ -8,6 +8,11 @@ xfst -utf8 -e "source $name.foma" -e "push $name" -e "invert net" -e "save stack
 echo "Created Foma binary $binary."
 if [ -f in.txt ]; then
 	input=in.txt
+	lookup $binary -utf8 < $input > loc.txt
+fi
+echo $directory
+if [[ $directory == 'ParadigmFeatures'* ]]; then
+	input=../../lemmata.txt
 else
 	input=../../in.txt
 fi

@@ -11,6 +11,7 @@ from package.categories import get_categories
 from package.util import join
 from package.validate import is_valid
 data = dict[str, set[str]]()
+lemmata = set[str]()
 for corpus in CORPORA:
 	source = f'../UD_{LANG}-{corpus}'
 	print(source)
@@ -31,10 +32,12 @@ for corpus in CORPORA:
 						features = [feats[category] for category in categories]
 						if (all(feature != '' for feature in features)):
 							tag = ''.join('+'+ feature for feature in features)
-							morpholex = node.lemma + tag
+							lemma = node.lemma
+							morpholex = lemma + tag
 							if not morpholex in data:
 								data[morpholex] = set[str]()
 							data[morpholex].add(form)
+							lemmata.add(lemma)
 result = [(morpholex, join(forms)) for morpholex, forms in data.items()]
 result.sort()
 os.chdir(start_dir)
@@ -44,3 +47,6 @@ with open('in.txt', 'w', encoding='utf-8') as fout:
 with open('corr.txt', 'w', encoding='utf-8') as fout:
 	for morpholex, form in result:
 		fout.write(form + '\n')
+with open('lemmata.txt', 'w', encoding='utf-8') as fout:
+	for lemma in sorted(lemmata):
+		fout.write(lemma + '\n')
