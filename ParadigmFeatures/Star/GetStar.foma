@@ -27,4 +27,4 @@ union net
 define WordCons;
 define WordStar WordVoc | WordCons;
 define GetStar GetStem .o. StarExceptions .P.
-	[WordStar Feature+ .o. Wordform 0:%+Star Feature+] .P. ?*;
+	[WordStar Feature* .o. Wordform 0:%+Star Feature+] .P. ?*;
