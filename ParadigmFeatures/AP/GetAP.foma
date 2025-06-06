@@ -15,7 +15,10 @@ define Polysyll Syll^>1 / Sep;
 define FinalStressed UnaccOrth+ AccentedVowel С* Sep;
 #
 # Слова бесчисловых разрядов
-define Numless Wordform %+a DeclType Gender Number (ParadigmDefects) Numl;
+regex Wordform %+a (Star) DeclType Gender Number (ParadigmDefects) %+Nesoglbch;
+regex Wordform %+a (Star) DeclType Number (ParadigmDefects) %+Soglbch;
+union net
+define Numless;
 #
 # Существительные
 #

@@ -9,7 +9,7 @@ define Preceding DeclType;
 define Following (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define Insertion Letter+ Preceding 0:Number;
 define MorphNumberExceptions [Insertion .o. MorphNumberLexicon.l / Preceding] Following;
-regex L+ [{дцать} | {деся́т}] %+Sing;
+regex L+ [{дцать} | {дес} я Irr т] %+Sing;
 regex L+ [{со́т} | {еро}] %+Plur; 
 turn stack
 union net

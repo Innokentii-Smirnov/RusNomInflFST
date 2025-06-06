@@ -9,7 +9,7 @@ define Features (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define DeclTypeExceptions [Letter+ 0:DeclType .o. DeclTypeLexicon] Features;
 # Слова бесчисловых разрядов
 regex [..] -> %+Subst1 || {со́т} _ .#.;
-regex [..] -> %+Subst2 || {дцать} | {деся́т} _ .#.;
+regex [..] -> %+Subst2 || {дцать} | {дес} я Irr т _ .#.;
 regex [..] -> %+Pron1 || {еро} _ .#.;
 turn stack
 compose net
