@@ -18,6 +18,6 @@ define NonStCountForm %+True;
 define NonStPreposForms %+True;
 define UnstableO %+0 | %+1 | %+2;
 define Alternation %+Alt61 | %+Alt11 | %+Alt1 | %+Alt2 | %+Alt3 | %+Alt4 | %+Alt27 | %+Alt5 | %+Alt9 | %+Alt6 | %+Alt7 | %+Alt8 | %+Alt10 | %+Alt12 | %+Alt13 | %+Alt14 | %+Alt15 | %+Alt16 | %+Alt17 | %+Alt18 | %+Alt19 | %+Alt20 | %+Alt21 | %+Alt22 | %+Alt24 | %+Alt25 | %+Alt28 | %+Alt29 | %+Alt30 | %+Alt31 | %+Alt32 | %+Alt33 | %+Alt34 | %+Alt35 | %+Alt36 | %+Alt37 | %+Alt38 | %+Alt39 | %+Alt40 | %+Alt41 | %+Alt42 | %+Alt57 | %+Alt43 | %+Alt53 | %+Alt44 | %+Alt54 | %+Alt56 | %+Alt45 | %+Alt55 | %+Alt46 | %+Alt47 | %+Alt58 | %+Alt48 | %+Alt49 | %+Alt50 | %+Alt51 | %+Alt52 | %+Alt59 | %+Alt60;
-define NonStandEnding %+Nse10 | %+Nse5 | %+Nse0 | %+Nse11 | %+Nse12 | %+Nse13 | %+Nse14 | %+Nse15 | %+Nse16 | %+Nse17 | %+Nse18 | %+Nse19 | %+Nse20 | %+Nse21 | %+Nse22 | %+Nse23 | %+Nse24 | %+Nse25 | %+Nse3 | %+Nse4 | %+Nse2 | %+Nse6 | %+Nse1;
+define NonStandEnding %+Nse10 | %+Nse5 | %+Nse0 | %+Nse11 | %+Nse12 | %+Nse13 | %+Nse14 | %+Nse15 | %+Nse16 | %+Nse17 | %+Nse18 | %+Nse19 | %+Nse20 | %+Nse21 | %+Nse22 | %+Nse23 | %+Nse24 | %+Nse25 | %+Nse26 | %+Nse3 | %+Nse4 | %+Nse2 | %+Nse6 | %+Nse1;
 define Feature Animacy | GrammRazr | ParadigmDefects | DeclType | NumberHom | Number | Gender | Star | AP | NonStAcc | NonStPart | NonStLoc | NonStCountForm | NonStPreposForms | UnstableO | AccentualDeviations | Alternation | NonStandEnding;
 define ParadigmFeatures Feature;
