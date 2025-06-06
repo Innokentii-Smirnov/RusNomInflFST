@@ -15,7 +15,7 @@ regex L+ е 0:%+Masc;
 regex	L+ [{ья} Irr | {иеся}] 0:%+Masc .P.
 		L+ [а|я] Irr 0:%+Neut;
 regex [
-		L+ [ы|и] Acc 0:%+Masc |
+		L+ [ы|и] Acc |
 		L+ [{сы}|{озы}|{уары}|[С|ь][{ты}|{цы}]]
 	]
 	0:%+Masc .P.
