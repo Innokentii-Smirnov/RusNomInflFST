@@ -14,7 +14,17 @@ define Disyll Syll^2 / Sep;
 define Polysyll Syll^>1 / Sep;
 define FinalStressed UnaccOrth+ AccentedVowel С* Sep;
 #
+# Слова бесчисловых разрядов
+#
 # Существительные
+#
+# Существительные несубстантивных типов склонения
+define Nul Wordform %+a %+Nul Gender (NumberHom);
+define Finals Sep [о Acc й | а Acc я | о Acc е | ы Acc е | и Acc е] | [и Acc н | ы Acc н] Sep | Sep Г Acc;
+define Other [Letter+ Finals 0:%+b .P. Wordform 0:%+a].l
+	(Star) [DeclType - [Subst | %+Nul]] Gender (NumberHom);
+define NonsubstantivalNouns Nul | Other;
+# Существительные субстантивных типов склонения
 #
 # Группа первая. Существительные мужского морфологического рода (кроме pluralia tantum)
 regex Letters [щ | Г Irr ч | [у|ю] Irr н]		Sep;
@@ -66,14 +76,15 @@ concatenate net
 define FifthGroup;
 #
 # Объединение
-define Substantival [FirstGroup | SecondGroup | ThirdGroup | FourthGroup | FifthGroup] (ParadigmDefects) %+Subst;
+define SubstantivalNouns [FirstGroup | SecondGroup | ThirdGroup | FourthGroup | FifthGroup];
+define Nouns [NonsubstantivalNouns | SubstantivalNouns] (ParadigmDefects) %+Subst;
 #
 # Прилагательные
 #
 # Прилагательные простого адъективного разряда
 regex [[Letter* Sep о Acc й | Letter* [и|ы] Acc н Sep] 0:%+b .P.
 	Wordform 0:%+a].l;
-regex (Star) DeclType %+Simadj;
+regex (Star) DeclType (ParadigmDefects) %+Simadj;
 turn stack
 concatenate net
 define SimAdjectival;
@@ -82,16 +93,16 @@ define SimAdjectival;
 regex StemStressed %+a;
 regex EndingStressed %+b;
 union net
-regex (Star) DeclType %+Extadj;
+regex (Star) DeclType (ParadigmDefects) %+Extadj;
 turn stack
 concatenate net
 define ExtAdjectival;
 #
 # Объединение
-define APDistribution Substantival | SimAdjectival | ExtAdjectival;
+define APDistribution Nouns | SimAdjectival | ExtAdjectival;
 #
 define Intervening Alternation* NonStandEnding*;
 define Following (Animacy) (Gender);
 define ExtendedAPDistribution [APDistribution / Intervening] Following .o. Wordform AP Features;
 define APRules Wordform 0:AP Features .o. ExtendedAPDistribution;
-define GetAP GetStar .o. APExceptions .P. APRules .P. ?*; #Wordform 0:%+Error Feature+;
+define GetAP GetStar .o. APExceptions .P. APRules .P. Wordform 0:%+Error Feature+;

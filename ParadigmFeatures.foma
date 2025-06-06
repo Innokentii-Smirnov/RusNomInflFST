@@ -5,6 +5,7 @@ define Numl %+Nesoglbch | %+Soglbch;
 define Adj %+Extadj | %+Simadj;
 define ParadigmDefects %+ParDef0 | %+ParDef1 | %+ParDef3 | %+ParDef4 | %+ParDef5 | %+ParDef6 | %+ParDef7 | %+ParDef9 | %+ParDef10 | %+ParDef11 | %+ParDef12 | %+ParDef13 | %+ParDef14 | %+ParDef15 | %+ParDef17;
 define DeclType %+Adj | %+Anom | %+Nul | %+Poss | %+Pron1 | %+Pron2 | %+Subst1 | %+Subst2 | %+Subst | %+Refl;
+define Subst %+Subst1 | %+Subst2;
 define NumberHom %+NumberHom0 | %+NumberHom1;
 define Number %+Plur | %+Sing;
 define Gender %+Fem | %+Masc | %+Neut;
