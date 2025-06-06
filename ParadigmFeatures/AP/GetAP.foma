@@ -46,10 +46,10 @@ define g1a Wordform 0:%+a (Star);
 define FirstGroup [g1b .P. g1a].l %+Subst1 %+Masc;
 #
 # Группа вторая. Существительные среднего морфологического рода (кроме pluralia tantum)
-regex StemStressed %+a;
+regex [Letter+ м Sep я 0:%+c .P. StemStressed 0:%+a].l;
 regex EndingStressed %+b;
 union net
-regex (Star) %+Subst1 %+Neut;
+regex (Star) Subst %+Neut;
 turn stack
 concatenate net
 define SecondGroup;
