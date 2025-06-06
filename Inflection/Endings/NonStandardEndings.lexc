@@ -30,11 +30,23 @@ LEXICON Root
 <%+Nse18 %+Pron1 (Gender) %+Plur %+Nom .x. о>				#;
 <%+Nse19 %+Pron1 [%+Masc|%+Neut] %+Plur %+Nom .x. а>	#;
 +Nse19+Pron1+Fem+Plur+Nom:е								#;
-<%+Nse24 %+Anom %+Plur Gender .x. у>		NumeralOblique;
-<%+Nse25 %+Anom %+Plur .x. о>		NumeralOblique;
+<%+Nse24 %+Anom %+Plur [%+Masc|%+Neut] %+Nom .x. а>		#;
+<%+Nse24 %+Anom %+Plur %+Fem %+Nom .x. е>		#;
+<%+Nse24 %+Anom %+Plur Gender .x. у>			NumeralOblique;
+<%+Nse25 %+Anom %+Plur %+Nom .x. ы>		#;
+<%+Nse25 %+Anom %+Plur .x. о>					NumeralOblique;
+<%+Nse26 %+Anom %+Plur %+Nom .x. о>		#;
+<%+Nse26 %+Anom %+Plur .x. о>					GenDatLoc;
+<%+Nse26 %+Anom %+Plur .x. 0>					Ins;
 
-Lexicon NumeralOblique
+LEXICON NumeralOblique
+GenDatLoc;
+Ins;
+
+LEXICON GenDatLoc
 +Gen:х			#;
 +Loc:х			#;
 +Dat:м			#;
+
+LEXICON Ins
 +Ins:м'а		#;
