@@ -1,6 +1,6 @@
-load stack ../../Inflection/ParadigmSchemata/ParadigmSchemata.bin
+load stack ../../Inflection/Syncretism/Syncretism.bin
 invert net
-define ParadigmSchemata;
+define Syncretism;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
@@ -16,4 +16,4 @@ define rF1 %+ConvStress -> %+Stem %+Marg || %+f1 Feature+ [%+Sing %+Acc | %+Plur
 define Default %+ConvStress -> %+Ending || _ ;
 define Rules r0 .o. rA .o. rC .o. rD .o. rD1 .o. rE .o. rF .o. rF1 .o. Default;
 define Cleanup AP -> 0 || _ ;
-define GetConvStress ParadigmSchemata .o. Rules .o. Cleanup;
+define GetConvStress Syncretism .o. Rules .o. Cleanup;

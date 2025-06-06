@@ -8,17 +8,7 @@ define NonStandardEnding;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define RemoveParDef ParadigmDefects -> 0 || _ ;
-define RemoveNumHom NumberHom -> 0 || _ ;
-define RemoveGrammRazr GrammRazr -> 0 || _ ;
-define r1 %+Acc -> %+Nom || %+Neut Animacy %+Sing _ ;
-define r2 %+Acc -> %+Nom || %+Subst2 Gender Animacy %+Sing _ ;
-define r3 %+Acc -> %+Nom || %+Masc %+Inan %+Sing _ , %+Inan %+Plur _ ;
-define r4 %+Acc -> %+Gen || %+Masc %+Anim %+Sing _ , %+Anim %+Plur _ ;
-define Syncretism r1 .o. r2 .o. r3 .o. r4;
-define RemoveAnimacy Animacy -> 0 || _ ;
-define Rules RemoveParDef .o. RemoveNumHom .o. RemoveGrammRazr .o. Syncretism .o. RemoveAnimacy;
 define W Letter+ (Sep Letter*);
 define RemoveNse NonStandEnding -> 0 || _ ;
 set flag-is-epsilon ON
-define Endings Alternations .o. Rules .o. [W NonStandardEnding Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];
+define Endings Alternations .o. [W NonStandardEnding Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];

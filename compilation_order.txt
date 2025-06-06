@@ -13,6 +13,7 @@ Star
 AP
 Morphonology/OrthToConv/OrthToConv
 Inflection/ParadigmSchemata/ParadigmSchemata
+Inflection/Syncretism/Syncretism
 Accentuation/ConvStress/GetConvStress
 Morphonology/Alternations/Alternations
 Inflection/Endings/Endings
