@@ -15,6 +15,7 @@ define Polysyll Syll^>1 / Sep;
 define FinalStressed UnaccOrth+ AccentedVowel С* Sep;
 #
 # Слова бесчисловых разрядов
+define Numless Wordform %+a DeclType Gender Number (ParadigmDefects) Numl;
 #
 # Существительные
 #
@@ -99,7 +100,7 @@ concatenate net
 define ExtAdjectival;
 #
 # Объединение
-define APDistribution Nouns | SimAdjectival | ExtAdjectival;
+define APDistribution Numless | Nouns | SimAdjectival | ExtAdjectival;
 #
 define Intervening Alternation* NonStandEnding*;
 define Following (Animacy) (Gender);
