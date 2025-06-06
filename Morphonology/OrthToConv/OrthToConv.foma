@@ -1,7 +1,11 @@
-load stack ../../ParadigmFeatures/AP/GetAP.foma
+load stack ../../ParadigmFeatures/AP/GetAP.bin
+invert net
 define GetAP;
+read lexc ../../Morphonology/OrthToConv/Exceptions.lexc
+define Lexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
+define Exceptions Lexicon Feature*;
 
 !!!Блок I. Замена членов акцентно-позиционных чередований!!!
 define b1r1 ё -> ё̀ || _ Letter+ Acc, Acc Letter* _ ;
@@ -53,4 +57,5 @@ define Accent Acc -> "" || ё _ ;
 define Cleanup1 UnstableO -> "";
 define Cleanup2 Star -> "";
 define Cleanup Cleanup1 .o. Cleanup2;
-define OrthToConv GetAP .o. b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b6 .o. b7 .o. Accent .o. Cleanup;
+define Rules b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b6 .o. b7;
+define OrthToConv GetAP .o. Exceptions .P. Rules .o. Accent .o. Cleanup;
