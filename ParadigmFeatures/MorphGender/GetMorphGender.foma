@@ -8,7 +8,7 @@ source ../../ParadigmFeatures.foma
 define Preceding DeclType;
 define Following (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define Insertion Letter+ Preceding 0:Gender;
-define MorphGenderExceptions [Insertion .o. [MorphGenderLexicon / Preceding]] Following;
+define MorphGenderExceptions Insertion Following .o. MorphGenderLexicon / Preceding;
 regex Letter+ %+Nul 0:%+Neut (NumberHom) %+Subst (Animacy) (Gender) .P. ?*;
 define IndeclMorphGender;
 regex L+ е 0:%+Masc;

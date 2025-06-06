@@ -1,12 +1,20 @@
 Multichar_Symbols +Fem +Masc +Neut
 
+Definitions
+	Acc = "́";
+	Irr = (Acc);
+
 LEXICON Root
+Lexeme;
+<?*>	Suffix;
+
+LEXICON Lexeme
 пять		Fem;
 шесть		Fem;
 семь		Fem;
 во́семь		Fem;
 де́вять		Fem;
-десять		Fem;
+де́сять		Fem;
 две́сти		Fem;
 ты́сяча		Fem;
 я		Fem;
@@ -356,11 +364,19 @@ LEXICON Root
 дитя́		Neut;
 порося́		Neut;
 
+LEXICON Suffix
+дцать			Fem;
+<д е с я Irr т>	Fem;
+со́т				Fem;
+
 LEXICON Fem
-+Fem	#;
++Fem		Tail;
 
 LEXICON Masc
-+Masc	#;
++Masc 		Tail;
 
 LEXICON Neut
-+Neut	#;
++Neut 		Tail;
+
+LEXICON Tail
+<\%+Soglbch*>	#;
