@@ -1,5 +1,6 @@
+load stack ../../ParadigmFeatures/AP/GetAP.foma
+define GetAP;
 source ../../LetterClasses.foma
-source ../../ParadigmFeatures/AP/GetAP.foma
 source ../../ParadigmFeatures.foma
 
 !!!Блок I. Замена членов акцентно-позиционных чередований!!!
