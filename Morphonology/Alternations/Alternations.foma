@@ -5,14 +5,28 @@ source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
 define W Letter+ Sep Letter* Feature+;
-define class1 %+Alt1|%+Alt2|%+Alt3|%+Alt4|%+Alt5|%+Alt6|%+Alt7|%+Alt8|%+Alt9|%+Alt10|%+Alt11|%+Alt12|%+Alt13|%+Alt14|%+Alt15|%+Alt16|%+Alt17;
+define class1 %+Alt1|%+Alt2|%+Alt3|%+Alt4|%+Alt5|%+Alt6|%+Alt7|%+Alt8|%+Alt9|%+Alt10|
+	%+Alt11|%+Alt12|%+Alt13|%+Alt14|%+Alt15|%+Alt16|%+Alt17;
 define class2 %+Alt18|%+Alt19|%+Alt20|%+Alt21|%+Alt22|%+Alt23;
 define class3 %+Alt24|%+Alt25;
 define class4 %+Alt26;
 define class5 %+Alt27|%+Alt28;
 define class6 %+Alt29|%+Alt30|%+Alt31|%+Alt32;
 define class7 %+Alt33|%+Alt34;
-define AlternationIndices class1|class2|class3|class4|class5;
+define class8 %+Alt35;
+define class9 %+Alt36;
+define class10 %+Alt37;
+define class11 %+Alt38|%+Alt39;
+define class12 %+Alt40;
+define class13 %+Alt41|%+Alt42|%+Alt43|%+Alt44|%+Alt45|%+Alt46|%+Alt47|%+Alt48|%+Alt49|%+Alt50;
+define class14 %+Alt51|%+Alt52|%+Alt53;
+define class15 %+Alt54;
+define class16 %+Alt55;
+define class17 %+Alt56;
+define class18 %+Alt57;
+define class19 %+Alt58;
+define class20 %+Alt59|%+Alt60|%+Alt61;
+
 !!!_____________________Класс I_____________________!!!
 define r1 к -> ч || _ "|" %+Alt1 .o. %+Alt1 -> 0;
 define r2 г -> з || _ "|" %+Alt2 .o. %+Alt2 -> 0;
@@ -77,18 +91,31 @@ define morphome7 b7 .o. W %+Short %+Masc %+Sing Tail;
 define c7 morphome7 .P. [?* .o. class7 -> 0];
 !!!_____________________Класс VIII_____________________!!!
 define r35 ' -> 0 || _ "|" %+Alt35 .o. %+Alt35 -> 0;
-define c8 r35;
+define b r35;
+define morphome b .o. W %+Short [%+Masc|%+Fem] %+Sing Tail;
+define c8 morphome .P. [?* .o. class8 -> 0];
 !!!_____________________Класс IX_____________________!!!
 define r36 {от} -> 0 || _ "|" %+Alt36 .o. %+Alt36 -> 0;
-define c9 r36;
+define b r36;
+define morphome b .o. W [Gender Number Case - %+Masc %+Sing %+Nom] Tail;
+define c9 morphome .P. [?* .o. class9 -> 0];
 !!!_____________________Класс X_____________________!!!
 define r37 [..] -> ' || _ "|" %+Alt37 .o. %+Alt37 -> 0;
-define c10 r37;
+define b r37;
+define morphome b .o. W [Gender %+Plur Case | [%+Masc|%+Neut] %+Sing %+Ins] Tail;
+define c10 morphome .P. [?* .o. class10 -> 0];
+!!!_____________________Класс XI_____________________!!!
 define r38 {еj} -> 0 || _ "|" %+Alt38 .o. %+Alt38 -> 0;
 define r39 [..] -> {оj} || _ "|" %+Alt39 .o. %+Alt39 -> 0;
-define c11 r38 .o. r39;
+define b r38 .o. r39;
+define morphome b .o. W [Gender Number [Case - [%+Nom | %+Acc]]] Tail;
+define c11 morphome .P. [?* .o. class11 -> 0];
+!!!_____________________Класс XII_____________________!!!
 define r40 [..] -> {оj} || _ "|" %+Alt40 .o. %+Alt40 -> 0;
-define c12 r40;
+define b r40;
+define morphome b .o. W [[%+Masc|%+Neut] %+Sing [%+Gen|%+Dat|%+Loc]] Tail;
+define c12 morphome .P. [?* .o. class12 -> 0];
+!!!_____________________Класс XIII_____________________!!!
 define r41 т -> 0 || _ "|" %+Alt41 .o. %+Alt41 -> 0;
 define r42 е -> 0 || _ "|" %+Alt42 .o. %+Alt42 -> 0;
 define r43 [..] -> ' || _ "|" %+Alt43 .o. %+Alt43 -> 0;
@@ -99,25 +126,76 @@ define r47 м -> н || _ "|" %+Alt47 .o. %+Alt47 -> 0;
 define r48 ' -> 0 || _ "|" %+Alt48 .o. %+Alt48 -> 0;
 define r49 {он} -> j || _ "|" %+Alt49 .o. %+Alt49 -> 0;
 define r50 [..] -> у || _ "|" %+Alt50 .o. %+Alt50 -> 0;
-define c13 r41 .o. r42 .o. r43 .o. r44 .o. r45 .o. r46 .o. r47 .o. r48 .o. r49 .o. r50;
+define b r41 .o. r42 .o. r43 .o. r44 .o. r45 .o. r46 .o. r47 .o. r48 .o. r49 .o. r50;
+define morphome b .o. W Gender Number [Case - %+Nom] Tail;
+define c13 morphome .P. [?* .o. class13 -> 0];
+!!!_____________________Класс XIV_____________________!!!
 define r51 ' -> 0 || _ "|" %+Alt51 .o. %+Alt51 -> 0;
 define r52 [..] -> {оj} || _ "|" %+Alt52 .o. %+Alt52 -> 0;
-define r53 ы -> {ве} || _ "|" %+Alt53 .o. %+Alt53 -> 0;
-define c14 r51 .o. r52 .o. r53;
+define r53 ы -> {ве} || .#. {чет} _ Letter+ Sep %+Alt53 .o. %+Alt53 -> 0;
+define b r51 .o. r52 .o. r53;
+define morphome b .o. W %+Parn Number %+Nom Tail;
+define c14 morphome .P. [?* .o. class14 -> 0];
+!!!_____________________Класс XV_____________________!!!
 define r54 о -> е || _ "|" %+Alt54 .o. %+Alt54 -> 0;
-define c15 r54;
-define r55 е -> 0 || _ "|" %+Alt55 .o. %+Alt55 -> 0;
-define c16 r55;
-define r56 е -> о || _ "|" %+Alt56 .o. %+Alt56 -> 0;
-define c17 r56;
+define b r54;
+define morphome b .o. W %+Fem Number [%+Gen|%+Dat|%+Ins|%+Loc] Tail;
+define c15 morphome .P. [?* .o. class15 -> 0];
+!!!_____________________Класс XVI_____________________!!!
+define r55 е -> 0 || _ Letter+ Sep %+Alt55 .o. %+Alt55 -> 0;
+define b r55;
+define morphome b .o. W %+Fem Number [%+Dat|%+Ins|%+Loc] Tail;
+define c16 morphome .P. [?* .o. class16 -> 0];
+!!!_____________________Класс XVII_____________________!!!
+define r56 е -> о || _ Letter+ Sep %+Alt56 .o. %+Alt56 -> 0;
+define b r56;
+define morphome b .o. W Gender Number %+Ins Tail;
+define c17 morphome .P. [?* .o. class17 -> 0];
+!!!_____________________Класс XVIII_____________________!!!
 define r57 [..] -> ' || _ "|" %+Alt57 .o. %+Alt57 -> 0;
-define c18 r57;
-define r58 [..] -> ы || _ "|" %+Alt58 .o. %+Alt58 -> 0;
-define c19 r58;
+define b r57;
+define morphome b .o. W [Gender Number %+Gen] Tail;
+define c18a morphome .P. ?*;
+define r57 ' -> 0 || _ "|" %+Alt57 .o. %+Alt57 -> 0;
+define b r57;
+define morphome b .o. W Gender Number [Case - %+Gen] Tail;
+define c18b morphome .P. [?* .o. class18 -> 0];
+define c18 c18a .o. c18b;
+!!!_____________________Класс XIX_____________________!!!
+define r58 [..] -> ы || .#.
+	[{п'ат'}|{шест'}|{сем'}|{вос'*м'}|{вос'м'}|{вос'ем'}|{дев'ат'}] _
+	Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
+define b r58;
+define morphome b .o. W Gender Number [%+Gen|%+Dat|%+Loc] Tail;
+define c19a morphome .P. ?*;
+define r58 [..] -> {jу} || .#.
+	[{п'ат'}|{шест'}|{сем'}|{вос'*м'}|{вос'м'}|{вос'ем'}|{дев'ат'}] _
+	Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
+define b r58;
+define morphome b .o. W Gender Number [%+Gen|%+Dat|%+Loc] Tail;
+define c19b morphome .P. [?* .o. class19 -> 0];
+define c19 c19a .o. c19b;
+!!!_____________________Класс XX_____________________!!!
 define r59 е -> {ух} || _ "|" %+Alt59 .o. %+Alt59 -> 0;
-define r60 ы -> {ох} || _ "|" %+Alt60 .o. %+Alt60 -> 0;
-define r61 о -> {ох} || _ "|" %+Alt61 .o. %+Alt61 -> 0;
-define c20 r59 .o. r60 .o. r61;
+define r60 ы -> о̀ х || _ "|" %+Alt60 .o. %+Alt60 -> 0;
+define r61 о -> о̀ х || _ "|" %+Alt61 .o. %+Alt61 -> 0;
+define b r59 .o. r60 .o. r61;
+define morphome b .o. W Gender Number [%+Gen | %+Loc] Tail;
+define c20a morphome .P. ?*;
+define r59 е -> {ум} || _ "|" %+Alt59 .o. %+Alt59 -> 0;
+define r60 ы -> о̀ м || _ "|" %+Alt60 .o. %+Alt60 -> 0;
+define r61 о -> о̀ м || _ "|" %+Alt61 .o. %+Alt61 -> 0;
+define b r59 .o. r60 .o. r61;
+define morphome b .o. W Gender Number [%+Gen | %+Loc] Tail;
+define c20b morphome .P. ?*;
+define r59 е -> {ум'а} || _ "|" %+Alt59 .o. %+Alt59 -> 0;
+define r60 ы -> {ом'а} || _ "|" %+Alt60 .o. %+Alt60 -> 0;
+define r61 о -> {м'а} || _ "|" %+Alt61 .o. %+Alt61 -> 0;
+define b r59 .o. r60 .o. r61;
+define morphome b .o. W Gender Number [%+Gen | %+Loc] Tail;
+define c20c morphome .P. [?* .o. class20 -> 0];
+define c20 c20a .o. c20b .o. c20c;
+!!!____________________Объединение__________________!!!
 define Stem Letter+ -> 0 || Sep _ Feature;
 define g1 GetConvStress .o. Stem .o. c1 .o. c2 .o. c3 .o. c4 .o. c5 .o. c6 .o. c7 .o. c8 .o. c9 .o. c10;
 define g2 c11 .o. c12 .o. c13 .o. c14 .o. c15 .o. c16 .o. c17 .o. c18 .o. c19 .o. c20;

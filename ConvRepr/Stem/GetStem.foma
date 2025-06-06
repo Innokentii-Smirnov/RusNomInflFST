@@ -3,9 +3,9 @@ invert net
 define GetNonStandEndings;
 read lexc ../../ConvRepr/Stem/GetStem.lexc
 define Lexicon;
-define ExpandedLexicon Letter+ 0:Sep Letter* .o. Lexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
+define ExpandedLexicon [Letter+ 0:Sep Letter* .o. Lexicon] Feature*;
 regex	Letter+ 0:Sep [Feature+ & $%+Adj & $%+ParDef14] .P.
 		Letter+ 0:Sep Letter^2 [Feature+ & $%+Adj] |
 		Letter+ 0:Sep Letter^4 [Feature+ & $%+Refl] |
@@ -17,4 +17,4 @@ regex	Letter+ 0:Sep [Feature+ & $%+Adj & $%+ParDef14] .P.
 turn stack
 union net
 define SepInsertion;
-define GetStem GetNonStandEndings .o. SepInsertion;
+define GetStem GetNonStandEndings .o. ExpandedLexicon .P. SepInsertion;
