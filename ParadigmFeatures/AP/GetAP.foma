@@ -7,8 +7,8 @@ source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Features (Star) Alternation* NonStandEnding* DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define APExceptions Wordform 0:AP Feature+ .o. APLexicon / Sep Feature+;
-define StemStressed Letter* AccentedVowel Letter* Sep Letter*;
-define EndingStressed Letter* Sep Letter* AccentedVowel Letter*;
+define StemStressed Letter* AccentedVowel Letter* Sep Letter* | Syll Sep (Consonants);
+define EndingStressed Letter* Sep Letter* AccentedVowel Letter* | (Consonants) Sep Syll;
 define Monosyll Syll / Sep;
 define Disyll Syll^2 / Sep;
 define Polysyll Syll^>1 / Sep;
