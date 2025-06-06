@@ -1,3 +1,7 @@
+Definitions
+	Acc = "́";
+	Irr = (Acc);
+
 LEXICON Root
 одён:оди́н			Sep;
 яец:яи́ц				Sep;
@@ -13,8 +17,8 @@ LEXICON Root
 кочерог:кочерёг		Sep;
 су́мерок:су́мерек		Sep;
 зор:зар				Sep;
-семян:семен			Sep;
-стремяе:стремен		Sep;
+<с е Irr м я:е н>		Sep;
+<с т р е Irr м я:е н>	Sep;
 се:си				Sep;
 заей:заяц			Sep;
 достоен:достоин		Sep;
