@@ -1,0 +1,11 @@
+load stack ../../ParadigmFeatures/MorphGender/GetMorphGender.bin
+invert net
+define GetMorphNumber;
+read lexc ../../ParadigmFeatures/MorphAnimacy/GetMorphAnimacy.lexc
+define MorphAnimacyLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Preceding DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) %+Nesoglbch;
+define Following (Gender);
+define Insertion Letter+ Preceding 0:Animacy Following;
+define GetMorphAnimacy GetMorphNumber .o. [Insertion .o. MorphAnimacyLexicon / Preceding] .P. ?*;

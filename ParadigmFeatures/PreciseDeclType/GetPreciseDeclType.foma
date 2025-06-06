@@ -1,6 +1,6 @@
-load stack ../../ParadigmFeatures/MorphGender/GetMorphGender.bin
+load stack ../../ParadigmFeatures/MorphAnimacy/GetMorphAnimacy.bin
 invert net
-define GetMorphGender;
+define GetMorphAnimacy;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 regex %+Subst -> %+Subst2 || .#. {путь}  _ %+Masc Feature* %+Subst;
@@ -10,4 +10,4 @@ regex %+Subst -> %+Subst2 ||  _ %+Fem Feature* %+Subst;
 turn stack
 compose net
 define PreciseDeclTypeRules;
-define GetPreciseDeclType GetMorphGender .o. PreciseDeclTypeRules;
+define GetPreciseDeclType GetMorphAnimacy .o. PreciseDeclTypeRules;

@@ -11,7 +11,7 @@ define SimadjSchema Gender (Animacy) Number Case;
 define ExtadjSchema Gender (Animacy) Number Case;
 define Schema NesoglbchSchema | SoglbchSchema | SubstSchema | SimadjSchema | ExtadjSchema;
 define Constraint Letter+ Sep Letter* Feature+ [
-	%+Nesoglbch NesoglbchSchema | 
+	%+Nesoglbch Animacy NesoglbchSchema |
 	%+Soglbch SoglbchSchema | 
 	%+Subst Animacy SubstSchema |
 	%+Simadj SimadjSchema | 

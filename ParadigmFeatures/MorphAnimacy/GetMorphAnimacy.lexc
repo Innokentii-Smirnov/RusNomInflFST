@@ -1,0 +1,70 @@
+Multichar_Symbols +Anim +Inan
+
+LEXICON Root
+Lemma;
+<?*> 	Suffix;
+
+LEXICON Lemma
+пол			Inan;
+со́рок		Inan;
+мно́го		Inan;
+немно́го		Inan;
+сто́лько		Inan;
+ско́лько		Inan;
+не́сколько	Inan;
+он			Anim;
+ка́ждый		Anim;
+лю́бой		Anim;
+друг_дру́га	Anim;
+мы			Anim;
+вы			Anim;
+они́			Anim;
+вы			Anim;
+не́которые	Anim;
+мно́гие		Anim;
+немно́гие	Anim;
+пять		Inan;
+шесть		Inan;
+семь		Inan;
+во́семь		Inan;
+де́вять		Inan;
+де́сять		Inan;
+ты́сяча		Inan;
+я			Anim;
+ты			Anim;
+она			Anim;
+себя́		Anim;
+что			Inan;
+ничто́		Inan;
+не́что		Inan;
+не́кто		Inan;
+не́чего		Inan;
+ма́ло		Inan;
+нема́ло		Inan;
+всё			Inan;
+мно́гое		Inan;
+немно́гое	Inan;
+вся́кое		Inan;
+про́чее		Inan;
+остально́е	Inan;
+девяно́сто	Inan;
+сто			Inan;
+полтора́ста	Inan;
+три́ста		Inan;
+четы́реста	Inan;
+оно́			Anim;
+кто			Anim;
+никто́		Anim;
+не́кого		Anim;
+
+LEXICON Suffix
+дцать		Inan;
+десят		Inan;
+деся́т		Inan;
+со́т			Inan;
+
+LEXICON Anim
++Anim		#;
+
+LEXICON Inan
++Inan		#;

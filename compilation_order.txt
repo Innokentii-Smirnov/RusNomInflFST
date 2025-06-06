@@ -5,6 +5,7 @@ DeclType
 NumberHom
 MorphNumber
 MorphGender
+MorphAnimacy
 PreciseDeclType
 Alternations
 NonStandEndings
