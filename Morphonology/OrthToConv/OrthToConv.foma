@@ -6,6 +6,8 @@ define Lexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Exceptions Lexicon Feature*;
+define AccentuateMonosyllables [..] -> Acc || .#. [С|ь|ъ]* [Г - ё] _ [С|ь|ъ]* Sep [С|ь|ъ]* Feature,
+	.#. [С|ь|ъ]* Sep [С|ь|ъ]* [Г - ё] _ [С|ь|ъ]* Feature;
 
 !!!Блок I. Замена членов акцентно-позиционных чередований!!!
 define b1r1 ё -> ё̀ || _ Letter+ Acc, Acc Letter* _ ;
@@ -58,4 +60,4 @@ define Cleanup1 UnstableO -> "";
 define Cleanup2 Star -> "";
 define Cleanup Cleanup1 .o. Cleanup2;
 define Rules b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b6 .o. b7;
-define OrthToConv GetUnstableO .o. Exceptions .P. Rules .o. Accent .o. Cleanup;
+define OrthToConv GetUnstableO .o. AccentuateMonosyllables .o. Exceptions .P. Rules .o. Accent .o. Cleanup;

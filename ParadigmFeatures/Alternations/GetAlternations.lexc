@@ -37,8 +37,8 @@ LEXICON Root
 о́бод		Alt12;
 по́вод		#;
 по́вод		Alt12; ! в упряжи
-по́лоз		#;
-по́лоз		Alt12; ! саней
+по́лоз		Anim;
+по́лоз		Alt12Inan; ! саней
 собра́т		Alt12;
 струп		Alt12;
 стул		Alt12;
@@ -367,3 +367,12 @@ LEXICON Alt60
 
 LEXICON Alt61
 +Alt61	#;
+
+LEXICON Alt12Inan
++Alt12	Inan;
+
+LEXICON Anim
+<%+Subst1 ?* %+Anim>		#;
+
+LEXICON Inan
+<%+Subst1 ?* %+Inan>		#;

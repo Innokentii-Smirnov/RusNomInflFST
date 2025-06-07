@@ -8,7 +8,8 @@ define NonStandardEnding;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define W Letter+ (Sep Letter*);
+define Stem Letter+ Sep;
+define W Letter+ (Sep);
 define RemoveNse NonStandEnding -> 0 || _ ;
 set flag-is-epsilon ON
-define Endings Alternations .o. [W NonStandardEnding Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];
+define Endings Alternations .o. [Stem NonStandardEnding Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];

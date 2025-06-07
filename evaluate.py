@@ -22,8 +22,14 @@ if path.exists('errors.txt'):
 		old_errors = set(map(str.rstrip, fin))
 else:
 	old_errors = set()
+if path.exists('missing.txt'):
+	with open('missing.txt') as fin:
+		old_missing = set(map(str.rstrip, fin))
+else:
+	old_missing = set()
 correct = set()
 errors = set()
+missing = set()
 n_correct = 0
 n_equal = 0
 total = 0
@@ -85,6 +91,7 @@ with (open(predfile) as fin,
 		else:
 			string = '{0:30} {1}'.format(morpholex, joined_corr)
 			mf.write(string + '\n')
+			missing.add(string)
 new_correct = sorted(correct - old_correct)
 print('New correct: {0}.'.format(len(new_correct)))
 new_errors = sorted(errors - old_errors)
@@ -92,11 +99,19 @@ if len(new_errors) == 0:
 	print('No new errors.')
 else:
 	print('New errors: {0}.'.format(len(new_errors)))
+new_missing = sorted(missing - old_missing)
+if len(new_missing) == 0:
+	print('No new missing.')
+else:
+	print('New missing: {0}.'.format(len(new_missing)))
 with open('new_correct.txt', 'w') as fout:
 	for string in new_correct:
 		fout.write(string + '\n')
 with open('new_errors.txt', 'w') as fout:
 	for string in new_errors:
+		fout.write(string + '\n')
+with open('new_missing.txt', 'w') as fout:
+	for string in new_missing:
 		fout.write(string + '\n')
 accuracy = 100 * n_correct / total
 print('Accuracy: {0} % ({1} / {2}).'.format(round(accuracy, 2), n_correct, total))

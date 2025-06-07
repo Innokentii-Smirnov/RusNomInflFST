@@ -1,4 +1,4 @@
-Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Nse1 +Nse2 +Nse3 +Nse4 +Nse5 +Nse6 +Nse7 +Nse8 +Nse9 +Nse10 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse24 +Nse25
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Nse1 +Nse2 +Nse3 +Nse4 +Nse5 +Nse6 +Nse7 +Nse8 +Nse9 +Nse1%0 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse24 +Nse25
 
 Definitions
 	Gender = %+Masc|%+Fem|%+Neut;
@@ -27,7 +27,7 @@ LEXICON Root
 +Nse6+Subst2+Neut+Plur+Ins:ми		#;
 +Nse7+Subst1:0						OldNom;
 +Nse7+Nse8+Nse9+Subst1:0			OldNomInsLoc;
-+Nse8+Nse9+Nse10+Subst1:0			OldInsLocDat;
++Nse8+Nse9+Nse1%0+Subst1:0			OldInsLocDat;
 +Nse14+Nse15+Subst1+Fem+Sing+Nom:0		#;
 +Nse14+Nse15+Subst1+Fem+Sing+Gen:а		#;
 +Nse15+Subst1+Fem+Sing+Gen:а			#;
