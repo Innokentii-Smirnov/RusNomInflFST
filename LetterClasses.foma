@@ -17,3 +17,4 @@ define Wordform Letter+ Sep Letter*;
 define AccentedVowel [Г Acc | ё];
 define Unaccented [Г|С|С "'"|"*"];
 define UnaccOrth [Г|С|ь|ъ];
+define Cons С (');

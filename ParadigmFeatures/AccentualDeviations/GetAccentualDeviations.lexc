@@ -1,4 +1,4 @@
-Multichar_Symbols +Left1 +Left2 +Left3 +Left4 +Right1 +Right2 +Right3 +Right4 +Right5 +Right6
+Multichar_Symbols +Left1 +Left2 +Left3 +Left4 +Right1 +Right2 +Right3 +Right4 +Right5 +Right6 +a +Alt12
 
 LEXICON Root
 госпо́дь		Left1;
@@ -43,13 +43,13 @@ LEXICON Root
 зна́мя		Right2;
 о́зеро		Right2;
 де́рево		Right2;
-ка́мень		Right2;
+ка́мень		Right2Alt12;
 ко́лос		Right2;
 о́бод		Right2;
-по́вод		Right2;
-по́лоз		Right2;
+по́вод		Right2Alt12;
+по́лоз		Right2Alt12;
 бесёнок		Right2;
-чертёнок		Right2;
+чертёнок	Right2;
 гумно́		Right3;
 земля́		Right3;
 кольцо́		Right3;
@@ -101,3 +101,6 @@ LEXICON Right5
 
 LEXICON Right6
 +Right6	#;
+
+LEXICON Right2Alt12
++Right2+a+Alt12		#;
