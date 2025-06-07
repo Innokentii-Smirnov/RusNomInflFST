@@ -9,6 +9,7 @@ define Features DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRa
 define AlternationsExceptions [Letter+ 0:Alternation* .o. AlternationsLexicon] Features;
 regex [..] -> %+Alt6 || [а|я] Irr н и Irr н _ $%+Masc & $%+Anim;
 regex [..] -> %+Alt14 || [ё|Ш о Irr] {нок} _ $%+Masc & $%+Anim;
+regex [..] -> %+Alt24 || [С|ь] н я _ DeclType;
 define Context [Letter+ [ё|а|я|е] {нный}]
  - [Letter* [П| [Letter - ж] д|т|з|с] {ённый}]
  - [Letter* [б|п|ф|т|з|с] {енный}]

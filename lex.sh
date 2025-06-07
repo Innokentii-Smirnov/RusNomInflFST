@@ -1,1 +1,1 @@
-grep -w ^$1 Morphonology/OrthToConv/out.txt
+grep -w ^$1 ParadigmFeatures/AccentualDeviations/out.txt

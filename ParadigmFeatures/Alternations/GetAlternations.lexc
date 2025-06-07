@@ -1,4 +1,4 @@
-Multichar_Symbols +Alt1 +Alt12 +Alt2 +Alt3 +Alt4 +Alt13 +Alt5 +Alt28 +Alt6 +Alt1%0 +Alt7 +Alt8 +Alt9 +Alt11 +Alt14 +Alt15 +Alt16 +Alt17 +Alt18 +Alt19 +Alt2%0 +Alt21 +Alt22 +Alt23 +Alt25 +Alt26 +Alt27 +Alt29 +Alt3%0 +Alt31 +Alt32 +Alt33 +Alt35 +Alt36 +Alt37 +Alt38 +Alt39 +Alt4%0 +Alt41 +Alt42 +Alt43 +Alt58 +Alt44 +Alt54 +Alt45 +Alt55 +Alt57 +Alt46 +Alt56 +Alt47 +Alt48 +Alt59 +Alt49 +Alt5%0 +Alt51 +Alt52 +Alt53 +Alt6%0 +Alt61
+Multichar_Symbols +Alt1 +Alt12 +Alt2 +Alt3 +Alt4 +Alt13 +Alt5 +Alt28 +Alt6 +Alt1%0 +Alt7 +Alt8 +Alt9 +Alt11 +Alt14 +Alt15 +Alt16 +Alt17 +Alt18 +Alt19 +Alt2%0 +Alt21 +Alt22 +Alt23 +Alt24 +Alt25 +Alt26 +Alt27 +Alt29 +Alt3%0 +Alt31 +Alt32 +Alt33 +Alt35 +Alt36 +Alt37 +Alt38 +Alt39 +Alt4%0 +Alt41 +Alt42 +Alt43 +Alt58 +Alt44 +Alt54 +Alt45 +Alt55 +Alt57 +Alt46 +Alt56 +Alt47 +Alt48 +Alt59 +Alt49 +Alt5%0 +Alt51 +Alt52 +Alt53 +Alt6%0 +Alt61
 
 LEXICON Root
 о́ко		Alt1;
@@ -81,7 +81,12 @@ LEXICON Root
 мать		Alt22;
 по́лдень		Alt23;
 по́лночь		Alt23;
-год		Alt25;
+ба́рышня		#;
+ку́хня		#;
+дере́вня		#;
+пешня́		Alt24;
+шестерня́	Alt24;
+год			Alt25;
 це́рковь		Alt26;
 расхля́банный		Alt29;
 опосре́дствованный		Alt29;
@@ -256,6 +261,9 @@ LEXICON Alt22
 
 LEXICON Alt23
 +Alt23	#;
+
+LEXICON Alt24
++Alt24	#;
 
 LEXICON Alt25
 +Alt25	#;
