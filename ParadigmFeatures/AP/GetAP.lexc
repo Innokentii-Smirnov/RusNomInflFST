@@ -1,4 +1,4 @@
-Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Alt1 +Alt12
+Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15
 
 LEXICON Root
 я		b;
@@ -1296,7 +1296,8 @@ nи́сарь		cNse1;
 сапожо́к		d;
 каза́к		b;
 каза́к		d;
-щено́к		d;
+щено́к		b;
+щено́к		dAlt15;
 зуб		e;
 ход		e;
 лом		e;
@@ -1472,3 +1473,6 @@ LEXICON dAlt12
 
 LEXICON dAlt1Alt12
 +d+Alt1+Alt12+Nse1	#;
+
+LEXICON dAlt15
++d+Alt15			#;
