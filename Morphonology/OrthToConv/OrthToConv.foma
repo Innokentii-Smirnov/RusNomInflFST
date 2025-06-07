@@ -31,7 +31,7 @@ define b3 я -> ' а, ю -> ' у, ё -> ' о Acc, ё̀ -> ' о̀;
 define b4r1 и -> ы || К "|" _;
 define b4r2 и -> е || и "|" _ Unacc ?* "+Sg" ["+Prep"|"+Dat"];
 define b4r3 и -> ' ы || "|" _;
-define b4r4 [..] -> ' || Г|ь _ и;
+define b4r4 [..] -> ' || Г Irr|ь _ и;
 define b4 b4r1 .o. b4r2 .o. b4r3 .o. b4r4;
 
 !!!Блок V. Замена е!!!

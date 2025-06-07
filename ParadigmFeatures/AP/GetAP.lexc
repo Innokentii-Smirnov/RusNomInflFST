@@ -1,4 +1,4 @@
-Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15
+Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Nse3 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15
 
 LEXICON Root
 я		b;
@@ -1468,11 +1468,20 @@ LEXICON e1
 LEXICON cNse1
 +c+Nse1			#;
 
-LEXICON dAlt12
-+d+Alt12+Nse1		#;
-
 LEXICON dAlt1Alt12
-+d+Alt1+Alt12+Nse1	#;
++d				Alt1Alt12;
+
+LEXICON dAlt12
++d+Alt12		Alt12;
 
 LEXICON dAlt15
-+d+Alt15			#;
++d				Alt15;
+
+LEXICON Alt1Alt12
++Alt1				Alt12;
+
+LEXICON Alt12
++Alt12+Nse1			#;
+
+LEXICON Alt15
++Alt15+Nse1+Nse3	#;
