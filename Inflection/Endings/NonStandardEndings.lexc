@@ -8,6 +8,7 @@ LEXICON Root
 +Nse1+Nse3+Subst1+Masc+Plur+Nom:а	#;
 +Nse1+Subst1+Fem+Plur+Nom:а			#;
 +Nse1+Subst1+Neut+Plur+Nom:ы		#;
++Nse1+Nse4+Subst1+Neut+Plur+Nom:ы	#;
 +Nse2+Nse3+Subst1+Masc+Plur+Nom:е	#;
 +Nse1+Nse3+Subst1+Masc+Plur+Gen:0	#;
 +Nse1+Nse3+Subst1+Fem+Plur+Gen:ов	#;
@@ -16,6 +17,7 @@ LEXICON Root
 +Nse3+Subst1+Masc+Plur+Gen:0		#;
 +Nse3+Subst1+Fem+Plur+Gen:ов		#;
 +Nse3+Subst1+Neut+Plur+Gen:ов		#;
++Nse1+Nse4+Subst1+Neut+Plur+Gen:еj	#;
 +Nse4+Subst1+Neut+Plur+Gen:еj		#;
 +Nse4+Subst1+Fem+Plur+Gen:еj		#;
 +Nse5+Subst1+Neut+Plur+Gen:0		#;

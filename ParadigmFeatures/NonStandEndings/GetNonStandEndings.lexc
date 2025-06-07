@@ -1,4 +1,4 @@
-Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0
+Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0 +Alt12 +Alt13
 
 LEXICON Root
 бытие́		Nse7_Nse8_Nse9;
@@ -126,8 +126,8 @@ LEXICON Root
 де́верь		Nse3;
 друг		Nse3;
 князь		Nse3;
-муж		Nse3;
-сын		Nse3;
+муж			Alt12Nse3;
+сын			Alt12Nse3;
 собра́т		Nse3;
 абази́н		Nse3;
 грузи́н		Nse3;
@@ -157,11 +157,11 @@ LEXICON Root
 гран		Nse3;
 ампе́р		Nse3;
 ватт		Nse3;
-гектова́тт		Nse3;
-килова́тт		Nse3;
+гектова́тт	Nse3;
+килова́тт	Nse3;
 вольт		Nse3;
 грамм		Nse3;
-килогра́мм		Nse3;
+килогра́мм	Nse3;
 боти́нок		Nse3;
 ва́ленок		Nse3;
 мокаси́н		Nse3;
@@ -173,9 +173,9 @@ LEXICON Root
 глазо́к		Nse3;
 зубо́к		Nse3;
 рожо́к		Nse3;
-раз		Nse3;
-коле́но		Nse1;
-у́хо		Nse1;
+раз			Nse3;
+коле́но		Alt13Nse1Nse4;
+у́хо			Nse1;
 мазло́		Nse1_Nse3;
 трепло́		Nse1_Nse3;
 брю́хо		Nse1;
@@ -270,6 +270,12 @@ LEXICON Nse2
 
 LEXICON Nse3
 +Nse3	#;
+
+LEXICON Alt13Nse1Nse4
++Alt13+Nse1+Nse4		#;
+
+LEXICON Alt12Nse3
++Alt12+Nse3				#;
 
 LEXICON Nse7_Nse8_Nse9
 +Nse7+Nse8+Nse9			#;
