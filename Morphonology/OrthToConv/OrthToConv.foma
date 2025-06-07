@@ -1,6 +1,6 @@
-load stack ../../ParadigmFeatures/AccentualDeviations/GetAccentualDeviations.bin
+load stack ../../ParadigmFeatures/NonStLoc/GetNonStLoc.bin
 invert net
-define GetAP;
+define GetNonStLoc;
 read lexc ../../Morphonology/OrthToConv/Exceptions.lexc
 define Lexicon;
 source ../../LetterClasses.foma
@@ -58,4 +58,4 @@ define Cleanup1 UnstableO -> "";
 define Cleanup2 Star -> "";
 define Cleanup Cleanup1 .o. Cleanup2;
 define Rules b1 .o. b2 .o. b3 .o. b4 .o. b5 .o. b6 .o. b7;
-define OrthToConv GetAP .o. Exceptions .P. Rules .o. Accent .o. Cleanup;
+define OrthToConv GetNonStLoc .o. Exceptions .P. Rules .o. Accent .o. Cleanup;

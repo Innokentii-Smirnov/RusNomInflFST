@@ -1,6 +1,9 @@
-source ../../ParadigmFeatures/NonStPart/GetNonStPart.foma
+load stack ../../ParadigmFeatures/AccentualDeviations/GetAccentualDeviations.bin
+invert net
+define GetAccentualDeviations;
 read lexc ../../ParadigmFeatures/NonStLoc/GetNonStLoc.lexc
-define Lexicon;
-define Rules ?*;
-define GetNonStLoc GetNonStPart .o. [Lexicon Feature* .P. Rules];
-define Feature NonStLoc | Feature;
+define NonStLocLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Exceptions [Wordform 0:NonStLoc .o. NonStLocLexicon / Sep] Feature+;
+define GetNonStLoc GetAccentualDeviations .o. Exceptions .P. ?*;

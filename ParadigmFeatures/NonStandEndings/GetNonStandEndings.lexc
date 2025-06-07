@@ -1,6 +1,14 @@
-Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2
+Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0
 
 LEXICON Root
+бытие́		Nse7_Nse8_Nse9;
+небытие́		Nse7_Nse8_Nse9;
+инобытие́	Nse7_Nse8_Nse9;
+житие́		Nse7_Nse8_Nse9;
+питие́		Nse7_Nse8_Nse9;
+лития́		Nse8_Nse9_Nse10;
+паремия́		Nse8_Nse9_Nse10;
+судия́		Nse8_Nse9_Nse10;
 дитя́		Nse1_Nse6_Nse11;
 ты́сяча		Nse12;
 пятьсо́т		Nse13;
@@ -262,3 +270,9 @@ LEXICON Nse2
 
 LEXICON Nse3
 +Nse3	#;
+
+LEXICON Nse7_Nse8_Nse9
++Nse7+Nse8+Nse9			#;
+
+LEXICON Nse8_Nse9_Nse10
++Nse8+Nse9+Nse1%0		#;
