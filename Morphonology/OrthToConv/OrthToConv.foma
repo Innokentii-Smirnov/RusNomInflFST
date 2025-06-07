@@ -20,7 +20,7 @@ define s4 о -> "*" || _ Irr С "|" ?* Star;
 define s5 Г -> "*" || Ш _ Irr С "|" ?* Star;
 define s6 Г -> ' "*" || _ Irr С "|" ?* Star;
 define StarInsertion s1 .o. s2 .o. s3 .o. s4 .o. s5 .o. s6;
-define b2r2 ь -> ' "*" || _ Sep;
+define b2r2 ь -> ' "*" || _ Sep Letter;
 define b2r3 ' -> 0 || _ "*" Sep;
 define b2 StarInsertion .o. b2r2 .o. b2r3;
 

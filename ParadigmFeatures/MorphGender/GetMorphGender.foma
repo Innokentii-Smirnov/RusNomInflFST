@@ -46,7 +46,7 @@ regex [
 regex [
 		С* [а|е] |
 		Syll+ е Acc |
-		Letter+ [с|[с|ф] о Irr]
+		Letter* [с|[с|ф] о Irr]
 	]
 	{ль} 0:%+Fem .P.
 	Letter+ {ль} 0:%+Masc;
