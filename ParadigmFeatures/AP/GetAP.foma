@@ -31,7 +31,7 @@ define NonsubstantivalNouns Nul | Other;
 # Существительные субстантивных типов склонения
 #
 # Группа первая. Существительные мужского морфологического рода (кроме pluralia tantum)
-regex Letters [щ | Г Irr ч | [у|ю] Irr н]		Sep;
+regex Letters [щ | Г Irr ч | [у|ю] Irr н] Sep & [Monosyll | FinalStressed];
 regex Letters {ец} Sep & Monosyll;
 regex Syll+	[{е́ц}|{ёж}|{ы́ш}]	Sep;
 regex Syll	[{а́ш}|{я́ш}]			Sep;
