@@ -1,5 +1,12 @@
 LEXICON Root
+Noun;
+Adjective;
+не		Adjective;
+
+LEXICON Noun
 д0н|о:д*н|о			#;
 з0л|о:з*л|о			#;
+
+LEXICON Adjective
 з0л|ой:з*л|ой		#;
 по́л0н|ый:по́л*н|ый	#;
