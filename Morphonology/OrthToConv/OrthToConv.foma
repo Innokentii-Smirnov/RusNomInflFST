@@ -1,4 +1,4 @@
-load stack ../../ParadigmFeatures/AP/GetAP.bin
+load stack ../../ParadigmFeatures/AccentualDeviations/GetAccentualDeviations.bin
 invert net
 define GetAP;
 read lexc ../../Morphonology/OrthToConv/Exceptions.lexc

@@ -1,6 +1,9 @@
-source ../../ParadigmFeatures/UnstableO/GetUnstableO.foma
+load stack ../../ParadigmFeatures/AP/GetAP.bin
+invert net
+define GetAP;
 read lexc ../../ParadigmFeatures/AccentualDeviations/GetAccentualDeviations.lexc
-define Lexicon;
-define Rules ?*;
-define GetAccentualDeviations GetUnstableO .o. [Lexicon Feature* .P. Rules];
-define Feature AccentualDeviations | Feature;
+define AccentualDeviationsLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Exceptions [Wordform 0:AccentualDeviation .o. AccentualDeviationsLexicon / Sep] Feature+;
+define GetAccentualDeviations GetAP .o. Exceptions .P. ?*;

@@ -12,6 +12,7 @@ NonStandEndings
 ConvRepr/Stem/GetStem
 Star
 AP
+AccentualDeviations
 Morphonology/OrthToConv/OrthToConv
 Inflection/ParadigmSchemata/ParadigmSchemata
 Inflection/Syncretism/Syncretism

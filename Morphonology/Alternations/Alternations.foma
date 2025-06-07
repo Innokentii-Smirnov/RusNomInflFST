@@ -196,7 +196,8 @@ define morphome b .o. W Gender Number [%+Gen | %+Loc] Tail;
 define c20c morphome .P. [?* .o. class20 -> 0];
 define c20 c20a .o. c20b .o. c20c;
 !!!____________________Объединение__________________!!!
+define Cleanup AccentualDeviation -> 0 || _ ;
 define Stem Letter+ -> 0 || Sep _ Feature;
-define g1 GetConvStress .o. Stem .o. c1 .o. c2 .o. c3 .o. c4 .o. c5 .o. c6 .o. c7 .o. c8 .o. c9 .o. c10;
+define g1 GetConvStress .o. Cleanup .o. Stem .o. c1 .o. c2 .o. c3 .o. c4 .o. c5 .o. c6 .o. c7 .o. c8 .o. c9 .o. c10;
 define g2 c11 .o. c12 .o. c13 .o. c14 .o. c15 .o. c16 .o. c17 .o. c18 .o. c19 .o. c20;
 define Alternations g1 .o. g2;
