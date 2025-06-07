@@ -4,7 +4,7 @@ define Syncretism;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 source ../../Properties.foma
-define r0 [..] -> %+ConvStress || _ .#.;
+define r0 [..] -> %+ConvStress || Property _ .#.;
 define A %+a | %+ab | %+ac;
 define rA %+ConvStress -> %+Stem || A Feature+ Case _ ;
 define rC %+ConvStress -> %+Stem || %+c Feature+ %+Sing Case _ ;

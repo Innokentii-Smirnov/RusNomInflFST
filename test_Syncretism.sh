@@ -1,2 +1,2 @@
 ./run_submodule_alone.sh Inflection/Syncretism/Syncretism.foma
-grep -E 'Left|Right' Inflection/Syncretism/out.txt
+grep -E -w '^лес' Inflection/Syncretism/out.txt
