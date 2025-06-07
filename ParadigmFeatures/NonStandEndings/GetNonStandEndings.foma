@@ -17,7 +17,7 @@ regex [..] (->) %+Nse1 || и Irr {ще} Alt _ NonStandEnding* DeclType Feature+ 
 regex [..] -> %+Nse2 || [а|я] Irr н и Irr н %+Alt6 Alt _ NonStandEnding* DeclType;
 define Prev %+Nse1|%+Nse2;
 define Next [NonStandEnding - Prev]* DeclType Feature+;
-regex	Letter+ [Alt & $[%+Alt6|%+Alt14|%+Alt15]] (%+Nse1) 	0:%+Nse3 Next |
+regex	Letter+ [Alt & $[%+Alt14|%+Alt15] | %+Alt6 (%+Alt10)] (%+Nse1) 	0:%+Nse3 Next |
 		Letter+ Alt (%+Nse1) %+Nse2 						0:%+Nse3 Next |
 		Letter+ [Alt & $%+Alt12] (%+Nse1) 					0:%+Nse3 [Next & $[%+Neut|%+Fem]] |
 		Letter+ [С|ь]{ко} Acc Alt (%+Nse1)					0:%+Nse3 [Next & $%+Subst1 & $%+Neut] |
