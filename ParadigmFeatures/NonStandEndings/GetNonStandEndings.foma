@@ -11,7 +11,7 @@ define Insertion Letter+ Intervening 0:NonStandEnding* Following .o. [NonStandEn
 define NonStandEndingsExceptions Insertion .P. ?*;
 define Alt Alternation*;
 define Nse NonStandEnding*;
-regex [..] -> %+Nse1 || Letter [%+Alt12 | %+Alt14 | %+Alt15] Alt _ Nse DeclType %+Masc;
+regex [..] -> %+Nse1 || Letter Alt [%+Alt12 | %+Alt14 | %+Alt15] Alt _ Nse DeclType %+Masc;
 regex [..] -> %+Nse1 || {ко} Irr Alt _ NonStandEnding* DeclType;
 regex [..] (->) %+Nse1 || и Irr {ще} Alt _ NonStandEnding* DeclType Feature+ %+Masc .#.;
 regex [..] -> %+Nse2 || [а|я] Irr н и Irr н %+Alt6 Alt _ NonStandEnding* DeclType;

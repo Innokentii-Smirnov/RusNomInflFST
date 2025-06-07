@@ -1,4 +1,4 @@
-Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1
+Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Alt1 +Alt12
 
 LEXICON Root
 я		b;
@@ -1280,15 +1280,16 @@ nи́сарь		cNse1;
 учи́тель		a;
 учи́тель		cNse1; ! преподаватель
 полуо́стров	cNse1;
-клок		d;
-кол			d;
+клок		dAlt1Alt12;
+кол			dAlt12; ! в основном значении, мн. ко́лья
 копы́л		d;
-крюк		d;
-лист		d;
-ло́скут		d;
-лоску́т		d;
-прут		d;
-сук_глазок	d;
+крюк		dAlt1Alt12;
+лист		dAlt12; ! дерева
+лоску́т		dAlt12;
+прут		a;
+прут		dAlt12; ! в основном значении
+сук			dAlt1Alt12;
+глазо́к		d;
 зубо́к		d;
 рожо́к		d;
 сапожо́к		d;
@@ -1462,4 +1463,10 @@ LEXICON e1
 +e1	#;
 
 LEXICON cNse1
-+c+Nse1	#;
++c+Nse1			#;
+
+LEXICON dAlt12
++d+Alt12+Nse1		#;
+
+LEXICON dAlt1Alt12
++d+Alt1+Alt12+Nse1	#;

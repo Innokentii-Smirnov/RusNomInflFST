@@ -2,9 +2,6 @@ Multichar_Symbols +Alt1 +Alt12 +Alt2 +Alt3 +Alt4 +Alt13 +Alt5 +Alt28 +Alt6 +Alt1
 
 LEXICON Root
 о́ко		Alt1;
-клок		Alt1_Alt12;
-крюк		Alt1_Alt12;
-сук		Alt1_Alt12;
 друг		Alt2_Alt12;
 у́хо		Alt3;
 чёрт		Alt4_Alt13;
@@ -34,19 +31,14 @@ LEXICON Root
 ка́мень		Alt12;
 клин		Alt12;
 князь		Alt12;
-кол		Alt12;
 ко́лос		Alt12;
 ком		Alt12;
 копы́л		Alt12;
-лист		Alt12;
-ло́скут		Alt12;
-лоску́т		Alt12;
 луб		Alt12;
 муж		Alt12;
 о́бод		Alt12;
 по́вод		Alt12;
 по́лоз		Alt12;
-прут		Alt12;
 собра́т		Alt12;
 струп		Alt12;
 стул		Alt12;
@@ -194,9 +186,6 @@ LEXICON Root
 
 LEXICON Alt1
 +Alt1	#;
-
-LEXICON Alt1_Alt12
-+Alt1+Alt12	#;
 
 LEXICON Alt2_Alt12
 +Alt2+Alt12	#;
