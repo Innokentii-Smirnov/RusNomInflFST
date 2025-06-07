@@ -5,5 +5,5 @@ read lexc ../../ParadigmFeatures/AccentualDeviations/GetAccentualDeviations.lexc
 define AccentualDeviationsLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
-define Exceptions [Wordform 0:AccentualDeviation (AP Alternation*) .o. AccentualDeviationsLexicon / Sep] Feature+;
+define Exceptions [Wordform 0:AccentualDeviation (AP (Star) Alternation*) .o. AccentualDeviationsLexicon / [Sep|Star]] Feature+;
 define GetAccentualDeviations GetAP .o. Exceptions .P. ?*;

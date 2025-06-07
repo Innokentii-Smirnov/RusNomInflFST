@@ -16,7 +16,7 @@ define rF1 %+ConvStress -> %+Stem %+Marg || %+f1 Feature+ [%+Sing %+Acc | %+Plur
 define Default %+ConvStress -> %+Ending || _ ;
 define Rules r0 .o. rA .o. rC .o. rD .o. rD1 .o. rE .o. rF .o. rF1 .o. Default;
 # Дополнительная часть правил
-define RightAccentShift Unaccented* Г Acc:0 Cons* (Г 0:Acc Unaccented*) Sep Unaccented*;
+define RightAccentShift Unaccented* Г Acc:0 Cons* ([Г|"*"] 0:Acc Unaccented*) Sep Unaccented*;
 define r2 RightAccentShift %+Right2 Feature* %+Plur Case ConvStress (AccType) .P. ?*;
 define r3 %+Stem -> %+Ending || %+Right3 Feature+ %+Plur %+Gen _ ;
 define Additional r2 .o. r3;
