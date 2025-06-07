@@ -11,6 +11,7 @@ define Irr (Acc);
 define Letter [Г Irr|С|С "'"|ь|ъ|"*" Irr];
 define L Letter;
 define Letters Letter+;
+define Consonant С (ь);
 define Consonants [С (ь)]+;
 define Syll (Consonants) Г Irr (Consonants);
 define Wordform Letter+ Sep Letter*;

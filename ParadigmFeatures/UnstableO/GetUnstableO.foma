@@ -1,6 +1,14 @@
-source ../../ParadigmFeatures/NonStPreposForms/GetNonStPreposForms.foma
+load stack ../../ParadigmFeatures/NonStLoc/GetNonStLoc.bin
+invert net
+define GetNonStLoc;
 read lexc ../../ParadigmFeatures/UnstableO/GetUnstableO.lexc
-define Lexicon;
-define Rules ?*;
-define GetUnstableO GetNonStPreposForms .o. [Lexicon Feature* .P. Rules];
-define Feature UnstableO | Feature;
+define UnstableOLexicon;
+source ../../LetterClasses.foma
+source ../../ParadigmFeatures.foma
+define Exceptions [Wordform (0:UnstableO) .o. UnstableOLexicon / Sep] Feature*;
+define r1 [..] -> %+UnstableO ||
+	UnaccOrth* е [Consonant* - [К|Ш|й|С ь] Consonant*] Sep Letter*
+	_ [%+d|%+d1|%+f|%+f1];
+define r2 [..] -> %+UnstableO || _ Feature* %+Alt20;
+define Rules r1 .o. r2;
+define GetUnstableO GetNonStLoc .o. Exceptions .P. Rules;

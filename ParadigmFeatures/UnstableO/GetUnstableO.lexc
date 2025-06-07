@@ -1,42 +1,39 @@
-Multichar_Symbols +%0 +1 +2
+Multichar_Symbols +UnstableO +UnstableO2
 
 LEXICON Root
-чёрт		0;
-помело́		0;
-звено́		0;
-перо́		0;
-еда́		0;
-беда́		0;
-среда́		0;
-стрела́		0;
-стена́		0;
-цена́		0;
-щепа́		0;
-ме́та		0;
-жерло́		0;
-бесёнок		1;
-чертёнок		1;
-дежа́		1;
-щека́		1;
-стекло́		1;
-пелена́		1;
-письмена́		1;
-бечева́		1;
-стега́		1;
-лебеда́		1;
-череда́		1;
-дереза́		1;
-дрема		1;
-белена́		1;
-о́зеро		1;
-хозя́ин		1;
-дешёвый		2;
+чёрт		#;
+помело́		#;
+звено́		#;
+перо́		#;
+еда́			#;
+беда́		#;
+среда́		#;
+стрела́		#;
+стена́		#;
+цена́		#;
+щепа́		#;
+ме́та		#;
+жерло́		#;
+бесёнок		UnstableO;
+чертёнок	UnstableO;
+дежа́		UnstableO;
+щека́		UnstableO;
+стекло́		UnstableO;
+пелена́		UnstableO;
+письмена́	UnstableO;
+бечева́		UnstableO;
+стега́		UnstableO;
+лебеда́		UnstableO;
+череда́		UnstableO;
+дереза́		UnstableO;
+дрема		UnstableO;
+белена́		UnstableO;
+о́зеро		UnstableO;
+хозя́ин		UnstableO;
+дешёвый		UnstableO2;
 
-LEXICON 0
-+%0	#;
+LEXICON UnstableO
++UnstableO	#;
 
-LEXICON 1
-+1	#;
-
-LEXICON 2
-+2	#;
+LEXICON UnstableO2
++UnstableO2	#;

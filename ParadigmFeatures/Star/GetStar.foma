@@ -21,7 +21,7 @@ regex	Syll+ [о Irr|ё|е] к Sep -
 		Letter+ [{пёк}|{тёк}|в о Irr л о Irr к] Sep;
 regex Letter* AccentedVowel Letter* {ец} Sep;
 regex Letter* AccentedVowel Letter* {ен|ь} Feature* %+Subst1;
-regex Letter* [Г | Г С] е Acc ц Sep;
+regex Letter* [Г | Г С | {лб} | {ст}] е Acc ц Sep;
 turn stack
 union net
 define WordCons;

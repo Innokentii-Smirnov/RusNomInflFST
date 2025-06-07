@@ -51,7 +51,7 @@ define FirstGroup [g1b .P. g1a].l %+Subst1 %+Masc;
 #
 # Группа вторая. Существительные среднего морфологического рода (кроме pluralia tantum)
 regex [Letter+ м Sep я 0:%+c .P. StemStressed 0:%+a].l;
-regex EndingStressed %+b;
+regex [[Letter+ [{тв|о́} | С {к|о́} | {ц|о́} | {ь|ё} | {и|ё} | {и|е́}]] 0:%+b .P. EndingStressed 0:%+d].l;
 union net
 regex (Star) Subst %+Neut;
 turn stack
