@@ -6,14 +6,16 @@ define MorphNumberLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Preceding DeclType;
-define Following (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Following (NumberHom) (ParadigmDefects) GrammRazr;
 define Insertion Letter+ Preceding 0:Number;
 define MorphNumberExceptions [Insertion .o. MorphNumberLexicon.l / Preceding] Following;
 regex L+ [{дцать} | {дес} я Irr т] %+Sing;
 regex L+ [{со́т} | {еро}] %+Plur; 
-turn stack
 union net
+regex (NumberHom) (ParadigmDefects) Numl;
+turn stack
+concatenate net
 define NumlMorphNumberRules;
-define NumlMorphNumber [Insertion .o. NumlMorphNumberRules.l / Preceding] Following .P. ?*;
+define NumlMorphNumber [Insertion .o. NumlMorphNumberRules.l / Preceding] (Animacy) (Gender) .P. ?*;
 define MorphNumberRules NumlMorphNumber;
 define GetMorphNumber GetNumberHom .o. MorphNumberExceptions .P. MorphNumberRules;
