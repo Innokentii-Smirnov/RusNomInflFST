@@ -162,15 +162,12 @@ define morphome b .o. W Gender Number [Case - %+Gen] Tail;
 define c18b morphome .P. [?* .o. class18 -> 0];
 define c18 c18a .o. c18b;
 !!!_____________________Класс XIX_____________________!!!
-define r58 [..] -> ы || .#.
-	[{п'ат'}|{шест'}|{сем'}|{вос'*м'}|{вос'м'}|{вос'ем'}|{дев'ат'}] _
-	Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
+define NumeralStems {п'ат'}|{шест'}|с е Irr м '|в о Irr с ' ("*"|е) м '|{дев'ат'};
+define r58 [..] -> ы || .#. NumeralStems _ Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
 define b r58;
 define morphome b .o. W Gender Number [%+Gen|%+Dat|%+Loc] Tail;
 define c19a morphome .P. ?*;
-define r58 [..] -> {jу} || .#.
-	[{п'ат'}|{шест'}|{сем'}|{вос'*м'}|{вос'м'}|{вос'ем'}|{дев'ат'}] _
-	Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
+define r58 [..] -> {jу} || .#. NumeralStems _ Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
 define b r58;
 define morphome b .o. W Gender Number %+Ins Tail;
 define c19b morphome .P. [?* .o. class19 -> 0];

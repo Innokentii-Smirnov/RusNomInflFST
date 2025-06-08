@@ -2,6 +2,7 @@ LEXICON Root
 Noun;
 Adjective;
 не		Adjective;
+Numeral;
 
 LEXICON Noun
 зар|я́:зор'|а́		#;
@@ -9,5 +10,9 @@ LEXICON Noun
 з0л|о́:з*л|о́			#;
 
 LEXICON Adjective
-з0л|ой:з*л|ой		#;
+з0л|о́й:з*л|о́й		#;
 по́л0н|ый:по́л*н|ый	#;
+
+LEXICON Numeral
+во́семьдесят|:во́с'*м'дес'ат|	#;
+восемьсо́т|:вос'*м'с*́т|		#;
