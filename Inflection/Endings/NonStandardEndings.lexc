@@ -1,4 +1,4 @@
-Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Nse1 +Nse2 +Nse3 +Nse4 +Nse5 +Nse6 +Nse7 +Nse8 +Nse9 +Nse1%0 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse24 +Nse25
+Multichar_Symbols +Subst1 +Subst2 +Adj +Pron1 +Pron2 +Poss +Anom +Masc +Fem +Neut +Sing +Plur +Nom +Acc +Gen +Loc +Dat +Ins +Nse1 +Nse2 +Nse3 +Nse4 +Nse5 +Nse6 +Nse7 +Nse8 +Nse9 +Nse1%0 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse22 +Nse24 +Nse25
 
 Definitions
 	Gender = %+Masc|%+Fem|%+Neut;
@@ -35,6 +35,7 @@ LEXICON Root
 <%+Nse18 %+Pron1 (Gender) %+Plur %+Nom .x. о>				#;
 <%+Nse19 %+Pron1 [%+Masc|%+Neut] %+Plur %+Nom .x. а>	#;
 +Nse19+Pron1+Fem+Plur+Nom:е								#;
++Nse22+Anom:0		Nse22;
 <%+Nse24 %+Anom %+Plur [%+Masc|%+Neut] %+Nom .x. а>		#;
 <%+Nse24 %+Anom %+Plur %+Fem %+Nom .x. е>		#;
 <%+Nse24 %+Anom %+Plur Gender .x. у>			NumeralOblique;
@@ -43,6 +44,11 @@ LEXICON Root
 <%+Nse26 %+Anom %+Plur %+Nom .x. о>		#;
 <%+Nse26 %+Anom %+Plur .x. о>					GenDatLoc;
 <%+Nse26 %+Anom %+Plur .x. 0>					Ins;
+
+LEXICON Nse22
++Masc+Sing+Nom:0	#;
++Neut+Sing+Nom:о	#;
+<[%+Masc|%+Neut] %+Sing [%+Gen|%+Dat|%+Ins|%+Loc] .x. а>	#;
 
 LEXICON NumeralOblique
 GenDatLoc;
