@@ -172,7 +172,7 @@ define r58 [..] -> {jу} || .#.
 	[{п'ат'}|{шест'}|{сем'}|{вос'*м'}|{вос'м'}|{вос'ем'}|{дев'ат'}] _
 	Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
 define b r58;
-define morphome b .o. W Gender Number [%+Gen|%+Dat|%+Loc] Tail;
+define morphome b .o. W Gender Number %+Ins Tail;
 define c19b morphome .P. [?* .o. class19 -> 0];
 define c19 c19a .o. c19b;
 !!!_____________________Класс XX_____________________!!!
