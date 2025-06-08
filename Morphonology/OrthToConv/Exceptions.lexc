@@ -1,3 +1,5 @@
+Multichar_Symbols +Right1 +Right6 +b +Star +Star2 +Alt42
+
 LEXICON Root
 Noun;
 Adjective;
@@ -14,5 +16,23 @@ LEXICON Adjective
 по́л0н|ый:по́л*н|ый	#;
 
 LEXICON Numeral
-во́семьдесят|:во́с'*м'дес'ат|	#;
-восемьсо́т|:вос'*м'с*́т|		#;
+во́сем|ь:во́с'ем'|			Alt42;
+во́семьдесят|:во́с'*м'дес'ат|	Right1;
+во́семьдесят|:во́с'ем'дес'ат|	Right6;
+восемьсо́т|:вос'*м'с*́т|		Star2;
+восемьсо́т|:вос'ем'с*́т|		Star;
+
+LEXICON Alt42
++b+Alt42	#;
+
+LEXICON Right1
++Right1		#;
+
+LEXICON Right6
++Right6		#;
+
+LEXICON Star2
++b+Star2	#;
+
+LEXICON Star
++b+Star		#;

@@ -117,7 +117,7 @@ define morphome b .o. W [[%+Masc|%+Neut] %+Sing [%+Gen|%+Dat|%+Loc]] Tail;
 define c12 morphome .P. [?* .o. class12 -> 0];
 !!!_____________________Класс XIII_____________________!!!
 define r41 т -> 0 || _ "|" %+Alt41 .o. %+Alt41 -> 0;
-define r42 е -> 0 || _ "|" %+Alt42 .o. %+Alt42 -> 0;
+define r42 е -> 0 || .#. в о Irr с ' _ Letter+ "|" %+Alt42 .o. %+Alt42 -> 0;
 define r43 [..] -> ' || _ "|" %+Alt43 .o. %+Alt43 -> 0;
 define r44 [..] -> {оj} || _ "|" %+Alt44 .o. %+Alt44 -> 0;
 define r45 {jа́} -> {мен} || _ "|" %+Alt45 .o. %+Alt45 -> 0;
