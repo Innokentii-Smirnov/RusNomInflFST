@@ -12,4 +12,4 @@ define Stem Letter+ Sep;
 define W Letter+ (Sep);
 define RemoveNse NonStandEnding -> 0 || _ ;
 set flag-is-epsilon ON
-define Endings Alternations .o. [Stem NonStandardEnding Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];
+define Endings Alternations .o. [Stem NonStandardEnding ("@D.REFL.ON@") Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];
