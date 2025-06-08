@@ -12,3 +12,5 @@ You can also download a binary from https://fomafst.github.io/
 ./run_all.sh
 ```
 Assuming XFST is installed in the immediately containing directory of this repository.
+# Result
+The final lexical transducer is the file "Morphonology/ConvToOrth/ConvToOrth.bin". 
