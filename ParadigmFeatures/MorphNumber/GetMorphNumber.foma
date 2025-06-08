@@ -16,6 +16,6 @@ regex (NumberHom) (ParadigmDefects) Numl;
 turn stack
 concatenate net
 define NumlMorphNumberRules;
-define NumlMorphNumber [Insertion .o. NumlMorphNumberRules.l / Preceding] (Animacy) (Gender) .P. ?*;
+define NumlMorphNumber [Insertion Following .o. NumlMorphNumberRules.l / Preceding] (Animacy) (Gender) .P. ?*;
 define MorphNumberRules NumlMorphNumber;
 define GetMorphNumber GetNumberHom .o. MorphNumberExceptions .P. MorphNumberRules;
