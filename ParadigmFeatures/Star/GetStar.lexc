@@ -1,4 +1,4 @@
-Multichar_Symbols +Star +Star2 +Alt42 +Alt58 +Subst2
+Multichar_Symbols +Star +Star2 +Alt12 +Alt42 +Alt58 +Subst1 +Subst2
 
 LEXICON Root
 намёк		#;
@@ -134,7 +134,7 @@ LEXICON Root
 ти́гель		Star;
 ко́мель		Star;
 кишель		Star;
-у́голь		Star;
+у́голь		StarSubst1;
 ого́нь		Star;
 у́горь		Star;
 вихорь		Star;
@@ -222,17 +222,26 @@ LEXICON Root
 Гостомель		Star;
 восемьсо́т		Star2Alt58;
 ка́мень		Star2;
-у́голь		Star2;
+у́голь		Star2Alt12;
 дно		Star2;
 
 LEXICON Star
 +Star	#;
 
-LEXICON Star2
-+Star2	#;
+LEXICON StarSubst1
++Star+Subst1	#;
+
+LEXICON StarSubst2
++Star+Subst2	#;
 
 LEXICON StarAlt42
 +Star+Alt42		#;
+
+LEXICON Star2
++Star2	#;
+
+LEXICON Star2Alt12
++Star2+Alt12	#;
 
 LEXICON Star2Alt58
 +Star2+Alt58	#;
@@ -240,5 +249,4 @@ LEXICON Star2Alt58
 LEXICON Alt42
 +Alt42			#;
 
-LEXICON StarSubst2
-+Star+Subst2	#;
+
