@@ -67,7 +67,7 @@ define c3 morphome3 .P. [?* .o. class3 -> 0];
 !!!_____________________Класс IV_____________________!!!
 define r26 ' -> 0 || _ "|" %+Alt26 .o. %+Alt26 -> 0;
 define b3 r26;
-define morphome4 b3 .o. W %+Plur [%+Prep|%+Dat|%+Ins] Tail;
+define morphome4 b3 .o. W %+Plur [%+Loc|%+Dat|%+Ins] Tail;
 define c4 morphome4 .P. [?* .o. %+Alt26 -> 0];
 !!!_____________________Класс V_____________________!!!
 define r27 [..] -> ' || _ "|" %+Alt27 .o. %+Alt27 -> 0;
@@ -123,10 +123,10 @@ define r44 [..] -> {оj} || _ "|" %+Alt44 .o. %+Alt44 -> 0;
 define r45 {jа́} -> {мен} || _ "|" %+Alt45 .o. %+Alt45 -> 0;
 define r46 {ы́} -> {еб} || _ "|" %+Alt46 .o. %+Alt46 -> 0;
 define r47 м -> н || _ "|" %+Alt47 .o. %+Alt47 -> 0;
-define r48 ' -> 0 || _ "|" %+Alt48 .o. %+Alt48 -> 0;
-define r49 о Irr н -> j || _ "|" %+Alt49 .o. %+Alt49 -> 0;
+define r48 о Irr н -> j || _ "|" %+Alt48 .o. %+Alt48 -> 0;
+define r49 ' -> 0 || _ "|" %+Alt49 .o. %+Alt49 -> 0;
 define r50 [..] -> у || _ "|" %+Alt50 .o. %+Alt50 -> 0;
-define b r41 .o. r42 .o. r43 .o. r44 .o. r45 .o. r46 .o. r47 .o. r48 .o. r49 .o. r50;
+define b r41 .o. r42 .o. r43 .o. r44 .o. r45 .o. r46 .o. r47 .o. r49 .o. r48 .o. r50;
 define morphome b .o. W Gender Number [Case - %+Nom] Tail;
 define c13 morphome .P. [?* .o. class13 -> 0];
 !!!_____________________Класс XIV_____________________!!!
@@ -163,11 +163,12 @@ define c18b morphome .P. [?* .o. class18 -> 0];
 define c18 c18a .o. c18b;
 !!!_____________________Класс XIX_____________________!!!
 define NumeralStems {п'ат'}|{шест'}|с е Irr м '|в о Irr с ' ("*"|е) м '|{дев'ат'};
-define r58 [..] -> ы || .#. NumeralStems _ Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
+define SecondParts {дес'} а Irr {т'} | {с*́т};
+define r58 [..] -> ы || .#. NumeralStems _ SecondParts "|" %+Alt58 .o. %+Alt58 -> 0;
 define b r58;
 define morphome b .o. W Gender Number [%+Gen|%+Dat|%+Loc] Tail;
 define c19a morphome .P. ?*;
-define r58 [..] -> {jу} || .#. NumeralStems _ Letter+ "|" %+Alt58 .o. %+Alt58 -> 0;
+define r58 [..] -> {jу} || .#. NumeralStems _ SecondParts "|" %+Alt58 .o. %+Alt58 -> 0;
 define b r58;
 define morphome b .o. W Gender Number %+Ins Tail;
 define c19b morphome .P. [?* .o. class19 -> 0];
@@ -183,13 +184,13 @@ define r59 е -> {ум} || _ "|" %+Alt59 .o. %+Alt59 -> 0;
 define r60 ы -> о̀ м || _ "|" %+Alt60 .o. %+Alt60 -> 0;
 define r61 о -> о̀ м || _ "|" %+Alt61 .o. %+Alt61 -> 0;
 define b r59 .o. r60 .o. r61;
-define morphome b .o. W Gender Number [%+Gen | %+Loc] Tail;
+define morphome b .o. W Gender Number %+Dat Tail;
 define c20b morphome .P. ?*;
 define r59 е -> {ум'а} || _ "|" %+Alt59 .o. %+Alt59 -> 0;
 define r60 ы -> {ом'а} || _ "|" %+Alt60 .o. %+Alt60 -> 0;
 define r61 о -> {м'а} || _ "|" %+Alt61 .o. %+Alt61 -> 0;
 define b r59 .o. r60 .o. r61;
-define morphome b .o. W Gender Number [%+Gen | %+Loc] Tail;
+define morphome b .o. W Gender Number %+Ins Tail;
 define c20c morphome .P. [?* .o. class20 -> 0];
 define c20 c20a .o. c20b .o. c20c;
 !!!____________________Объединение__________________!!!
