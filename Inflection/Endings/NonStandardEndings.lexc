@@ -51,7 +51,7 @@ LEXICON Nse5
 <[%+Fem|%+Neut] %+Plur %+Gen .x. 0>		#;
 
 LEXICON Nse6
-<Gender %+Plur .x. {ми}>  #;
+<Gender %+Plur %+Ins .x. {ми}>  #;
 
 LEXICON Nse11
 +Neut+Sing+Ins:оj	   	#;
