@@ -12,6 +12,10 @@ define Stem Letter+ Sep;
 define W Letter+ (Sep);
 define RemoveNse NonStandEnding -> 0 || _ ;
 set flag-is-epsilon ON
-define Preprocess [(NonStandEnding:0) NonStandEnding | NonStandEnding NonStandEnding:0] Feature+ Property;
+define Preprocess [ NonStandEnding:0^{1,2} NonStandEnding |
+                    NonStandEnding:0 NonStandEnding NonStandEnding:0 |
+                    NonStandEnding NonStandEnding:0^{1,2} |
+                    NonStandEnding
+                  ] [Feature - NonStandEnding]+ Property;
 define NonStandard Preprocess .o. NonStandardEnding;
 define Endings Alternations .o. [Stem NonStandard ("@D.REFL.ON@") Tail .P. [RemoveNse .o. W StandardEnding (ConvStress) (AccType)]];
