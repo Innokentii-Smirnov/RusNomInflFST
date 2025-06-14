@@ -8,7 +8,7 @@ source ../../ParadigmFeatures.foma
 define StarExceptions Wordform (0:Star) [Feature-Star]+ .o. StarLexicon / Sep [Feature-Star]+;
 define ConsonantalDesinence С*;
 define VocalicDesinence Letter* Г Irr Letter*;
-define ExcFinVoc [д|з|й|л|н|р] н Sep а (DeclType) (Gender);
+define ExcFinVoc [д|з|й|л|н|р] н Sep а Irr (DeclType) (Gender);
 define PosFinVoc ь Sep | [С|ь]к Sep | [С|ь]ц Sep ?* %+Neut | [С|ь]н Sep | С л Sep [я|и] ?* %+Subst1;
 define CompPosFinVoc PosFinVoc ?* .o. Letter+ Sep VocalicDesinence (DeclType) (Gender);
 define FinVoc CompPosFinVoc - ExcFinVoc;
