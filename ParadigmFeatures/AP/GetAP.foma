@@ -12,7 +12,7 @@ define EndingStressed Letter* Sep Letter* AccentedVowel Letter* | (Consonants) S
 define Monosyll Syll / Sep;
 define Disyll Syll^2 / Sep;
 define Polysyll Syll^>1 / Sep;
-define FinalStressed UnaccOrth+ AccentedVowel С* Sep;
+define FinalStressed UnaccOrth+ [AccentedVowel С* Sep | AccentedVowel Sep й];
 #
 # Слова бесчисловых разрядов
 regex Wordform %+a (Star) DeclType Gender Number (ParadigmDefects) %+Nesoglbch;
