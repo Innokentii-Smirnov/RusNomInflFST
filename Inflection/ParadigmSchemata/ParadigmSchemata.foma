@@ -17,5 +17,5 @@ define Constraint Letter+ Sep Letter* Feature+ [
 	%+Simadj SimadjSchema | 
 	%+Extadj ExtadjSchema
 ];
-define Cleanup Gender -> 0 || к Sep о Irr Feature+ _ .#.;
+define Cleanup Gender -> 0 || [к Sep о Irr | и Irr щ Sep о Irr] Feature+ _ .#.;
 define ParadigmSchemata [[OrthToConv .o. Cleanup] Schema] .o. Constraint;
