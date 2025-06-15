@@ -1,6 +1,13 @@
 Multichar_Symbols +Noun +Adj +Pron +PronAdj +Anim +Inan +Masc +Fem +Neut
 
 LEXICON Root
+Prefix;
+Lemma;
+
+LEXICON Prefix
+<@txt"../../Prefixes.txt">   Lemma;
+
+LEXICON Lemma
 а+Inan		#;
 аба́+Inan		#;
 абажу́р+Inan		#;
