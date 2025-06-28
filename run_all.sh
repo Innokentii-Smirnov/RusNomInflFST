@@ -3,9 +3,9 @@ if [[ ":$PATH:" != *":~/xfst:"* ]]; then
 fi
 while read -r line; do
 	if [[ $line != *'/'* ]]; then
-		filepath=ParadigmFeatures/$line/Get$line.foma
+		filepath=src/ParadigmFeatures/$line/Get$line.foma
 	else
-		filepath=$line.foma
+		filepath=src/$line.foma
 	fi
 	echo $filepath
 	./run_submodule.sh $filepath

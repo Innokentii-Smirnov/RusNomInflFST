@@ -7,7 +7,7 @@ from package.util import split, join
 from package.eval import is_correct
 def postprocess(morpholex: str) -> str:
 	return morpholex.replace('\u0301', '').replace('|', '')
-predfile = '../Morphonology/ConvToOrth/out.txt'
+predfile = '../src/Morphonology/ConvToOrth/out.txt'
 corrfile = '../corr.txt'
 target = 'test_result'
 os.makedirs(target, exist_ok=True)
