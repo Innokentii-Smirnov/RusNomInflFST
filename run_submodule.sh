@@ -12,9 +12,9 @@ if [ -f in.txt ]; then
 fi
 echo $directory
 if [[ $directory == 'ParadigmFeatures'* || $name == 'OrthToConv' ]]; then
-	input=../../../lemmata.txt
+	input=../../../test_data/lemmata.txt
 else
-	input=../../../in.txt
+	input=../../../test_data/in.txt
 fi
 lookup $binary -utf8 < $input > out.txt
 cd "$olddir"

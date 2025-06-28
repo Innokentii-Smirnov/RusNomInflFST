@@ -4,5 +4,6 @@
 *.pyc
 !in.txt
 !corr.txt
+!lemmata.txt
 !compilation_order.txt
 !Prefixes.txt

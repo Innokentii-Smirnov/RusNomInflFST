@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from udapi.block.read.conllu import Conllu
 start_dir = os.getcwd()
 import sys
-sys.path.insert(1, start_dir)
+sys.path.insert(1, path.join(start_dir, 'python'))
 from package.const import LANG, CORPORA, CATEGORIES
 from package.categories import get_categories
 from package.util import join
@@ -40,7 +40,9 @@ for corpus in CORPORA:
 							lemmata.add(lemma)
 result = [(morpholex, join(forms)) for morpholex, forms in data.items()]
 result.sort()
-os.chdir(start_dir)
+target = path.join(start_dir, 'test_data')
+os.makedirs(target, exist_ok=True)
+os.chdir(target)
 with open('in.txt', 'w', encoding='utf-8') as fout:
 	for morhpolex, form in result:
 		fout.write(morhpolex + '\n')

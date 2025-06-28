@@ -2,13 +2,13 @@ import os, shutil
 from os import path
 import sys
 start_dir = os.getcwd()
-sys.path.insert(1, start_dir)
+sys.path.insert(1, path.join(start_dir, 'python'))
 from package.util import split, join
 from package.eval import is_correct
 def postprocess(morpholex: str) -> str:
 	return morpholex.replace('\u0301', '').replace('|', '')
 predfile = '../src/Morphonology/ConvToOrth/out.txt'
-corrfile = '../corr.txt'
+corrfile = '../test_data/corr.txt'
 target = 'test_result'
 os.makedirs(target, exist_ok=True)
 os.chdir(target)
