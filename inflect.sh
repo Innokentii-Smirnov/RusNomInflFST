@@ -1,3 +1,4 @@
+clear
 if [[ ":$PATH:" != *":~/xfst:"* ]]; then
 	export PATH=~/xfst:$PATH
 fi
