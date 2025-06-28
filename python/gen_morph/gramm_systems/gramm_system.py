@@ -26,6 +26,9 @@ class GrammaticalSystem:
     def __getitem__(self, key: str) -> ParadigmScheme:
         return self.schemata[key]
 
+    def __contains__(self, key: str) -> bool:
+        return self.schemata.__contains__(key)
+
     @classmethod
     def from_file(cls, filename: str):
         properties = dict()

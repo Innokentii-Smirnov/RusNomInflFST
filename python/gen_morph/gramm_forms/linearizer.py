@@ -1,7 +1,7 @@
 import re
 from functools import partial
-from library.iterable import modify_values
-from library.read import read_multidict
+from iterable import modify_values
+from read import read_multidict
 from itertools import chain
 from languages.brackets import generate_language
 
@@ -40,8 +40,8 @@ class Linearizer:
                 line = line.replace('<{0}>'.format(category), '')
         line = line.strip('.')
         line = line.strip(':')
-        line = re.sub('\.+', '.', line)
-        line = re.sub('\:+', ':', line)
+        line = re.sub(r'\.+', '.', line)
+        line = re.sub(r'\:+', ':', line)
         return line
 
     @classmethod

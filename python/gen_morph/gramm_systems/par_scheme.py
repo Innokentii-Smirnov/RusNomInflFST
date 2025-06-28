@@ -1,7 +1,7 @@
 from functools import partial
-from library.iterable import group_by, modify_values, composition, compone, pi
+from iterable import group_by, modify_values, composition, compone, pi
 from collections.abc import Iterable
-from library.tables.table_scheme import TableScheme
+from tables.table_scheme import TableScheme
 from collections import OrderedDict
 
 class ParadigmScheme:

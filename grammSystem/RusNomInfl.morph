@@ -1,0 +1,3 @@
+Case = Nom Acc Gen Loc Dat Ins
+Number = Sing Plur
+Subst: Number Case
