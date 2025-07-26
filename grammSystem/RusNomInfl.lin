@@ -1,1 +1,7 @@
+Nesoglbch	+<Case>
+Soglbch	+<Gender>+<Case>
 Subst	+<Number>+<Case>
+Simadj	+<Gender>+<Number>+<Case>
+Simadj	+<Gender>+<Animacy>+<Number>+<Case>
+Extadj	+<Gender>+<Number>+<Case>
+Extadj	+<Gender>+<Animacy>+<Number>+<Case>

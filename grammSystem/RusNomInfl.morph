@@ -1,3 +1,10 @@
 Case = Nom Acc Gen Loc Dat Ins
 Number = Sing Plur
+Gender = Masc Fem Neut
+Animacy = Anim Inan
+Nesoglbch: Case
+Soglbch: Gender Case
 Subst: Number Case
+Simadj: Gender Number Case ~Animacy
+Extadj: Gender Number Case ~Animacy
+Acc -> Animacy
