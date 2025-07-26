@@ -5,21 +5,21 @@ from package.util import split, join
 from package.eval import is_correct
 def postprocess(morpholex: str) -> str:
 	return morpholex.replace('\u0301', '').replace('|', '')
-predfile, corrfile, target = argv
+predfile, corrfile, target = argv[1:]
 os.makedirs(target, exist_ok=True)
 os.chdir(target)
 if path.exists('correct.txt'):
-	with open('correct.txt') as fin:
+	with open('correct.txt', 'r', encoding='utf-8') as fin:
 		old_correct = set(map(str.rstrip, fin))
 else:
 	old_correct = set()
 if path.exists('errors.txt'):
-	with open('errors.txt') as fin:
+	with open('errors.txt', 'r', encoding='utf-8') as fin:
 		old_errors = set(map(str.rstrip, fin))
 else:
 	old_errors = set()
 if path.exists('missing.txt'):
-	with open('missing.txt') as fin:
+	with open('missing.txt', 'r', encoding='utf-8') as fin:
 		old_missing = set(map(str.rstrip, fin))
 else:
 	old_missing = set()
@@ -29,13 +29,13 @@ missing = set()
 n_correct = 0
 n_equal = 0
 total = 0
-with (open(predfile) as fin,
-	  open(corrfile) as ref,
-	  open('correct.txt', 'w') as corrf,
-	  open('errors.txt', 'w') as errf,
-	  open('missing.txt', 'w') as mf,
-	  open('incomplete.txt', 'w') as incompf,
-	  open('extra.txt', 'w') as extraf):
+with (open(predfile, 'r', encoding='utf-8') as fin,
+	  open(corrfile, 'r', encoding='utf-8') as ref,
+	  open('correct.txt', 'w', encoding='utf-8') as corrf,
+	  open('errors.txt', 'w', encoding='utf-8') as errf,
+	  open('missing.txt', 'w', encoding='utf-8') as mf,
+	  open('incomplete.txt', 'w', encoding='utf-8') as incompf,
+	  open('extra.txt', 'w', encoding='utf-8') as extraf):
 	for corr_line in ref:
 		total += 1
 		joined_corr = corr_line.rstrip()
@@ -100,13 +100,13 @@ if len(new_missing) == 0:
 	print('No new missing.')
 else:
 	print('New missing: {0}.'.format(len(new_missing)))
-with open('new_correct.txt', 'w') as fout:
+with open('new_correct.txt', 'w', encoding='utf-8') as fout:
 	for string in new_correct:
 		fout.write(string + '\n')
-with open('new_errors.txt', 'w') as fout:
+with open('new_errors.txt', 'w', encoding='utf-8') as fout:
 	for string in new_errors:
 		fout.write(string + '\n')
-with open('new_missing.txt', 'w') as fout:
+with open('new_missing.txt', 'w', encoding='utf-8') as fout:
 	for string in new_missing:
 		fout.write(string + '\n')
 accuracy = 100 * n_correct / total
