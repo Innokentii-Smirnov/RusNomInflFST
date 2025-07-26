@@ -3,16 +3,16 @@ from os import path
 from os.path import isfile, splitext
 from tqdm.auto import tqdm
 from udapi.block.read.conllu import Conllu
-from package.const import LANG, CORPORA, CATEGORIES
+from package.const import CATEGORIES
 from package.categories import get_categories
 from package.util import join
 from package.validate import is_valid
 data = dict[str, set[str]]()
 lemmata = set[str]()
-for corpus in CORPORA:
-	source = f'../../UD_{LANG}-{corpus}'
-	print(source)
-	os.chdir(source)
+os.chdir('../corpora')
+for corpus in os.listdir('.'):
+	print(corpus)
+	os.chdir(corpus)
 	files = [name for name in os.listdir('.')
 			if isfile(name) and splitext(name)[1] == '.conllu']
 	conllu = Conllu(files=files)
@@ -35,6 +35,7 @@ for corpus in CORPORA:
 								data[morpholex] = set[str]()
 							data[morpholex].add(form)
 							lemmata.add(lemma)
+	os.chdir('..')
 result = [(morpholex, join(forms)) for morpholex, forms in data.items()]
 result.sort()
 target = '../test_data'
