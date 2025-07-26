@@ -16,3 +16,6 @@
 [submodule "TestMorph"]
 	path = TestMorph
 	url = https://github.com/Innokentii-Smirnov/TestMorph.git
+[submodule "ParadigmScheme"]
+	path = ParadigmScheme
+	url = https://github.com/Innokentii-Smirnov/ParadigmScheme.git
