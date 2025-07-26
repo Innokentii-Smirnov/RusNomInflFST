@@ -1,0 +1,15 @@
+[submodule "corpora/UD_Russian-Taiga"]
+	path = corpora/UD_Russian-Taiga
+	url = https://github.com/UniversalDependencies/UD_Russian-Taiga.git
+[submodule "corpora/UD_Russian-SynTagRus"]
+	path = corpora/UD_Russian-SynTagRus
+	url = https://github.com/UniversalDependencies/UD_Russian-SynTagRus.git
+[submodule "corpora/UD_Russian-Poetry"]
+	path = corpora/UD_Russian-Poetry
+	url = https://github.com/UniversalDependencies/UD_Russian-Poetry.git
+[submodule "corpora/UD_Russian-GSD"]
+	path = corpora/UD_Russian-GSD
+	url = https://github.com/UniversalDependencies/UD_Russian-GSD.git
+[submodule "corpora/UD_Russian-PUD"]
+	path = corpora/UD_Russian-PUD
+	url = https://github.com/UniversalDependencies/UD_Russian-PUD.git
