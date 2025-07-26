@@ -1,15 +1,32 @@
 import os
 from os import path
 from os.path import isfile, splitext
+from sys import argv
+import json
 from tqdm.auto import tqdm
+from udapi.core.feats import Feats
 from udapi.block.read.conllu import Conllu
-from package.const import CATEGORIES
-from package.categories import get_categories
 from package.util import join
 from package.validate import is_valid
+
+categories_path = argv[1]
+corpora_path = argv[2]
+
+with open(categories_path, 'r', encoding='utf-8') as fin:
+    CATEGORIES = json.load(fin)
+
+def get_categories(upos: str, feats: Feats):
+	if upos == 'ADJ' and feats['Case'] == 'Acc':
+		return CATEGORIES['ADJ-Animacy']
+	if upos == 'NUM' and 'Gender' in feats:
+		return CATEGORIES['NUM-Gender']
+	return CATEGORIES[upos]
+
 data = dict[str, set[str]]()
 lemmata = set[str]()
-os.chdir('../corpora')
+
+os.chdir(corpora_path)
+
 for corpus in os.listdir('.'):
 	print(corpus)
 	os.chdir(corpus)
