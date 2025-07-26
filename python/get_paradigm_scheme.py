@@ -1,13 +1,11 @@
 import os
-from os import path
-import sys
+from sys import argv
 import warnings
-start_dir = os.getcwd()
-sys.path.insert(1, path.join(start_dir, 'python'))
 from gen_morph.gramm_systems.gramm_system import GrammaticalSystem
 from gen_morph.gramm_forms.linearizer import Linearizer
-grammSystem = GrammaticalSystem.from_file(path.join(start_dir, 'grammSystem', 'RusNomInfl.morph'))
-linearizer = Linearizer.from_file(path.join(start_dir, 'grammSystem', 'RusNomInfl.lin'))
+grammSystemPath = argv[1]
+grammSystem = GrammaticalSystem.from_file(grammSystemPath + '.morph')
+linearizer = Linearizer.from_file(grammSystemPath + '.lin')
 while (lexeme := input()) != '':
   lemma, gramm_type = lexeme.split('+', 2)[:2];
   if gramm_type in grammSystem:
