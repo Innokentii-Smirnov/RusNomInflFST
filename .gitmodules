@@ -13,3 +13,6 @@
 [submodule "corpora/UD_Russian-PUD"]
 	path = corpora/UD_Russian-PUD
 	url = https://github.com/UniversalDependencies/UD_Russian-PUD.git
+[submodule "TestMorph"]
+	path = TestMorph
+	url = https://github.com/Innokentii-Smirnov/TestMorph.git
