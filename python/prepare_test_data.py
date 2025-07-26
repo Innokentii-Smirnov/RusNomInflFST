@@ -3,9 +3,6 @@ from os import path
 from os.path import isfile, splitext
 from tqdm.auto import tqdm
 from udapi.block.read.conllu import Conllu
-start_dir = os.getcwd()
-import sys
-sys.path.insert(1, path.join(start_dir, 'python'))
 from package.const import LANG, CORPORA, CATEGORIES
 from package.categories import get_categories
 from package.util import join
@@ -13,7 +10,7 @@ from package.validate import is_valid
 data = dict[str, set[str]]()
 lemmata = set[str]()
 for corpus in CORPORA:
-	source = f'../UD_{LANG}-{corpus}'
+	source = f'../../UD_{LANG}-{corpus}'
 	print(source)
 	os.chdir(source)
 	files = [name for name in os.listdir('.')
@@ -40,7 +37,7 @@ for corpus in CORPORA:
 							lemmata.add(lemma)
 result = [(morpholex, join(forms)) for morpholex, forms in data.items()]
 result.sort()
-target = path.join(start_dir, 'test_data')
+target = '../test_data'
 os.makedirs(target, exist_ok=True)
 os.chdir(target)
 with open('in.txt', 'w', encoding='utf-8') as fout:
