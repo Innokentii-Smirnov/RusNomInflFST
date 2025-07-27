@@ -10,7 +10,7 @@ define Following (ParadigmDefects) GrammRazr (Animacy) (Gender);
 define Insertion Letter+ Preceding 0:NumberHom;
 define NumberHomExceptions [Insertion .o. NumberHomLexicon / Preceding] Following;
 define NumberHomRules [
-		Letter+ DeclType 0:%+NumberHom0 %+ParDef6 .P. 
+		Letter+ DeclType %+ParDef6 .P. 
 		Letter+
 		[
 			[ы|и] Irr е %+Adj |
