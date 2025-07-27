@@ -4,6 +4,6 @@ define ParadigmSchemata;
 read lexc ParadigmDefects.lexc
 define ParadigmDefectsLexicon;
 source ..\..\ParadigmFeatures.foma
-define Intervening GrammRazr (Animacy);
+define Intervening GrammRazr | Animacy;
 define Excluded ParadigmDefectsLexicon / Intervening;
 define ParadigmDefects ParadigmSchemata .o. ~$Excluded;

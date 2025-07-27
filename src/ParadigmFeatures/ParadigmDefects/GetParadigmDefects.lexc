@@ -2,6 +2,7 @@ Multichar_Symbols +ParDef1 +ParDef3 +ParDef4 +ParDef5 +ParDef6 +ParDef7 +ParDef8
 
 LEXICON Root
 крепостца́		#;
+овца́     #;
 себя́		ParDef1;
 не́кого		ParDef1;
 друг_дру́га		ParDef1;
