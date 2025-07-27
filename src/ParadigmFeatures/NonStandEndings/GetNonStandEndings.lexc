@@ -1,6 +1,7 @@
 Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0 +Alt12 +Alt13
 
 LEXICON Root
+во́йско  #;
 бытие́		Nse7_Nse8_Nse9;
 небытие́		Nse7_Nse8_Nse9;
 инобытие́	Nse7_Nse8_Nse9;
@@ -83,7 +84,7 @@ LEXICON Root
 плу́тня		Nse4;
 чу́ня		Nse4;
 при́го́ршня		Nse4;
-плечо́		Nse1_Nse5;
+плечо́		Nse1Nse5;
 госпожа́		Nse5;
 дере́вня		Nse5;
 заря́		Nse5;
@@ -97,8 +98,8 @@ LEXICON Root
 ло́шадь		Nse6;
 зверь		Nse6;
 сей		Nse7;
-господи́н		Nse1;
-хозя́ин		Nse1;
+господи́н		Nse1Nse3;
+хозя́ин		Nse1Nse3;
 ле́мех		Nse1;
 леме́х		Nse1;
 обшла́г		Nse1;
@@ -120,12 +121,12 @@ LEXICON Root
 ба́рин		Nse2;
 боя́рин		Nse2;
 цыга́н		Nse2;
-де́верь		Nse3;
-друг		Nse3;
-князь		Nse3;
-муж			Alt12Nse3;
-сын			Alt12Nse3;
-собра́т		Nse3;
+де́верь		Nse1Nse3;
+друг		Nse1Nse3;
+князь		Nse1Nse3;
+муж			Alt12Nse1Nse3;
+сын			Alt12Nse1Nse3;
+собра́т		Nse1Nse3;
 абази́н		Nse3;
 грузи́н		Nse3;
 имерети́н		Nse3;
@@ -169,10 +170,10 @@ LEXICON Root
 раз			Nse3;
 коле́но		Alt13Nse1Nse4;
 у́хо			Nse1;
-мазло́		Nse1_Nse3;
-трепло́		Nse1_Nse3;
+мазло́		Nse1Nse3;
+трепло́		Nse1Nse3;
 брю́хо		Nse1;
-дре́вко		Nse3;
+дре́вко		Nse1Nse3;
 о́блако		Nse3;
 о́блачко		Nse3;
 верхо́вье		Nse3;
@@ -237,7 +238,7 @@ LEXICON Nse26
 LEXICON Nse4
 +Nse4	#;
 
-LEXICON Nse1_Nse5
+LEXICON Nse1Nse5
 +Nse1+Nse5	#;
 
 LEXICON Nse5
@@ -252,11 +253,11 @@ LEXICON Nse7
 LEXICON Nse1
 +Nse1	#;
 
-LEXICON Nse1_Nse3
+LEXICON Nse1Nse3
 +Nse1+Nse3	#;
 
 LEXICON Nse2
-+Nse2	#;
++Nse2	Nse3;
 
 LEXICON Nse3
 +Nse3	#;
@@ -264,8 +265,8 @@ LEXICON Nse3
 LEXICON Alt13Nse1Nse4
 +Alt13+Nse1+Nse4		#;
 
-LEXICON Alt12Nse3
-+Alt12+Nse3				#;
+LEXICON Alt12Nse1Nse3
++Alt12      Nse1Nse3;
 
 LEXICON Nse7_Nse8_Nse9
 +Nse7+Nse8+Nse9			#;

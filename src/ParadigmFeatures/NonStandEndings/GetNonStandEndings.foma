@@ -1,32 +1,23 @@
 load stack ../../ParadigmFeatures/Alternations/GetAlternations.bin
 invert net
-define GetPreciseDeclType;
+define GetAlternations;
 read lexc ../../ParadigmFeatures/NonStandEndings/GetNonStandEndings.lexc
 define NonStandEndingsLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Intervening Alternation*;
 define Following DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
-define Insertion Letter+ Intervening 0:NonStandEnding* Following .o. [NonStandEndingsLexicon / Intervening] Following;
-define NonStandEndingsExceptions Insertion .P. ?*;
+define Insertion Letter+ Intervening 0:NonStandEnding* .o. [NonStandEndingsLexicon / Intervening];
+define NonStandEndingsExceptions Insertion Following;
 define Alt Alternation*;
-define Nse NonStandEnding*;
-regex [..] -> %+Nse1 || Letter Alt [%+Alt12 | %+Alt14 | %+Alt15] Alt _ Nse DeclType %+Masc;
-regex [..] -> %+Nse1 || {ко} Irr Alt _ NonStandEnding* DeclType;
-regex [..] (->) %+Nse1 || и Irr {ще} Alt _ NonStandEnding* DeclType Feature+ %+Masc .#.;
-regex [..] -> %+Nse2 || [а|я] Irr н и Irr н %+Alt6 Alt _ NonStandEnding* DeclType;
-define Prev %+Nse1|%+Nse2;
-define Next [NonStandEnding - Prev]* DeclType Feature+;
-regex	Letter+ [Alt & $[%+Alt14|%+Alt15] | %+Alt6 (%+Alt10)] (%+Nse1) 	0:%+Nse3 Next |
-		Letter+ Alt (%+Nse1) %+Nse2 						0:%+Nse3 Next |
-		Letter+ [Alt & $%+Alt12] (%+Nse1) 					0:%+Nse3 [Next & $[%+Neut|%+Fem]] |
-		Letter+ [С|ь]{ко} Acc Alt (%+Nse1)					0:%+Nse3 [Next & $%+Subst1 & $%+Neut] |
-		Letter+ {ико} Alt (%+Nse1) 							0:%+Nse3 [Next & $%+Neut] .P.
-		?*;
-define Prev %+Nse1|%+Nse2|%+Nse3;
-define Next [NonStandEnding - Prev]* DeclType Feature+;
-regex	Letter+ [К {ля} | С {ря}] Alt Prev* 0:%+Nse4 Next .P. ?*; 
-turn stack
-compose net
-define NonStandEndingsRules;
-define GetNonStandEndings GetPreciseDeclType .o. NonStandEndingsExceptions .o. NonStandEndingsRules;
+define r1 [..] -> %+Nse1 || [%+Alt12 | %+Alt14 | %+Alt15] Alt _ DeclType %+Masc;
+define r2 [..] -> %+Nse1 || {ко} Irr Alt _ DeclType;
+define r3 [..] (->) %+Nse1 || и Irr {ще} Alt _ DeclType Feature+ %+Masc .#.;
+define r4 [..] -> %+Nse2 || [а|я] Irr н и Irr н %+Alt6 Alt _ DeclType;
+define r5	[..] -> %+Nse3 || [%+Alt6 | %+Alt14 | %+Alt15] Alt (%+Nse1) (%+Nse2) _ DeclType,
+		%+Alt12 Alt (%+Nse1) 					        _ DeclType [%+Neut|%+Fem],
+		[С|ь]{ко́} Alt (%+Nse1)					      _ %+Subst1 %+Neut,
+		{ико} Alt (%+Nse1) 							      _ DeclType %+Neut;
+define r6 [..] -> %+Nse4 || [К {ля} | С {ря}] Alt (%+Nse1) _ DeclType; 
+define NonStandEndingsRules r1 .o. r2 .o. r3 .o. r4 .o. r5 .o. r6;
+define GetNonStandEndings GetAlternations .o. [NonStandEndingsExceptions .P. NonStandEndingsRules];
