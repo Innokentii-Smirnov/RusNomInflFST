@@ -17,6 +17,7 @@ NonStLoc
 UnstableO
 Morphonology\OrthToConv\OrthToConv
 Inflection\ParadigmSchemata\ParadigmSchemata
+Inflection\ParadigmDefects\ParadigmDefects
 Inflection\Syncretism\Syncretism
 Accentuation\ConvStress\GetConvStress
 Morphonology\Alternations\Alternations

@@ -1,6 +1,6 @@
-load stack ../../Inflection/ParadigmSchemata/ParadigmSchemata.bin
+load stack ../../Inflection/ParadigmDefects/ParadigmDefects.bin
 invert net
-define ParadigmSchemata;
+define ApplyParadigmDefects;
 source ../../ParadigmFeatures.foma
 define RemoveParDef ParadigmDefects -> 0 || _ ;
 define RemoveNumHom NumberHom -> 0 || _ ;
@@ -16,4 +16,4 @@ define Rules r1 .o. r2 .o. r3 .o. r4 .o. r5 .o. r6;
 define RemoveAnimacy Animacy -> 0 || _ ;
 define RemoveNonStLoc NonStLoc -> 0 || _ ;
 define Postcleanup RemoveAnimacy .o. RemoveNonStLoc;
-define Syncretism ParadigmSchemata .o. Precleanup .o. Rules .o. Postcleanup;
+define Syncretism ApplyParadigmDefects .o. Precleanup .o. Rules .o. Postcleanup;

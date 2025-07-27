@@ -1,0 +1,6 @@
+load stack ../ParadigmSchemata/ParadigmSchemata.bin
+invert net
+define ParadigmSchemata;
+read lexc ParadigmDefects.lexc
+define Excluded;
+define ParadigmDefects ParadigmSchemata .o. ~$Excluded;

@@ -1,0 +1,15 @@
+Multichar_Symbols +Nom +Gen +Sing +Plur +ParDef1 +ParDef3 +ParDef4 +ParDef5 +ParDef6 +ParDef7 +ParDef8 +ParDef9 +ParDef1%0 +ParDef11 +ParDef12 +ParDef13 +ParDef14 +ParDef15 +ParDef17
+
+Definitions
+  Gender = %+Masc|%+Fem|%+Neut;
+	Number = %+Sing|%+Plur;
+	Case = %+Nom|%+Acc|%+Gen|%+Loc|%+Dat|%+Ins;
+
+LEXICON Root
++ParDef1+Nom   #;
+<%+ParDef3 [Case - %+Nom]>          #;
+<%+ParDef4 [Case - [%+Nom|%+Acc]]>  #;
++ParDef5+Gen   #;
++ParDef6+Sing  #;
++ParDef7+Sing  #;
++ParDef7+Plur+Nom   #;
