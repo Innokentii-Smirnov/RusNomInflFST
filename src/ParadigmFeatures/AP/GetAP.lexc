@@ -1507,7 +1507,13 @@ LEXICON Alt15
 +Alt15+Nse1+Nse3	#;
 
 LEXICON aNse3
-+a+Nse3         #;
++a+Nse3         ParDef8;
 
 LEXICON e1Alt17Nse6
-+e1+Alt17+Nse6  #;
++e1+Alt17+Nse6  NoParDef8;
+
+LEXICON ParDef8
+<%+Subst1 $%+ParDef8>   #;
+
+LEXICON NoParDef8
+<%+Subst1 \%+ParDef8*>  #;

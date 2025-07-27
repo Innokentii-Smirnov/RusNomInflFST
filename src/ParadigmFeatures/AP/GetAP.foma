@@ -5,8 +5,10 @@ read lexc ../../ParadigmFeatures/AP/GetAP.lexc
 define APLexicon;
 source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
-define Features (Star) Alternation* NonStandEnding* DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
-define APExceptions [Wordform 0:AP 0:Alternation* 0:NonStandEnding* .o. APLexicon / Sep] Feature+;
+define Following DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
+define Features (Star) Alternation* NonStandEnding* Following;
+define APExceptions [Wordform 0:AP 0:Alternation* 0:NonStandEnding* .o. APLexicon / Sep] Feature+ |
+                    [Wordform 0:AP 0:Alternation* 0:NonStandEnding* Following .o. APLexicon / Sep];
 define StemStressed Letter* AccentedVowel Letter* Sep Letter* | Syll Sep (Consonants);
 define EndingStressed Letter* Sep Letter* AccentedVowel Letter* | (Consonants) Sep Syll;
 define Monosyll Syll / Sep;

@@ -1,4 +1,4 @@
-Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0 +Alt12 +Alt13 +Alt17
+Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0 +Alt12 +Alt13
 
 LEXICON Root
 бытие́		Nse7_Nse8_Nse9;
@@ -93,8 +93,6 @@ LEXICON Root
 шестерня́		Nse5;
 свеча́		Nse5;
 ребёнок		Nse6;
-челове́к		Nse3ParDef8;
-челове́к   Alt17Nse6;
 дверь		Nse6;
 дочь		Nse6;
 ло́шадь		Nse6;
@@ -278,9 +276,3 @@ LEXICON Nse7_Nse8_Nse9
 
 LEXICON Nse8_Nse9_Nse10
 +Nse8+Nse9+Nse1%0		#;
-
-LEXICON Alt17Nse6
-+Alt17+Nse6          #;
-
-LEXICON Nse3ParDef8
-<%+Nse3 %+Subst1 ?* %+ParDef8 ?* %+Anim>   #;

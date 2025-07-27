@@ -62,7 +62,6 @@ LEXICON Root
 бесёнок		Alt15;
 чертёнок	Alt15;
 ребёнок		Alt16;
-челове́к		Alt17;
 госпо́дь		Alt18;
 Христо́с		Alt19;
 бере́мя		Alt20;
@@ -243,9 +242,6 @@ LEXICON Alt15
 
 LEXICON Alt16
 +Alt16	#;
-
-LEXICON Alt17
-<%+Alt17 %+Subst1 \%+ParDef8* %+Anim> #;
 
 LEXICON Alt18
 +Alt18	#;
