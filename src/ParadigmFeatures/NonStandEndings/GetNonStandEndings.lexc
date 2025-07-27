@@ -1,4 +1,4 @@
-Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0 +Alt12 +Alt13
+Multichar_Symbols +Nse1 +Nse6 +Nse11 +Nse12 +Nse13 +Nse14 +Nse15 +Nse16 +Nse17 +Nse18 +Nse19 +Nse2%0 +Nse21 +Nse22 +Nse23 +Nse24 +Nse25 +Nse26 +Nse4 +Nse5 +Nse3 +Nse7 +Nse2 +Nse8 +Nse9 +Nse1%0 +Alt12 +Alt13 +Alt17
 
 LEXICON Root
 бытие́		Nse7_Nse8_Nse9;
@@ -280,7 +280,7 @@ LEXICON Nse8_Nse9_Nse10
 +Nse8+Nse9+Nse1%0		#;
 
 LEXICON Alt17Nse6
-+Alt17Nse6          #;
++Alt17+Nse6          #;
 
 LEXICON Nse3ParDef8
 +Nse3               #;
