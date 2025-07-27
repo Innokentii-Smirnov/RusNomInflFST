@@ -1,47 +1,54 @@
-Multichar_Symbols +ParDef1 +ParDef3 +ParDef4 +ParDef5 +ParDef6 +ParDef7 +ParDef9 +ParDef1%0 +ParDef11 +ParDef12 +ParDef13 +ParDef14 +ParDef15 +ParDef17
+Multichar_Symbols +ParDef1 +ParDef3 +ParDef4 +ParDef5 +ParDef6 +ParDef7 +ParDef8 +ParDef9 +ParDef1%0 +ParDef11 +ParDef12 +ParDef13 +ParDef14 +ParDef15 +ParDef17
 
 LEXICON Root
 крепостца́		#;
 себя́		ParDef1;
-некого		ParDef1;
-друг_друга		ParDef1;
-нечего		ParDef1;
+не́кого		ParDef1;
+друг_дру́га		ParDef1;
+не́чего		ParDef1;
 не́кто		ParDef3;
 не́что		ParDef4;
 пол		ParDef4;
 ма́ло		ParDef4;
 нема́ло		ParDef4;
-дровец		ParDef5;
+дрове́ц		ParDef5;
 щец		ParDef5;
 внуча́та		ParDef6;
 девча́та		ParDef6;
 ребя́та		ParDef6;
 молодожёны		ParDef6;
 роди́тели		ParDef6;
-детки		ParDef6;
+де́тки		ParDef6;
 дети́шки		ParDef6;
 де́тушки		ParDef6;
-зверятки		ParDef6;
+зверя́тки		ParDef6;
 люди́шки		ParDef6;
 ребя́тки		ParDef6;
 ребяти́шки		ParDef6;
 ребя́тушки		ParDef6;
-солдатушки		ParDef6;
-телятки		ParDef6;
+солда́тушки		ParDef6;
+теля́тки		ParDef6;
+котя́тки		ParDef6;
+мыша́тки		ParDef6;
+порося́тки		ParDef6;
 дре́вние		ParDef6;
 дома́шние		ParDef6;
 молоды́е		ParDef6;
 родны́е		ParDef6;
 новобра́чные		ParDef6;
-брачующиеся		ParDef6;
-сот		ParDef7;
+брачу́ющиеся		ParDef6;
+сот		    ParDef7;
+челове́к   #;
+челове́к   ParDef8;
 мга		ParDef9;
 мгла		ParDef9;
+полумгла́   ParDef9;
 мзда		ParDef9;
 тьма		ParDef9;
 полутьма́		ParDef9;
 хна		ParDef9;
 скло		ParDef9;
+сткло   ParDef9;
 казна́		ParDef9;
 камка́		ParDef9;
 пенька́		ParDef9;
@@ -87,7 +94,7 @@ LEXICON Root
 до́лжен		ParDef14;
 люб		ParDef14;
 рад		ParDef14;
-великоват		ParDef14;
+великова́т		ParDef14;
 малова́т		ParDef14;
 како́в		ParDef14;
 тако́в		ParDef14;
@@ -123,6 +130,9 @@ LEXICON ParDef6
 
 LEXICON ParDef7
 +ParDef7	#;
+
+LEXICON ParDef8
++ParDef8	#;
 
 LEXICON ParDef9
 +ParDef9	#;
