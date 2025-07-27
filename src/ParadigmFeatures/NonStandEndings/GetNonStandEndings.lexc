@@ -93,7 +93,8 @@ LEXICON Root
 шестерня́		Nse5;
 свеча́		Nse5;
 ребёнок		Nse6;
-челове́к		Nse3_Nse6;
+челове́к		Nse3ParDef8;
+челове́к   Alt17Nse6;
 дверь		Nse6;
 дочь		Nse6;
 ло́шадь		Nse6;
@@ -277,3 +278,9 @@ LEXICON Nse7_Nse8_Nse9
 
 LEXICON Nse8_Nse9_Nse10
 +Nse8+Nse9+Nse1%0		#;
+
+LEXICON Alt17Nse6
++Alt17Nse6          #;
+
+LEXICON Nse3ParDef8
++Nse3               #;
