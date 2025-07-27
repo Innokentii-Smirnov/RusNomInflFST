@@ -2,5 +2,8 @@ load stack ../ParadigmSchemata/ParadigmSchemata.bin
 invert net
 define ParadigmSchemata;
 read lexc ParadigmDefects.lexc
-define Excluded;
+define ParadigmDefectsLexicon;
+source ..\..\ParadigmFeatures.foma
+define Intervening GrammRazr (Animacy);
+define Excluded ParadigmDefectsLexicon / Intervening;
 define ParadigmDefects ParadigmSchemata .o. ~$Excluded;
