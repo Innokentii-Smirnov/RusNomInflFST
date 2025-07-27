@@ -3,7 +3,7 @@ Number = Sing Plur
 Gender = Masc Fem Neut
 Animacy = Anim Inan
 Nesoglbch: Case
-Soglbch: Gender Case
+Soglbch: Gender Case ~Animacy
 Subst: Number Case
 Simadj: Gender Number Case ~Animacy
 Extadj: Gender Number Case ~Animacy
