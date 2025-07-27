@@ -51,7 +51,6 @@ LEXICON Root
 магара́джа		Nse4;
 чу́кча		Nse4;
 ю́ноша		Nse4;
-дя́дя		Nse4;
 э́рзя		Nse4;
 пустоме́ля		Nse4;
 мя́мля		Nse4;
@@ -246,9 +245,6 @@ LEXICON Nse5
 
 LEXICON Nse6
 +Nse6	#;
-
-LEXICON Nse3_Nse6
-+Nse3+Nse6	#;
 
 LEXICON Nse7
 +Nse7	#;

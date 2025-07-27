@@ -1,4 +1,4 @@
-Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Nse3 +Nse6 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15 +Alt17
+Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Nse3 +Nse4 +Nse6 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15 +Alt17
 
 LEXICON Root
 я		b;
@@ -344,7 +344,8 @@ Mféôpbiü		ac;
 удало́й		bc;
 развито́й		bc;
 холосто́й		bc;
-дя́дя		c;
+дя́дя		aNse4;
+дя́дя		cAlt12Nse1Nse3;
 изба́		d;
 глава́		d;
 дуга́		d;
@@ -1517,3 +1518,9 @@ LEXICON ParDef8
 
 LEXICON NoParDef8
 <%+Subst1 \%+ParDef8*>  #;
+
+LEXICON aNse4
++a+Nse4                 #;
+
+LEXICON cAlt12Nse1Nse3
++c+Alt12+Nse1+Nse3      #;
