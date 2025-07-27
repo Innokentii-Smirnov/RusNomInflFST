@@ -7,7 +7,7 @@ source ../../LetterClasses.foma
 source ../../ParadigmFeatures.foma
 define Intervening Alternation*;
 define Following DeclType (Gender) (Number) (NumberHom) (ParadigmDefects) GrammRazr (Animacy) (Gender);
-define Insertion Letter+ Intervening 0:NonStandEnding* Following .o. [NonStandEndingsLexicon / Intervening] Following;
+define Insertion Letter+ Intervening 0:NonStandEnding* Following .o. [NonStandEndingsLexicon / Intervening] (Following);
 define NonStandEndingsExceptions Insertion .P. ?*;
 define Alt Alternation*;
 define Nse NonStandEnding*;

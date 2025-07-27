@@ -1,4 +1,4 @@
-Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Nse3 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15
+Multichar_Symbols +b +e +e2 +ab +ac +bc +c +d +d1 +f +f1 +b1 +a +e1 +Nse1 +Nse3 +Nse6 +Alt1 +Alt6 +Alt10 +Alt12 +Alt15 +Alt17
 
 LEXICON Root
 я		b;
@@ -1355,7 +1355,8 @@ nи́сарь		cNse1;
 соболь_(животное)		e;
 ко́зырь		e;
 ребёнок		e1;
-челове́к		e1;
+челове́к		aNse3;
+челове́к		e1Alt17Nse6;
 гвоздь		f;
 груздь		f;
 конь		f;
@@ -1504,3 +1505,9 @@ LEXICON Alt12
 
 LEXICON Alt15
 +Alt15+Nse1+Nse3	#;
+
+LEXICON aNse3
++a+Nse3         #;
+
+LEXICON e1Alt17Nse6
++e1+Alt17+Nse6  #;

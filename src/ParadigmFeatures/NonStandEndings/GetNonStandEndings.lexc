@@ -283,4 +283,4 @@ LEXICON Alt17Nse6
 +Alt17+Nse6          #;
 
 LEXICON Nse3ParDef8
-+Nse3               #;
+<%+Nse3 %+Subst1 ?* %+ParDef8 ?* %+Anim>   #;
