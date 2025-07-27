@@ -37,4 +37,6 @@ define Cleanup Feature|Property -> 0;
 define Accent Acc -> "" || ё _ .o. Acc -> "́";
 define Postprocessing ё (->) е || _ ;
 set flag-is-epsilon ON
-define ConvToOrth Accentuate .o. Main .o. Additional .o. Cleanup .o. Accent .o. Postprocessing;
+define BasicConvToOrth Accentuate .o. Main .o. Additional .o. Cleanup .o. Accent .o. Postprocessing;
+define Prefixes @txt"../../Prefixes.txt";
+define ConvToOrth (Prefixes) BasicConvToOrth;
