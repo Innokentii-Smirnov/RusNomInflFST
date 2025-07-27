@@ -245,7 +245,7 @@ LEXICON Alt16
 +Alt16	#;
 
 LEXICON Alt17
-+Alt17	#;
+<%+Alt17 %+Subst1 \%+ParDef8* %+Anim> #;
 
 LEXICON Alt18
 +Alt18	#;
