@@ -5,9 +5,9 @@ Definitions
 	Subst = %+Subst1|%+Subst2;
 
 LEXICON Root
-+Nse1+Subst1:0          Nse1;
+<%+Nse1 Subst .x. 0>    Nse1;
 +Nse2+Subst1:0          Nse2;
-+Nse3+Subst1:0          Nse3;
+<%+Nse3 Subst .x. 0>    Nse3;
 +Nse4+Subst1:0          Nse4;
 +Nse5+Subst1:0          Nse5;
 <%+Nse6 Subst .x. 0>    Nse6;
