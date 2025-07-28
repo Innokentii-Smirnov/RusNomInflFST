@@ -1,5 +1,5 @@
-call test\Alt hide1
-call test\Nse hide1
-call test\Stem hide1
-call test\Star hide1
-call test\AP hide1
+call test\Alt hide
+call test\Nse hide
+call test\Stem hide
+call test\Star hide
+call test\AP hide

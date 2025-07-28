@@ -555,7 +555,7 @@ Mféôpbiü		ac;
 дверь		e;
 сласть		e;
 горсть		e;
-гроздь		a;
+гроздь		aAlt12Nse1Nse3;
 гроздь		e;
 ось			e;
 масть		e;
@@ -1522,5 +1522,11 @@ LEXICON NoParDef8
 LEXICON aNse4
 +a+Nse4                 #;
 
+LEXICON aAlt12Nse1Nse3
++a      Alt12Nse1Nse3;
+
 LEXICON cAlt12Nse1Nse3
-+c+Alt12+Nse1+Nse3      #;
++c      Alt12Nse1Nse3;
+
+LEXICON Alt12Nse1Nse3
++Alt12+Nse1+Nse3      #;
